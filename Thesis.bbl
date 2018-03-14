@@ -1,0 +1,130 @@
+\begin{thebibliography}{10}
+
+\bibitem{unit_A_star}
+Z.~Boroujeni, D.~Goehring, F.~Ulbrich, D.~Neumann, and R.~Rojas.
+\newblock Flexible unit a-star trajectory planning for autonomous vehicles on
+  structured road maps.
+\newblock In {\em 2017 IEEE International Conference on Vehicular Electronics
+  and Safety (ICVES)}, pages 7--12, June 2017.
+
+\bibitem{volvo_reactive_traj}
+R.~G. Cofield and R.~Gupta.
+\newblock Reactive trajectory planning and tracking for pedestrian-aware
+  autonomous driving in urban environments.
+\newblock In {\em 2016 IEEE Intelligent Vehicles Symposium (IV)}, pages
+  747--754, June 2016.
+
+\bibitem{dead_reckoning}
+Gerald Cook.
+\newblock {\em Robot Navigation}, pages 324--.
+\newblock Wiley-IEEE Press, 2011.
+
+\bibitem{rndf_fu}
+P.~Czerwionka, M.~Wang, and F.~Wiesel.
+\newblock Optimized route network graph as map reference for autonomous cars
+  operating on german autobahn.
+\newblock In {\em The 5th International Conference on Automation, Robotics and
+  Applications}, pages 78--83, Dec 2011.
+
+\bibitem{rndf_darpa}
+DARPA.
+\newblock Route network definition file (rndf) and mission data file (mdf)
+  formats.
+
+\bibitem{rrt_star}
+L.~Garrote, C.~Premebida, M.~Silva, and U.~Nunes.
+\newblock An rrt-based navigation approach for mobile robots and automated
+  vehicles.
+\newblock In {\em 2014 12th IEEE International Conference on Industrial
+  Informatics (INDIN)}, pages 326--331, July 2014.
+
+\bibitem{motion_planning_techniques}
+Christos Katrakazas, Mohammed Quddus, Wen-Hua Chen, and Lipika Deka.
+\newblock Real-time motion planning methods for autonomous on-road driving:
+  State-of-the-art and future research directions.
+\newblock {\em Transportation Research Part C: Emerging Technologies}, 60:416
+  -- 442, 2015.
+
+\bibitem{Wangrobustand}
+Joseph Kearney, Hongling Wang, and Kendall Atkinson.
+\newblock Robust and efficient computation of the closest point on a spline
+  curve.
+\newblock In {\em In in Proc. 5th International Conference on Curves and
+  Surfaces}, pages 397--406, 2002.
+
+\bibitem{curvilinear_System_Automated_Drv}
+J.~Kim, K.~Jo, W.~Lim, M.~Lee, and M.~Sunwoo.
+\newblock Curvilinear-coordinate-based object and situation assessment for
+  highly automated vehicles.
+\newblock {\em IEEE Transactions on Intelligent Transportation Systems},
+  16(3):1559--1575, June 2015.
+
+\bibitem{kolski_thesis}
+Sascha Kolski.
+\newblock {\em Autonomous Driving in Dynamic Environments}.
+\newblock PhD thesis, ÉCOLE POLYTECHNIQUE FÉDÉRALE DE LAUSANNE, 2008.
+
+\bibitem{real_time_traj_plan_article}
+X.~Li, Z.~Sun, D.~Cao, Z.~He, and Q.~Zhu.
+\newblock Real-time trajectory planning for autonomous urban driving:
+  Framework, algorithms, and verifications.
+\newblock {\em IEEE/ASME Transactions on Mechatronics}, 21(2):740--753, April
+  2016.
+
+\bibitem{ppt_teqniqs_coll_Avdnce}
+D.~Madås, M.~Nosratinia, M.~Keshavarz, P.~Sundström, R.~Philippsen,
+  A.~Eidehall, and K.~M. Dahlén.
+\newblock On path planning methods for automotive collision avoidance.
+\newblock In {\em 2013 IEEE Intelligent Vehicles Symposium (IV)}, pages
+  931--937, June 2013.
+
+\bibitem{eth_timing_constraints}
+Kristijan Maček.
+\newblock {\em Autonomous vehicle navigation in dynamic urban environments for
+  increased traffic safety}.
+\newblock PhD thesis, ETH Zurich, 2010.
+
+\bibitem{cmu_parallel_thesis}
+Matthew McNaughton.
+\newblock {\em Parallel Algorithms for Real-time Motion Planning}.
+\newblock PhD thesis, Carnegie Mellon University, 2011.
+
+\bibitem{mobile_eye_safety_distance}
+Shai Shalev{-}Shwartz, Shaked Shammah, and Amnon Shashua.
+\newblock On a formal model of safe and scalable self-driving cars.
+\newblock {\em CoRR}, abs/1708.06374, 2017.
+
+\bibitem{lengthparameterized}
+Hongling Wang, Joseph Kearney, and Kendall Atkinson.
+\newblock Arc-length parameterized spline curves for real-time simulation.
+\newblock In {\em In in Proc. 5th International Conference on Curves and
+  Surfaces}, pages 387--396, 2002.
+
+\bibitem{diss_shui_phd_thesis}
+Shuiying. Wang.
+\newblock {\em State Lattice-based Motion Planning for Autonomous On-Road
+  Driving}.
+\newblock PhD thesis, Freie Universität Berlin, 2015.
+
+\bibitem{werling_frenet}
+M.~Werling, J.~Ziegler, S.~Kammel, and S.~Thrun.
+\newblock Optimal trajectory generation for dynamic street scenarios in a frenet frame.
+\newblock In {\em 2010 IEEE International Conference on Robotics and
+  Automation}, pages 987--993, May 2010.
+
+\bibitem{traj_planner_optimization}
+Wenda Xu, Junqing Wei, J.~M. Dolan, Huijing Zhao, and Hongbin Zha.
+\newblock A real-time motion planner with trajectory optimization for
+  autonomous vehicles.
+\newblock In {\em 2012 IEEE International Conference on Robotics and
+  Automation}, pages 2061--2067, May 2012.
+
+\bibitem{spatio_temporal_state_lattice}
+Julius Ziegler and Christoph Stiller.
+\newblock Spatiotemporal state lattices for fast trajectory planning in dynamic
+  on-road driving scenarios.
+\newblock In {\em Proceedings of the 2009 IEEE/RSJ International Conference on
+  Intelligent Robots and Systems}, IROS'09, pages 1879--1884, Piscataway, NJ,
+  USA, 2009. IEEE Press.
+
+\end{thebibliography}

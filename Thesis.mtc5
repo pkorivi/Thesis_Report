@@ -1,0 +1,15 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {5.1}Experiments}{\reset@font\mtcSfont 27}{section.5.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.1.1}Lane blocked}{\reset@font\mtcSSfont 27}{subsection.5.1.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.1.2}Slow Moving Traffic}{\reset@font\mtcSSfont 28}{subsection.5.1.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.1.3}Merging into traffic}{\reset@font\mtcSSfont 29}{subsection.5.1.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.1.4}Merging into next lane with opposite traffic}{\reset@font\mtcSSfont 29}{subsection.5.1.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.1.5}Road Blocked or Pedestrian Ahead}{\reset@font\mtcSSfont 30}{subsection.5.1.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.1.6}Dynamic Obstacles - other vehicles}{\reset@font\mtcSSfont 32}{subsection.5.1.6}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {5.2}Criteria Based Evaluation}{\reset@font\mtcSfont 33}{section.5.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.2.1}Optimality}{\reset@font\mtcSSfont 33}{subsection.5.2.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.2.2}Feasibility}{\reset@font\mtcSSfont 35}{subsection.5.2.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.2.3}Completeness}{\reset@font\mtcSSfont 35}{subsection.5.2.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.2.4}Runtime}{\reset@font\mtcSSfont 36}{subsection.5.2.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.2.5}Deliberative Approach}{\reset@font\mtcSSfont 37}{subsection.5.2.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.2.6}Low Computational Costs}{\reset@font\mtcSSfont 37}{subsection.5.2.6}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {5.3}Comparisons to other Planners}{\reset@font\mtcSfont 37}{section.5.3}}

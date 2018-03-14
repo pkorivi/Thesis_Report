@@ -1,0 +1,79 @@
+
+\documentclass[a4paper,12pt,twoside]{ThesisStyle}
+
+
+\include{formatAndDefs}
+
+\begin{document}
+
+\include{TitlePage}
+\include{Chapters/Abstract}
+\include{Chapters/german_abstrakt}
+\include{DeclAuthorship}
+
+\dominitoc
+
+\pagenumbering{roman}
+
+% \cleardoublepage
+
+%\section*{Acknowledgments}
+%
+%Last thing to do :-)
+
+\tableofcontents
+
+\mainmatter
+
+\include{Chapters/Introduction}
+%\include{Chapters/Concepts}
+\include{Chapters/Related_work}
+\include{Chapters/VehicleSetup}
+\include{Chapters/Concept}
+\include{Chapters/Implementation}
+\include{Chapters/Discussion}
+\include{Chapters/Evaluation}
+\include{Chapters/Conclusion}
+%\appendix
+
+%\include{Chapters/Appendix1}
+
+\bibliographystyle{plain}
+\bibliography{Thesis}
+%\usepackage{number}
+%\bibliographystyle{acm}
+%\bibliography{Thesis}
+
+%\printnomenclature
+
+%\cleardoublepage
+%\begin{vcenterpage}
+%\noindent\rule[2pt]{\textwidth}{0.5pt}
+%\begin{center}
+%{\large\textbf{My fancy title\\}}
+%\end{center}
+%{\large\textbf{Abstract:}}
+%English version of the German ``Zusammenfassung''.\\
+%
+%{\large\textbf{Keywords:}}
+%3-6 English keywords
+%\\
+%\noindent\rule[2pt]{\textwidth}{0.5pt}
+%\end{vcenterpage}
+%
+%\clearpage
+%\begin{vcenterpage}
+%\noindent\rule[2pt]{\textwidth}{0.5pt}
+%\begin{center}
+%{\large\textbf{Mein schicker Titel\\}}
+%\end{center}
+%{\large\textbf{Zusammenfassung:}}
+%Deutsche Version des Englischen ``Abstracts''.\\
+%
+%{\large\textbf{Keywords:}}
+%3-6 deutsche Schl\"usselw\"orter
+%\\
+%\noindent\rule[2pt]{\textwidth}{0.5pt}
+%\end{vcenterpage}
+
+\end{document}

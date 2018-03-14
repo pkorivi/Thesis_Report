@@ -1,0 +1,61 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Thesis.aux
+A level-1 auxiliary file: TitlePage.aux
+A level-1 auxiliary file: Chapters/Abstract.aux
+A level-1 auxiliary file: Chapters/german_abstrakt.aux
+A level-1 auxiliary file: DeclAuthorship.aux
+A level-1 auxiliary file: Chapters/Introduction.aux
+A level-1 auxiliary file: Chapters/Related_work.aux
+A level-1 auxiliary file: Chapters/VehicleSetup.aux
+A level-1 auxiliary file: Chapters/Concept.aux
+A level-1 auxiliary file: Chapters/Implementation.aux
+A level-1 auxiliary file: Chapters/Discussion.aux
+A level-1 auxiliary file: Chapters/Evaluation.aux
+A level-1 auxiliary file: Chapters/Conclusion.aux
+The style file: plain.bst
+Database file #1: Thesis.bib
+Warning--entry type for "rndf_darpa" isn't style-file defined
+--line 21 of file Thesis.bib
+You've used 20 entries,
+            2118 wiz_defined-function locations,
+            624 strings with 8209 characters,
+and the built_in function-call counts, 7900 in all, are:
+= -- 767
+> -- 359
+< -- 11
++ -- 144
+- -- 122
+* -- 520
+:= -- 1233
+add.period$ -- 60
+call.type$ -- 20
+change.case$ -- 116
+chr.to.int$ -- 0
+cite$ -- 20
+duplicate$ -- 336
+empty$ -- 621
+format.name$ -- 122
+if$ -- 1737
+int.to.chr$ -- 0
+int.to.str$ -- 20
+missing$ -- 16
+newline$ -- 102
+num.names$ -- 40
+pop$ -- 145
+preamble$ -- 1
+purify$ -- 101
+quote$ -- 0
+skip$ -- 278
+stack$ -- 0
+substring$ -- 483
+swap$ -- 126
+text.length$ -- 11
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 78
+warning$ -- 0
+while$ -- 68
+width$ -- 22
+write$ -- 221
+(There was 1 warning)

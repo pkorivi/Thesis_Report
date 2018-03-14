@@ -1,0 +1,64 @@
+\chapter{Tools and Methodology}
+This section talks about the methods and tools used in predicting the personality of people. The different distortions added to emulate a telephonic conversation and implementation details. It also talks about the databases used for training and testing the model with the corresponding personality scores used in those databases.
+
+\section{Tools}
+The following tools and libraries help in extracting the acoustic-prosodic features from audio clips, add personality labels to them and then use it for training machine learning models. 
+\subsection{OpenSmile}
+
+Open-Source Media Interpretation Large feature-space Extraction (openSMILE) is a feature extraction toolkit for signal processing and machine learning applications \cite{49}. It was developed at Technische Universit{\"a}t M{\"u}nchen in the scope of EU project SEMA. The main focus of this tool is audio-signal feature extraction, though it can be used in other modalities such as visual, physiological signals, and etc. \par
+The input/output data to this tool can be in the following formats: \\
+\begin{bulletList}
+	
+	\item PCM WAVE
+	\item CSV
+	\item WEKA ARFF
+	\item HTK Parameter file. 
+\end{bulletList}
+For convenience, we use the CSV format for output and PCM WAVE as input to this tool. The core version of the tool is installed on a MacOS system following the guidelines from \cite{49}. The core version does not support live audio recording/playback, which is not necessary within scope of this paper. Once installed, the tool is run from the terminal window to extract features. \par
+
+The below command is used to extract features from audio clips using openSMILE tool. \par
+
+\hfill \ovalbox{\textbf{SMILExtract -C \#configFile -I \#inputFile -O \#outputFile}}\\
+
+\begin{bulletList}
+	\item \#configFile: placeholder for the location of the configuration file based on which the feature extraction will be done. The openSMILE package comes with the common configuration files used in Interspeech challenges. It also includes the eGeMAPS feature set configuration file in the folder \textbf{/config/gemaps}. We use the file \textbf{eGeMAPSv01a.conf}
+	
+	\item \#inputFile: placeholder for the .wav audio file from which the features will be extracted. The absolute path to the audio file with the filed name is provided here.
+	
+	\item \#outputFile: placeholder for the absolute path with output file name. We use .csv file format here. 
+\end{bulletList}
+\fbox{\parbox{\textwidth}{\label{outputconfig} Note: For some reason, the configuration file we used did not output in .csv format when provided in terminal window. Instead, we edited the \textbf{standard\_data\_output.conf.inc} file provided in the folder \textbf{/config/shared} of the openSMILE package. This output configuration file specifies the output type and file name. The default is \textbf{.arff} format. Under the section \textbf{csvsink:cCsvSink} of the \textbf{standard\_data\_output.conf.inc} file, we provided the filename for the output to be in .csv format. By doing so, the openSMILE extraction command is reduced to \textbf{SMILExtract -C \#configFile -I \#inputFile}}
+
+	
+\subsection{Matlab}
+The openSMILE feature extractor runs from the terminal window and accepts one input file at a time. The eGeMAPS configuration file provides 88 parameters for each speech clip resulting in an 88-dimensional feature vector $\vec{x}$. For a supervised learning, the feature vector must be accompanied by label(s). The labels in this case are the personality scores categorised into high, medium and low for training a classification model. The labels $\vec{y}$ is a 5-dimensional vector with each dimension corresponding to one personality trait. \par
+The personality scores are either self-rated or observed (human judges providing the sore). In case of self-rated (APR), the scores can be divided into high, medium, and low directly from range. For observed scores, an aggregation method needs to be followed to combine result from different annotators. This method is explained in detail in section \ref{speechdatabases}.
+
+MatLab is used to run the openSMILE tool for batch processing all the audio files and then add the personality labels to each feature vector. The following snippet provides the code for extracting the features of all audio files (.wav format) in a folder.
+
+
+\begin{lstlisting}
+data_path = 'folder containing the audio files';
+audio_files_path = strcat(data_path, '/**/*.wav'); 
+audio_files = dir(audio_files_path); % finds all files with .wav format
+audio_files_index = find(~[audio_files.isdir]); % finds the index of the audio files
+outputFile = 'the csv file to which the feature set is appended';  %, this file is provided in the output configuration file of openSMILE Tool. (see the \ref{outputconfig})
+smilExtractCommand = 'SMILExtract -C \#configFile -I \#inputFile';
+configFile = '~/opensmile-2.3.0/config/gemaps/eGeMAPSv01a.conf' % the location of the configuration file.
+for i = 1 : length(audio_files_index)
+audioFile = audio_files(audio_files_index(i));
+audioFilePath = strcat(audioFile.folder, '/', audioFile.name);
+% perform extraction on audio files.
+[status, result] = system(strrep(strrep(smilExtractCommand, '\#inputFile', audioFilePath), '\#configFile', configFile));
+end
+\end{lstlisting}
+
+\subsection{Scikit-learn}
+
+
+\section{Speech Databases}
+\subsection{Score Thresholds}
+
+\section{Distortions}
+
+\section{Implementation Details}
