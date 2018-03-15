@@ -3,19 +3,3 @@
 {\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.3}Computational Power and Software Architecture}{\reset@font\mtcSfont 5}{section.3.3}}
 {\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.4}Vehicle Control}{\reset@font\mtcSfont 5}{section.3.4}}
 {\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.5}Localisation}{\reset@font\mtcSfont 5}{section.3.5}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.6}Introduction}{\reset@font\mtcSfont 6}{section.3.6}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.7}Localization}{\reset@font\mtcSfont 6}{section.3.7}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.8}Prediction}{\reset@font\mtcSfont 7}{section.3.8}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.9}Route Planner}{\reset@font\mtcSfont 7}{section.3.9}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.9.1}RNDF}{\reset@font\mtcSSfont 8}{subsection.3.9.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.9.2}Path Representation and calculation}{\reset@font\mtcSSfont 8}{subsection.3.9.2}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.10}Motion Planner}{\reset@font\mtcSfont 11}{section.3.10}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.10.1}Temporal Horizon}{\reset@font\mtcSSfont 11}{subsection.3.10.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.10.2}Path Modelling}{\reset@font\mtcSSfont 12}{subsection.3.10.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.10.3} Trajectory Creation}{\reset@font\mtcSSfont 14}{subsection.3.10.3}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.10.4}Checking for Static Obstacles}{\reset@font\mtcSSfont 19}{subsection.3.10.4}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.10.5}Checking for Dynamic Obstacles}{\reset@font\mtcSSfont 20}{subsection.3.10.5}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.10.6}Cost Functions and Trajectory Selection}{\reset@font\mtcSSfont 21}{subsection.3.10.6}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.10.7}Velocity Planning}{\reset@font\mtcSSfont 22}{subsection.3.10.7}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.11}Trajectory Follower}{\reset@font\mtcSfont 23}{section.3.11}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.12}Implementation}{\reset@font\mtcSfont 23}{section.3.12}}

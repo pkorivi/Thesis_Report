@@ -1,0 +1,17 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.1}Introduction}{\reset@font\mtcSfont 7}{section.4.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.2}Localization}{\reset@font\mtcSfont 7}{section.4.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.3}Prediction}{\reset@font\mtcSfont 8}{section.4.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.4}Route Planner}{\reset@font\mtcSfont 9}{section.4.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.4.1}RNDF}{\reset@font\mtcSSfont 9}{subsection.4.4.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.4.2}Path Representation and calculation}{\reset@font\mtcSSfont 11}{subsection.4.4.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.4.3}Behavioral Layer}{\reset@font\mtcSSfont 12}{subsection.4.4.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.5}Motion Planner}{\reset@font\mtcSfont 12}{section.4.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.5.1}Temporal Horizon}{\reset@font\mtcSSfont 13}{subsection.4.5.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.5.2}Path Modelling}{\reset@font\mtcSSfont 14}{subsection.4.5.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.5.3} Trajectory Creation}{\reset@font\mtcSSfont 15}{subsection.4.5.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.5.4}Checking for Static Obstacles}{\reset@font\mtcSSfont 20}{subsection.4.5.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.5.5}Checking for Dynamic Obstacles}{\reset@font\mtcSSfont 21}{subsection.4.5.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.5.6}Cost Functions and Trajectory Selection}{\reset@font\mtcSSfont 22}{subsection.4.5.6}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.5.7}Velocity Planning}{\reset@font\mtcSSfont 23}{subsection.4.5.7}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.6}Trajectory Follower}{\reset@font\mtcSfont 24}{section.4.6}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.7}Implementation}{\reset@font\mtcSfont 24}{section.4.7}}
