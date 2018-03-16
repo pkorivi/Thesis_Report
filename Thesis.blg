@@ -17,45 +17,47 @@ The style file: plain.bst
 Database file #1: Thesis.bib
 Warning--entry type for "rndf_darpa" isn't style-file defined
 --line 21 of file Thesis.bib
-You've used 20 entries,
+Warning--entry type for "denmark_breaking" isn't style-file defined
+--line 30 of file Thesis.bib
+You've used 22 entries,
             2118 wiz_defined-function locations,
-            624 strings with 8209 characters,
-and the built_in function-call counts, 7900 in all, are:
-= -- 767
-> -- 359
+            632 strings with 8428 characters,
+and the built_in function-call counts, 8361 in all, are:
+= -- 808
+> -- 374
 < -- 11
-+ -- 144
-- -- 122
-* -- 520
-:= -- 1233
-add.period$ -- 60
-call.type$ -- 20
-change.case$ -- 116
++ -- 150
+- -- 126
+* -- 536
+:= -- 1307
+add.period$ -- 66
+call.type$ -- 22
+change.case$ -- 124
 chr.to.int$ -- 0
-cite$ -- 20
-duplicate$ -- 336
-empty$ -- 621
-format.name$ -- 122
-if$ -- 1737
+cite$ -- 22
+duplicate$ -- 357
+empty$ -- 673
+format.name$ -- 126
+if$ -- 1839
 int.to.chr$ -- 0
-int.to.str$ -- 20
-missing$ -- 16
-newline$ -- 102
-num.names$ -- 40
-pop$ -- 145
+int.to.str$ -- 22
+missing$ -- 17
+newline$ -- 112
+num.names$ -- 44
+pop$ -- 160
 preamble$ -- 1
-purify$ -- 101
+purify$ -- 107
 quote$ -- 0
-skip$ -- 278
+skip$ -- 296
 stack$ -- 0
-substring$ -- 483
-swap$ -- 126
+substring$ -- 499
+swap$ -- 129
 text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 78
+type$ -- 86
 warning$ -- 0
-while$ -- 68
-width$ -- 22
-write$ -- 221
-(There was 1 warning)
+while$ -- 72
+width$ -- 24
+write$ -- 240
+(There were 2 warnings)

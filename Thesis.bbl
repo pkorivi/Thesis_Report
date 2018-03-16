@@ -1,5 +1,12 @@
 \begin{thebibliography}{10}
 
+\bibitem{accelerations_study_2}
+P.S. Bokare and A.K. Maurya.
+\newblock Acceleration-deceleration behaviour of various vehicle types.
+\newblock {\em Transportation Research Procedia}, 25:4733 -- 4749, 2017.
+\newblock World Conference on Transport Research - WCTR 2016 Shanghai. 10-15
+  July 2016.
+
 \bibitem{unit_A_star}
 Z.~Boroujeni, D.~Goehring, F.~Ulbrich, D.~Neumann, and R.~Rojas.
 \newblock Flexible unit a-star trajectory planning for autonomous vehicles on
@@ -38,12 +45,9 @@ L.~Garrote, C.~Premebida, M.~Silva, and U.~Nunes.
 \newblock In {\em 2014 12th IEEE International Conference on Industrial
   Informatics (INDIN)}, pages 326--331, July 2014.
 
-\bibitem{motion_planning_techniques}
-Christos Katrakazas, Mohammed Quddus, Wen-Hua Chen, and Lipika Deka.
-\newblock Real-time motion planning methods for autonomous on-road driving:
-  State-of-the-art and future research directions.
-\newblock {\em Transportation Research Part C: Emerging Technologies}, 60:416
-  -- 442, 2015.
+\bibitem{denmark_breaking}
+Poul Greibe.
+\newblock Braking distance, friction and behavior.
 
 \bibitem{Wangrobustand}
 Joseph Kearney, Hongling Wang, and Kendall Atkinson.
@@ -89,6 +93,12 @@ Matthew McNaughton.
 \newblock {\em Parallel Algorithms for Real-time Motion Planning}.
 \newblock PhD thesis, Carnegie Mellon University, 2011.
 
+\bibitem{accelerations_study}
+Arpan Mehar, Satish Chandra, and Senathipathi Velmurugan.
+\newblock Speed and acceleration characteristics of different types of vehicles
+  on multi-lane highways.
+\newblock In {\em European Transport, 2013 - istiee.org}, 2013.
+
 \bibitem{mobile_eye_safety_distance}
 Shai Shalev{-}Shwartz, Shaked Shammah, and Amnon Shashua.
 \newblock On a formal model of safe and scalable self-driving cars.
@@ -108,7 +118,8 @@ Shuiying. Wang.
 
 \bibitem{werling_frenet}
 M.~Werling, J.~Ziegler, S.~Kammel, and S.~Thrun.
-\newblock Optimal trajectory generation for dynamic street scenarios in a frenet frame.
+\newblock Optimal trajectory generation for dynamic street scenarios in a
+  frenet frame.
 \newblock In {\em 2010 IEEE International Conference on Robotics and
   Automation}, pages 987--993, May 2010.
 

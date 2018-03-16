@@ -12,3 +12,7 @@ Prediction of state from where the planner should start planning instead of curr
 Due to inaccuracies in current planners measurement of speed and acceleration it is tough to estimate where the vehicle will be when the planner is under execution. Currently based on assumption that the vehicle will follow the current path for next few ms, it is made offset in control node. This can be improved to have better synchronizaton between planner and controller. 
 
 
+Create two functions to map lateral shift as a function of time and distance based on speed over current function only mapping based on distance.  
+
+Use quintic polynomials at high speeds and cubic at low speeds. 
+
