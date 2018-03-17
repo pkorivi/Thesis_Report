@@ -32,7 +32,7 @@
 \contentsline {subsection}{\numberline {4.5.4}Checking for Static Obstacles}{19}{subsection.4.5.4}
 \contentsline {subsection}{\numberline {4.5.5}Checking for Dynamic Obstacles}{20}{subsection.4.5.5}
 \contentsline {subsection}{\numberline {4.5.6}Cost Functions and Trajectory Selection}{21}{subsection.4.5.6}
-\contentsline {subsection}{\numberline {4.5.7}Velocity Planning}{22}{subsection.4.5.7}
+\contentsline {subsection}{\numberline {4.5.7}Velocity Planning}{23}{subsection.4.5.7}
 \contentsline {section}{\numberline {4.6}Trajectory Follower}{23}{section.4.6}
 \contentsline {chapter}{\numberline {5}Implementation}{25}{chapter.5}
 \contentsline {chapter}{\numberline {6}Evaluation}{27}{chapter.6}
@@ -54,4 +54,4 @@
 \contentsline {chapter}{\numberline {7}Conclusions and Future Work}{39}{chapter.7}
 \contentsline {section}{\numberline {7.1}Conclusions}{39}{section.7.1}
 \contentsline {section}{\numberline {7.2}Future Work}{39}{section.7.2}
-\contentsline {chapter}{Bibliography}{41}{chapter*.54}
+\contentsline {chapter}{Bibliography}{41}{chapter*.55}

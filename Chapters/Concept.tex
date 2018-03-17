@@ -254,7 +254,7 @@ The collision check for dynamic obstacles has one extra check in time over check
 
 To check collision in time dimension, time gap between the ego vehicle and the obstacle at the S dimension intersection borders is checked as shown in figure \ref{dynamic_time_check}. If the gap is greater than 2 seconds all times and doesn't change sign then there is no collision, Figure \ref{dynamic_time_check} a) presents a situation where the obstacles get close but does not collide. Extra costs are added if the ego vehicle gets too close to obstacle. A collision occurs when the sign of time gap between the ego vehicle and the obstacle changes as shown in sub figure b and c of \ref{dynamic_time_check}. Figure e of \ref{dynamic_time_check} shows the collision when obstacle is moving in opposite direction. 
 
-If a dynamic obstacle is found moving laterally across the road then dynamic obstacle is represented as static obstacle occupying the length of the road. Thus if there is a pedestrian crossing the road, trajectory is considered to be in collision if there is a collision in s dimension and there will anyways by collision in d dimension due to dilation of the pedestrian width to width of the road and no time dimension is checked.
+If a dynamic obstacle is found moving laterally across the road then it is represented as a static obstacle occupying the length of the road. Thus if there is a pedestrian crossing the road, trajectory is considered to be in collision if there is a collision in s dimension and there will anyways by collision in d dimension due to dilation of the pedestrian width to width of the road and no time dimension is checked.
 
 \todo{write why simulating over time and checking for collision is not a good idea - how computational complexity increases}
 
@@ -292,8 +292,9 @@ If a dynamic obstacle is found moving laterally across the road then dynamic obs
 
 
 \subsection{Cost Functions and Trajectory Selection} \label{traj_Selection}
+Selection of final trajectory is based on the different costs associated with it, costs can be static and dynamic. Static costs are known prior to trajectory creation and dynamic costs are known after the trajectory is created and evaluated. There is a wide research on different costs involved in trajectory selection as discussed in section \todo{add link to sub chapter costs in related works}
 
-Initial cost for trajectory
+This thesis implements a simple cost function as represented in \ref{cost_eqn}, explicit smoothness costs are not considered as the target validation platform is a model car with no humans inside and limitations of model car to track a fine trajectory. 
 \begin{equation}
 cost = |V_a - V_t| + |a_t| + | (d_t - d_e)*k1 | + | (d_p - d_e)*k2 |\
 \label{cost_eqn}
@@ -306,18 +307,21 @@ $d_e$ - Trajectory lateral distance.
 $d_p$ - Previous target lateral for trajectory.
 $k_1,k_2$ - Factors to adjust weights, currently used at 0.8 and 0.2
 
+The Velocity and acceleration terms in cost function \ref{cost_eqn} promote higher accelerations if the target and current velocity difference is higher and lower accelerations if the difference is low. The next lateral terms promote the trajectories that are closer to the target lateral distance and also closer to the previous selection thus limiting the shifts in path selection and maintaining continuity. 
 
-Initially all the sampled trajectories are assigned the costs based on the cost function \ref{cost_eqn} and sorted, then the trajectory with the lowest cost is evaluated first. The list is sorted and evaluated again till the top of the list has lowest cost and is evaluated.
-
-Different costs for comfort of the passengers and to improve the life of the vehicle can be added, \cite{traj_planner_optimization} details a list of static and dynamic costs that contribute to a comfortable journey. In this thesis only a simple cost function is used as the target platform is a model car with limitations in fineness of measurement and control of vehicle. 
+Initially all the sampled trajectories are assigned the costs based on the cost function \ref{cost_eqn} and sorted, then the trajectory with the lowest cost is evaluated for collisions first. The list is sorted again and evaluated till the top of the list has lowest cost and the trajectory is evaluated. 
 
 \subsection{Velocity Planning}
-Velocity planning is an important aspect of the planer, in general behavioural layer defines the target velocity based on speed regulation, other traffic participants, required behaviour, road condition etc. In this thesis a simple approach of velocity limiting is used based on road curvature to limit lateral accelerations. Max velocity  V\textsubscript{max} is calculated based on the equation \ref{max_vel}. 
+Velocity planning is an important aspect of the planer, in general behavioral layer defines the target velocity based on speed regulation, other traffic participants, required behavior, road condition etc. In this thesis a simple approach of velocity limiting is used based on road curvature to limit lateral accelerations. Max velocity  V\textsubscript{max} is calculated based on the equation \ref{max_vel}. 
 
 \begin{equation}
     V\textsubscript{max} = min(\sqrt{Acc\textsubscript{MaxLat} / |k(s)|} , V\textsubscript{limit})
 \label{max_vel}
 \end{equation}
+$V\textsubscript{limit}$ - Velocity limit mentioned in road network,
+$Acc\textsubscript{MaxLat}$ - Maximum Lateral acceleration(based on comfort and vehicle dynamics),
+$k(s)$ - Road curvature.
 
 \section{Trajectory Follower} \label{traj_follower}
 
+Check whether to refer to MIG trajectory controller or write in short about the controller. 

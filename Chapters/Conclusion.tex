@@ -14,6 +14,8 @@ Due to inaccuracies in current planners measurement of speed and acceleration it
 
 Create two functions to map lateral shift as a function of time and distance based on speed over current function only mapping based on distance.  
 
+Improve the lateral shift function to have an option to include where the ego vehicle is in current state with respect to lane change. If lets say the ego vehicle creates a trajectory to go from ds to dt in 5s, then when the trajectory is evaluated next time the ego vehicle is at d1 and it will choose 5s to travel to dt from there thus delaying the lane shift and this process repeats indefinitely and the robot will never exactly reach the target d. Thus the d\_final for lane shift from previous trajectory should be associated with the s\_final previous thus making the trajectory to be executed in the required distance ahead. This is similar to classical Proportional controller issue.  
+
 Use quintic polynomials at high speeds and cubic at low speeds. 
 
 Improve collision checking with respect to pedestrians following the huge research published in this specific domain of pedestrian tracking in autonomous cars. 
