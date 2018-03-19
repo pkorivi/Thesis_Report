@@ -10,47 +10,46 @@
 \BOOKMARK [2][]{subsection.2.1.2}{Lattice Planners}{section.2.1}% 10
 \BOOKMARK [2][]{subsection.2.1.3}{Local Search}{section.2.1}% 11
 \BOOKMARK [1][]{section.2.2}{Trajectory Evaluation}{chapter.2}% 12
-\BOOKMARK [1][]{section.2.3}{Evaluation Criteria}{chapter.2}% 13
-\BOOKMARK [0][]{chapter.3}{Vehicle Setup}{}% 14
-\BOOKMARK [1][]{section.3.1}{Vehicle Base}{chapter.3}% 15
-\BOOKMARK [1][]{section.3.2}{Sensors}{chapter.3}% 16
-\BOOKMARK [1][]{section.3.3}{Computational Power and Software Architecture}{chapter.3}% 17
-\BOOKMARK [1][]{section.3.4}{Vehicle Control}{chapter.3}% 18
-\BOOKMARK [1][]{section.3.5}{Localisation}{chapter.3}% 19
-\BOOKMARK [0][]{chapter.4}{Planning Algorithm}{}% 20
-\BOOKMARK [1][]{section.4.1}{Introduction}{chapter.4}% 21
-\BOOKMARK [1][]{section.4.2}{Localization}{chapter.4}% 22
-\BOOKMARK [1][]{section.4.3}{Prediction}{chapter.4}% 23
-\BOOKMARK [1][]{section.4.4}{Route Planner}{chapter.4}% 24
-\BOOKMARK [2][]{subsection.4.4.1}{RNDF}{section.4.4}% 25
-\BOOKMARK [2][]{subsection.4.4.2}{Path Representation and calculation}{section.4.4}% 26
-\BOOKMARK [2][]{subsection.4.4.3}{Behavioral Layer}{section.4.4}% 27
-\BOOKMARK [1][]{section.4.5}{Motion Planner}{chapter.4}% 28
-\BOOKMARK [2][]{subsection.4.5.1}{Temporal Horizon}{section.4.5}% 29
-\BOOKMARK [2][]{subsection.4.5.2}{Path Modelling}{section.4.5}% 30
-\BOOKMARK [2][]{subsection.4.5.3}{ Trajectory Creation}{section.4.5}% 31
-\BOOKMARK [2][]{subsection.4.5.4}{Checking for Static Obstacles}{section.4.5}% 32
-\BOOKMARK [2][]{subsection.4.5.5}{Checking for Dynamic Obstacles}{section.4.5}% 33
-\BOOKMARK [2][]{subsection.4.5.6}{Cost Functions and Trajectory Selection}{section.4.5}% 34
-\BOOKMARK [2][]{subsection.4.5.7}{Velocity Planning}{section.4.5}% 35
-\BOOKMARK [1][]{section.4.6}{Trajectory Follower}{chapter.4}% 36
-\BOOKMARK [0][]{chapter.5}{Implementation}{}% 37
-\BOOKMARK [0][]{chapter.6}{Evaluation}{}% 38
-\BOOKMARK [1][]{section.6.1}{Experiments}{chapter.6}% 39
-\BOOKMARK [2][]{subsection.6.1.1}{Lane blocked}{section.6.1}% 40
-\BOOKMARK [2][]{subsection.6.1.2}{Slow Moving Traffic}{section.6.1}% 41
-\BOOKMARK [2][]{subsection.6.1.3}{Merging into traffic}{section.6.1}% 42
-\BOOKMARK [2][]{subsection.6.1.4}{Merging into next lane with opposite traffic}{section.6.1}% 43
-\BOOKMARK [2][]{subsection.6.1.5}{Road Blocked or Pedestrian Ahead}{section.6.1}% 44
-\BOOKMARK [2][]{subsection.6.1.6}{Dynamic Obstacles - other vehicles}{section.6.1}% 45
-\BOOKMARK [1][]{section.6.2}{Criteria Based Evaluation}{chapter.6}% 46
-\BOOKMARK [2][]{subsection.6.2.1}{Optimality}{section.6.2}% 47
-\BOOKMARK [2][]{subsection.6.2.2}{Feasibility}{section.6.2}% 48
-\BOOKMARK [2][]{subsection.6.2.3}{Completeness}{section.6.2}% 49
-\BOOKMARK [2][]{subsection.6.2.4}{Runtime}{section.6.2}% 50
-\BOOKMARK [2][]{subsection.6.2.5}{Deliberative Approach}{section.6.2}% 51
-\BOOKMARK [1][]{section.6.3}{Comparisons to other Planners}{chapter.6}% 52
-\BOOKMARK [0][]{chapter.7}{Conclusions and Future Work}{}% 53
-\BOOKMARK [1][]{section.7.1}{Conclusions}{chapter.7}% 54
-\BOOKMARK [1][]{section.7.2}{Future Work}{chapter.7}% 55
-\BOOKMARK [0][]{chapter*.56}{Bibliography}{}% 56
+\BOOKMARK [0][]{chapter.3}{Vehicle Setup}{}% 13
+\BOOKMARK [1][]{section.3.1}{Vehicle Base}{chapter.3}% 14
+\BOOKMARK [1][]{section.3.2}{Sensors}{chapter.3}% 15
+\BOOKMARK [1][]{section.3.3}{Architecture \046 Computational Power}{chapter.3}% 16
+\BOOKMARK [1][]{section.3.4}{Vehicle Control}{chapter.3}% 17
+\BOOKMARK [1][]{section.3.5}{Localisation}{chapter.3}% 18
+\BOOKMARK [0][]{chapter.4}{Planning Algorithm}{}% 19
+\BOOKMARK [1][]{section.4.1}{Introduction}{chapter.4}% 20
+\BOOKMARK [1][]{section.4.2}{Localization}{chapter.4}% 21
+\BOOKMARK [1][]{section.4.3}{Prediction}{chapter.4}% 22
+\BOOKMARK [1][]{section.4.4}{Route Planner}{chapter.4}% 23
+\BOOKMARK [2][]{subsection.4.4.1}{RNDF}{section.4.4}% 24
+\BOOKMARK [2][]{subsection.4.4.2}{Path Representation and calculation}{section.4.4}% 25
+\BOOKMARK [2][]{subsection.4.4.3}{Behavioral Layer}{section.4.4}% 26
+\BOOKMARK [1][]{section.4.5}{Motion Planner}{chapter.4}% 27
+\BOOKMARK [2][]{subsection.4.5.1}{Temporal Horizon}{section.4.5}% 28
+\BOOKMARK [2][]{subsection.4.5.2}{Path Modelling}{section.4.5}% 29
+\BOOKMARK [2][]{subsection.4.5.3}{ Trajectory Creation}{section.4.5}% 30
+\BOOKMARK [2][]{subsection.4.5.4}{Checking for Static Obstacles}{section.4.5}% 31
+\BOOKMARK [2][]{subsection.4.5.5}{Checking for Dynamic Obstacles}{section.4.5}% 32
+\BOOKMARK [2][]{subsection.4.5.6}{Cost Functions and Trajectory Selection}{section.4.5}% 33
+\BOOKMARK [2][]{subsection.4.5.7}{Velocity Planning}{section.4.5}% 34
+\BOOKMARK [1][]{section.4.6}{Trajectory Follower}{chapter.4}% 35
+\BOOKMARK [0][]{chapter.5}{Implementation}{}% 36
+\BOOKMARK [0][]{chapter.6}{Evaluation}{}% 37
+\BOOKMARK [1][]{section.6.1}{Experiments}{chapter.6}% 38
+\BOOKMARK [2][]{subsection.6.1.1}{Lane blocked}{section.6.1}% 39
+\BOOKMARK [2][]{subsection.6.1.2}{Slow Moving Traffic}{section.6.1}% 40
+\BOOKMARK [2][]{subsection.6.1.3}{Merging into traffic}{section.6.1}% 41
+\BOOKMARK [2][]{subsection.6.1.4}{Merging into next lane with opposite traffic}{section.6.1}% 42
+\BOOKMARK [2][]{subsection.6.1.5}{Road Blocked or Pedestrian Ahead}{section.6.1}% 43
+\BOOKMARK [2][]{subsection.6.1.6}{Dynamic Obstacles - other vehicles}{section.6.1}% 44
+\BOOKMARK [1][]{section.6.2}{Criteria Based Evaluation}{chapter.6}% 45
+\BOOKMARK [2][]{subsection.6.2.1}{Optimality}{section.6.2}% 46
+\BOOKMARK [2][]{subsection.6.2.2}{Feasibility}{section.6.2}% 47
+\BOOKMARK [2][]{subsection.6.2.3}{Completeness}{section.6.2}% 48
+\BOOKMARK [2][]{subsection.6.2.4}{Runtime}{section.6.2}% 49
+\BOOKMARK [2][]{subsection.6.2.5}{Deliberative Approach}{section.6.2}% 50
+\BOOKMARK [1][]{section.6.3}{Comparisons to other Planners}{chapter.6}% 51
+\BOOKMARK [0][]{chapter.7}{Conclusions and Future Work}{}% 52
+\BOOKMARK [1][]{section.7.1}{Conclusions}{chapter.7}% 53
+\BOOKMARK [1][]{section.7.2}{Future Work}{chapter.7}% 54
+\BOOKMARK [0][]{chapter*.56}{Bibliography}{}% 55
