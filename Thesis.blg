@@ -19,45 +19,46 @@ Warning--entry type for "rndf_darpa" isn't style-file defined
 --line 21 of file Thesis.bib
 Warning--entry type for "denmark_breaking" isn't style-file defined
 --line 30 of file Thesis.bib
-You've used 22 entries,
+Warning--empty booktitle in mit_rrt
+You've used 30 entries,
             2118 wiz_defined-function locations,
-            632 strings with 8428 characters,
-and the built_in function-call counts, 8361 in all, are:
-= -- 808
-> -- 374
-< -- 11
-+ -- 150
-- -- 126
-* -- 536
-:= -- 1307
-add.period$ -- 66
-call.type$ -- 22
-change.case$ -- 124
+            677 strings with 9648 characters,
+and the built_in function-call counts, 10896 in all, are:
+= -- 1048
+> -- 480
+< -- 13
++ -- 194
+- -- 160
+* -- 686
+:= -- 1715
+add.period$ -- 90
+call.type$ -- 30
+change.case$ -- 162
 chr.to.int$ -- 0
-cite$ -- 22
-duplicate$ -- 357
-empty$ -- 673
-format.name$ -- 126
-if$ -- 1839
+cite$ -- 31
+duplicate$ -- 474
+empty$ -- 891
+format.name$ -- 160
+if$ -- 2392
 int.to.chr$ -- 0
-int.to.str$ -- 22
-missing$ -- 17
-newline$ -- 112
-num.names$ -- 44
-pop$ -- 160
+int.to.str$ -- 30
+missing$ -- 27
+newline$ -- 152
+num.names$ -- 60
+pop$ -- 218
 preamble$ -- 1
-purify$ -- 107
+purify$ -- 140
 quote$ -- 0
-skip$ -- 296
+skip$ -- 380
 stack$ -- 0
-substring$ -- 499
-swap$ -- 129
-text.length$ -- 11
+substring$ -- 626
+swap$ -- 159
+text.length$ -- 13
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 86
-warning$ -- 0
-while$ -- 72
-width$ -- 24
-write$ -- 240
-(There were 2 warnings)
+type$ -- 112
+warning$ -- 1
+while$ -- 93
+width$ -- 32
+write$ -- 326
+(There were 3 warnings)

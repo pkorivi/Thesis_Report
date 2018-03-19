@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{prometheus}
+R.~Behringer and N.~Muller.
+\newblock Autonomous road vehicle guidance from autobahnen to narrow curves.
+\newblock {\em IEEE Transactions on Robotics and Automation}, 14(5):810--815,
+  Oct 1998.
+
 \bibitem{accelerations_study_2}
 P.S. Bokare and A.K. Maurya.
 \newblock Acceleration-deceleration behaviour of various vehicle types.
@@ -13,6 +19,11 @@ Z.~Boroujeni, D.~Goehring, F.~Ulbrich, D.~Neumann, and R.~Rojas.
   structured road maps.
 \newblock In {\em 2017 IEEE International Conference on Vehicular Electronics
   and Safety (ICVES)}, pages 7--12, June 2017.
+
+\bibitem{darpa_urban_challenge}
+Martin Buehler, Karl Iagnemma, and Sanjiv Singh.
+\newblock {\em The DARPA Urban Challenge: Autonomous Vehicles in City Traffic}.
+\newblock Springer Publishing Company, Incorporated, 1st edition, 2009.
 
 \bibitem{volvo_reactive_traj}
 R.~G. Cofield and R.~Gupta.
@@ -38,6 +49,12 @@ DARPA.
 \newblock Route network definition file (rndf) and mission data file (mdf)
   formats.
 
+\bibitem{mit_rrt}
+Gaston~A. Fiore and David~L. Darmofal.
+\newblock A robust motion planning approach for autonomous driving in urban
+  areas.
+\newblock 2008.
+
 \bibitem{rrt_star}
 L.~Garrote, C.~Premebida, M.~Silva, and U.~Nunes.
 \newblock An rrt-based navigation approach for mobile robots and automated
@@ -45,9 +62,22 @@ L.~Garrote, C.~Premebida, M.~Silva, and U.~Nunes.
 \newblock In {\em 2014 12th IEEE International Conference on Industrial
   Informatics (INDIN)}, pages 326--331, July 2014.
 
+\bibitem{graff_thesis}
+Daniel Graff.
+\newblock {\em Programming and Managing Swarms of Mobile Robots:A Systemic
+  Approach}.
+\newblock PhD thesis, Technischen Universitat Berlin, 2016.
+
 \bibitem{denmark_breaking}
 Poul Greibe.
 \newblock Braking distance, friction and behavior.
+
+\bibitem{lattice_Gu_Tiyanu}
+Tianyu Gu and John~M. Dolan.
+\newblock On-road motion planning for autonomous vehicles.
+\newblock In {\em Proceedings of the 5th International Conference on
+  Intelligent Robotics and Applications (ICIRA 2012)}, pages 588--597, October
+  2012.
 
 \bibitem{Wangrobustand}
 Joseph Kearney, Hongling Wang, and Kendall Atkinson.
@@ -67,6 +97,22 @@ J.~Kim, K.~Jo, W.~Lim, M.~Lee, and M.~Sunwoo.
 Sascha Kolski.
 \newblock {\em Autonomous Driving in Dynamic Environments}.
 \newblock PhD thesis, ÉCOLE POLYTECHNIQUE FÉDÉRALE DE LAUSANNE, 2008.
+
+\bibitem{rrt_urban_driv}
+Y.~Kuwata, G.~A. Fiore, J.~Teo, E.~Frazzoli, and J.~P. How.
+\newblock Motion planning for urban driving using rrt.
+\newblock In {\em 2008 IEEE/RSJ International Conference on Intelligent Robots
+  and Systems}, pages 1681--1686, Sept 2008.
+
+\bibitem{book_robot_motion_planning}
+Jean-Claude Latombe.
+\newblock {\em Robot Motion Planning}.
+\newblock Kluwer Academic Publishers, Norwell, MA, USA, 1991.
+
+\bibitem{book_lavelle_planning}
+Steven~M. LaValle.
+\newblock {\em Planning Algorithms}.
+\newblock Cambridge University Press, New York, NY, USA, 2006.
 
 \bibitem{real_time_traj_plan_article}
 X.~Li, Z.~Sun, D.~Cao, Z.~He, and Q.~Zhu.
