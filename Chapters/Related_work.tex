@@ -15,7 +15,17 @@ Approach followed by different participants of DUC are described in \cite{darpa_
 	\item Motion planning module is responsible for generating local trajectories and converting them to steering and acceleration values. It initially creates a forward looking path and velocity planning is performed on top of that. 
 \end{itemize}
 
-After DUC, there has been a huge research into this accelerated by the industry because of benefits from autonomous driving. Planning for autonomous driving in general can be classified as shown in Figure \ref{related_work_classification}. The following sub sections discuss research in each of the described sub-categories. 
+After DUC, the research efforts have been increased to develop state of the art solutions in perception, planning and control for autonomous vehicles. Motion planning plays a crucial role in the system with aim of developing trajectories that are collision free and also fall under kinematic and dynamic constraints of vehicle, road boundaries and traffic rules \cite{motion_planning_techniques}. There has been a huge amount of research published with various techniques to solve the planning problem of autonomous vehicles. Potential fields is one of such algorithm, it models whole map as function of potential field with attractive forces towards goal and repulsive towards obstacles \cite{potential_field_3} \cite{potential_field_1} \cite{potential_field_2}. Path is found by traveling along the steepest gradient of potential field, however the paths gets trapped in local minima sometimes.  
+
+
+write about
+Grid based,Voroni Diagrams, Driving Corridors 
+
+Then below classification which is widely used
+
+
+ 
+ Planning for autonomous driving in general can be classified as shown in Figure \ref{related_work_classification}. The following sub sections discuss research in each of the described sub-categories. 
 
 \begin{figure}[H]
 	\centering
@@ -82,9 +92,6 @@ Combining Path and Velocity Werling, Lattices, Unit A* approach
 %splines? polynomials? lattice?
 
 
-Other approaches like Voroni Diagrams
-
-Driving Corridors 
 
 \section{Trajectory Evaluation}
 \label{traj_eval}
