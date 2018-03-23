@@ -424,8 +424,198 @@ keywords = {On-Road Motion planning, Autonomous Passenger Vehicle},
 	ISSN={}, 
 	month={Apr},}
 
+@InProceedings{D_star_1,
+	author="Ferguson, Dave
+	and Stentz, Anthony",
+	editor="Thrun, Sebastian
+	and Brooks, Rodney
+	and Durrant-Whyte, Hugh",
+	title="Field D*: An Interpolation-Based Path Planner and Replanner",
+	booktitle="Robotics Research",
+	year="2007",
+	publisher="Springer Berlin Heidelberg",
+	address="Berlin, Heidelberg",
+	pages="239--253",
+	abstract="We present an interpolation-based planning and replanning algorithm for generating direct, low-cost paths through nonuniform cost grids. Most grid-based path planners use discrete state transitions that artificially constrain an agent's motion to a small set of possible headings (e.g. 0,                                                                           {\$}{\$}{\backslash}frac{\{}{\backslash}pi {\}}{\{}4{\}},{\backslash}frac{\{}{\backslash}pi {\}}{\{}2{\}}{\$}{\$}                , etc). As a result, even `optimal' grid-based planners produce unnatural, suboptimal paths. Our approach uses linear interpolation during planning to calculate accurate path cost estimates for arbitrary positions within each grid cell and to produce paths with a range of continuous headings. Consequently, it is particularly well suited to planning low-cost trajectories for mobile robots. In this paper, we introduce the algorithm and present a number of example applications and results.",
+	isbn="978-3-540-48113-3"
+}
+
+@inproceedings{A_star,
+	author = {Likhachev, Maxim and Ferguson, Dave and Gordon, Geoff and Stentz, Anthony and Thrun, Sebastian},
+	title = {Anytime Dynamic A*: An Anytime, Replanning Algorithm},
+	booktitle = {Proceedings of the Fifteenth International Conference on International Conference on Automated Planning and Scheduling},
+	series = {ICAPS'05},
+	year = {2005},
+	isbn = {1-57735-220-3},
+	location = {Monterey, California, USA},
+	pages = {262--271},
+	numpages = {10},
+	url = {http://dl.acm.org/citation.cfm?id=3037062.3037096},
+	acmid = {3037096},
+	publisher = {AAAI Press},
+} 
+
+@ARTICLE{survey_planning_techniques, 
+	author={B. Paden and M. Čáp and S. Z. Yong and D. Yershov and E. Frazzoli}, 
+	journal={IEEE Transactions on Intelligent Vehicles}, 
+	title={A Survey of Motion Planning and Control Techniques for Self-Driving Urban Vehicles}, 
+	year={2016}, 
+	volume={1}, 
+	number={1}, 
+	pages={33-55}, 
+	keywords={feedback;mobile robots;motion control;path planning;pedestrians;road safety;road vehicles;automotive transportation accessibility;automotive transportation efficiency;control algorithms;dynamic environment;feedback control;motion control;motion planning;pedestrians;safety enhancement;safety-critical tasks;self-driving urban vehicles;vehicle mobility model;Autonomous automobiles;Decision making;Feedback control;Intelligent vehicles;Motion planning;Path planning;Trajectory}, 
+	doi={10.1109/TIV.2016.2578706}, 
+	ISSN={2379-8858}, 
+	month={March},}
+
+@TECHREPORT{Lavalle_rrt,
+	author = {Steven M. Lavalle},
+	title = {Rapidly-Exploring Random Trees: A New Tool for Path Planning},
+	institution = {},
+	year = {1998},
+	url = {http://msl.cs.illinois.edu/~lavalle/papers/Lav98c.pdf}
+}
+
+@MISC{prm,
+	author = {Lydia E. Kavraki and Jean-Claude Latombe},
+	title = {Probabilistic Roadmaps for Robot Path Planning},
+	year = {1998}
+}
+
+@article{rrt_higher_dimension,
+	author    = {Marios Xanthidis and
+	Ioannis M. Rekleitis and
+	Jason M. O'Kane},
+	title     = {{RRT+} : Fast Planning for High-Dimensional Configuration Spaces},
+	journal   = {CoRR},
+	volume    = {abs/1612.07333},
+	year      = {2016},
+	url       = {http://arxiv.org/abs/1612.07333},
+	archivePrefix = {arXiv},
+	eprint    = {1612.07333},
+	timestamp = {Wed, 07 Jun 2017 14:43:12 +0200},
+	biburl    = {https://dblp.org/rec/bib/journals/corr/XanthidisRO16},
+	bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@ARTICLE{mit_rrt, 
+	author={Y. Kuwata and J. Teo and G. Fiore and S. Karaman and E. Frazzoli and J. P. How}, 
+	journal={IEEE Transactions on Control Systems Technology}, 
+	title={Real-Time Motion Planning With Applications to Autonomous Urban Driving}, 
+	year={2009}, 
+	volume={17}, 
+	number={5}, 
+	pages={1105-1118}, 
+	keywords={closed loop systems;mobile robots;path planning;random processes;real-time systems;road safety;road vehicles;trees (mathematics);uncertain systems;MIT entry;autonomous urban driving;autonomous vehicle;closed-loop prediction;control software;random tree approach;real-time motion planning algorithm;safety requirement;uncertain operating environment;Autonomous;DARPA urban challenge;dynamic and uncertain environment;rapidly-exploring random tree (RRT);real-time motion planning;urban driving}, 
+	doi={10.1109/TCST.2008.2012116}, 
+	ISSN={1063-6536}, 
+	month={Sept},}
+
+ARTICLE{rrt_star,
+	author = {Sertac Karaman and Emilio Frazzoli},
+	title = {Sampling-based algorithms for optimal motion planning},
+	journal = {International Journal of Robotics Research (IJRR},
+	year = {},
+	pages = {2011}
+}
+
+@article{informed_rrt,
+	author    = {Jonathan D. Gammell and
+	Siddhartha S. Srinivasa and
+	Timothy D. Barfoot},
+	title     = {Informed RRT*: Optimal Incremental Path Planning Focused through an
+	Admissible Ellipsoidal Heuristic},
+	journal   = {CoRR},
+	volume    = {abs/1404.2334},
+	year      = {2014},
+	url       = {http://arxiv.org/abs/1404.2334},
+	archivePrefix = {arXiv},
+	eprint    = {1404.2334},
+	timestamp = {Wed, 07 Jun 2017 14:40:22 +0200},
+	biburl    = {https://dblp.org/rec/bib/journals/corr/GammellSB14},
+	bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@INPROCEEDINGS{birrt, 
+	author={J. J. Kuffner and S. M. LaValle}, 
+	booktitle={Proceedings 2000 ICRA. Millennium Conference. IEEE International Conference on Robotics and Automation. Symposia Proceedings (Cat. No.00CH37065)}, 
+	title={RRT-connect: An efficient approach to single-query path planning}, 
+	year={2000}, 
+	volume={2}, 
+	number={}, 
+	pages={995-1001 vol.2}, 
+	keywords={computational geometry;path planning;robots;search problems;3D workspace;6-DOF PUMA arm;7-DOF kinematic chain;RRT-connect;automatic graphic animation;collision-free grasping;collision-free manipulation;collision-free motions;high-dimensional configuration spaces;human arm;randomized algorithm;rapidly-exploring random trees;rigid objects;simple greedy heuristic;single-query path planning;Algorithm design and analysis;Animation;Buildings;Computer science;Humans;Kinematics;Path planning;Robotic assembly;Space exploration;Tree graphs}, 
+	doi={10.1109/ROBOT.2000.844730}, 
+	ISSN={1050-4729}, 
+	month={},}
+
+@INPROCEEDINGS{egrrt, 
+	author={L. Jaillet and J. Hoffman and J. van den Berg and P. Abbeel and J. M. Porta and K. Goldberg}, 
+	booktitle={2011 IEEE/RSJ International Conference on Intelligent Robots and Systems}, 
+	title={EG-RRT: Environment-guided random trees for kinodynamic motion planning with uncertainty and obstacles}, 
+	year={2011}, 
+	volume={}, 
+	number={}, 
+	pages={2646-2652}, 
+	keywords={collision avoidance;linear quadratic Gaussian control;mobile robots;robot dynamics;sampling methods;trees (mathematics);EG-RRT;LQG-MP framework;collision probability estimation;environment-guided random trees;kinodynamic motion planning;kinodynamic robot systems;obstacle avoidance;sampling-based robot motion planning methods;Dynamics;Measurement;Planning;Robot sensing systems;Uncertainty}, 
+	doi={10.1109/IROS.2011.6094802}, 
+	ISSN={2153-0858}, 
+	month={Sept},}
+
+@INPROCEEDINGS{anytimerrt, 
+	author={S. Karaman and M. R. Walter and A. Perez and E. Frazzoli and S. Teller}, 
+	booktitle={2011 IEEE International Conference on Robotics and Automation}, 
+	title={Anytime Motion Planning using the RRT*}, 
+	year={2011}, 
+	volume={}, 
+	number={}, 
+	pages={1478-1483}, 
+	keywords={Monte Carlo methods;mobile robots;path planning;real-time systems;tree data structures;tree searching;Monte Carlo method;RRT algorithm;branch-and-bound tree adaptation;incremental sampling;motion planning;outdoor wheeled robotic vehicle;rapidly-exploring random tree algorithm;Heuristic algorithms;Mobile robots;Planning;Trajectory;Vehicle dynamics;Vehicles}, 
+	doi={10.1109/ICRA.2011.5980479}, 
+	ISSN={1050-4729}, 
+	month={May},}
+
+@inproceedings{rrtx,
+	title={RRTX: Real-Time Motion Planning/Replanning for Environments with Unpredictable Obstacles},
+	author={Michael W. Otte and Emilio Frazzoli},
+	booktitle={WAFR},
+	year={2014}
+}
 
 
+@INPROCEEDINGS{improved_rrt, 
+	author={M. Du and J. Chen and P. Zhao and H. Liang and Y. Xin and T. Mei}, 
+	booktitle={2014 IEEE International Conference on Robotics and Automation (ICRA)}, 
+	title={An improved RRT-based motion planner for autonomous vehicle in cluttered environments}, 
+	year={2014}, 
+	volume={}, 
+	number={}, 
+	pages={4674-4679}, 
+	keywords={remotely operated vehicles;trajectory control;trees (mathematics);Bi-RRT planner;autonomous vehicle;basic RRT planner;cluttered environment;improved RRT-based motion planner;obstacle-based extension operation;rapidly-exploring random trees;trajectory generation;trajectory optimization;Algorithm design and analysis;Heuristic algorithms;Manufacturing;Mobile robots;Planning;Vehicles}, 
+	doi={10.1109/ICRA.2014.6907542}, 
+	ISSN={1050-4729}, 
+	month={May},}
+
+@article{lattice_1,
+	title={Efficiently using cost maps for planning complex maneuvers},
+	author={Ferguson, Dave and Likhachev, Maxim},
+	journal={Lab Papers (GRASP)},
+	pages={20},
+	year={2008}
+}
+
+@INPROCEEDINGS{lattice_2, 
+	author={M. Rufli and R. Siegwart}, 
+	booktitle={2010 IEEE International Conference on Robotics and Automation}, 
+	title={On the design of deformable input- / state-lattice graphs}, 
+	year={2010}, 
+	volume={}, 
+	number={}, 
+	pages={3071-3077}, 
+	keywords={bicycles;graph theory;road vehicles;robot kinematics;bicycles;car-like vehicles;deformable input-state-lattice graph design;differential-drive robots;kinematic model;lattice design algorithm;lattice-based planning approach;unicycles;Algorithm design and analysis;Intelligent robots;Lattices;Motion planning;Roads;Robot kinematics;Robotics and automation;Shape control;Smoothing methods;Vehicle dynamics;Non-holonomic motion planning;deformable input- / state-lattice}, 
+	doi={10.1109/ROBOT.2010.5509350}, 
+	ISSN={1050-4729}, 
+	month={May},}
 \iffalse
 
 \fi

@@ -19,46 +19,57 @@ Warning--entry type for "rndf_darpa" isn't style-file defined
 --line 21 of file Thesis.bib
 Warning--entry type for "denmark_breaking" isn't style-file defined
 --line 30 of file Thesis.bib
+Repeated entry---line 501 of file Thesis.bib
+ : @article{mit_rrt
+ :                 ,
+I'm skipping whatever remains of this entry
 Warning--empty booktitle in mit_rrt
-You've used 30 entries,
+Too many commas in name 1 of "(eds.: E. Menegatti, N. Michael, K. Berns, H. Yamaguchi), Springer Verlag, ISBN 978-3-319-08337-7" for entry traj_smoothing
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "(eds.: E. Menegatti, N. Michael, K. Berns, H. Yamaguchi), Springer Verlag, ISBN 978-3-319-08337-7" for entry traj_smoothing
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "(eds.: E. Menegatti, N. Michael, K. Berns, H. Yamaguchi), Springer Verlag, ISBN 978-3-319-08337-7" for entry traj_smoothing
+while executing---line 1090 of file plain.bst
+Warning--empty institution in Lavalle_rrt
+You've used 49 entries,
             2118 wiz_defined-function locations,
-            677 strings with 9648 characters,
-and the built_in function-call counts, 10896 in all, are:
-= -- 1048
-> -- 480
-< -- 13
-+ -- 194
-- -- 160
-* -- 686
-:= -- 1715
-add.period$ -- 90
-call.type$ -- 30
-change.case$ -- 162
+            776 strings with 13454 characters,
+and the built_in function-call counts, 18693 in all, are:
+= -- 1796
+> -- 866
+< -- 23
++ -- 346
+- -- 290
+* -- 1217
+:= -- 2929
+add.period$ -- 148
+call.type$ -- 49
+change.case$ -- 283
 chr.to.int$ -- 0
-cite$ -- 31
-duplicate$ -- 474
-empty$ -- 891
-format.name$ -- 160
-if$ -- 2392
+cite$ -- 51
+duplicate$ -- 790
+empty$ -- 1495
+format.name$ -- 290
+if$ -- 4098
 int.to.chr$ -- 0
-int.to.str$ -- 30
-missing$ -- 27
-newline$ -- 152
-num.names$ -- 60
-pop$ -- 218
+int.to.str$ -- 49
+missing$ -- 44
+newline$ -- 246
+num.names$ -- 102
+pop$ -- 359
 preamble$ -- 1
-purify$ -- 140
+purify$ -- 241
 quote$ -- 0
-skip$ -- 380
+skip$ -- 645
 stack$ -- 0
-substring$ -- 626
-swap$ -- 159
-text.length$ -- 13
+substring$ -- 1108
+swap$ -- 274
+text.length$ -- 23
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 112
-warning$ -- 1
-while$ -- 93
-width$ -- 32
-write$ -- 326
-(There were 3 warnings)
+type$ -- 188
+warning$ -- 2
+while$ -- 155
+width$ -- 51
+write$ -- 534
+(There were 4 error messages)

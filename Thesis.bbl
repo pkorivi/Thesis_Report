@@ -49,11 +49,36 @@ DARPA.
 \newblock Route network definition file (rndf) and mission data file (mdf)
   formats.
 
+\bibitem{improved_rrt}
+M.~Du, J.~Chen, P.~Zhao, H.~Liang, Y.~Xin, and T.~Mei.
+\newblock An improved rrt-based motion planner for autonomous vehicle in
+  cluttered environments.
+\newblock In {\em 2014 IEEE International Conference on Robotics and Automation
+  (ICRA)}, pages 4674--4679, May 2014.
+
+\bibitem{lattice_1}
+Dave Ferguson and Maxim Likhachev.
+\newblock Efficiently using cost maps for planning complex maneuvers.
+\newblock {\em Lab Papers (GRASP)}, page~20, 2008.
+
+\bibitem{D_star_1}
+Dave Ferguson and Anthony Stentz.
+\newblock Field d*: An interpolation-based path planner and replanner.
+\newblock In Sebastian Thrun, Rodney Brooks, and Hugh Durrant-Whyte, editors,
+  {\em Robotics Research}, pages 239--253, Berlin, Heidelberg, 2007. Springer
+  Berlin Heidelberg.
+
 \bibitem{mit_rrt}
 Gaston~A. Fiore and David~L. Darmofal.
 \newblock A robust motion planning approach for autonomous driving in urban
   areas.
 \newblock 2008.
+
+\bibitem{informed_rrt}
+Jonathan~D. Gammell, Siddhartha~S. Srinivasa, and Timothy~D. Barfoot.
+\newblock Informed rrt*: Optimal incremental path planning focused through an
+  admissible ellipsoidal heuristic.
+\newblock {\em CoRR}, abs/1404.2334, 2014.
 
 \bibitem{rrt_star}
 L.~Garrote, C.~Premebida, M.~Silva, and U.~Nunes.
@@ -79,6 +104,40 @@ Tianyu Gu and John~M. Dolan.
   Intelligent Robotics and Applications (ICIRA 2012)}, pages 588--597, October
   2012.
 
+\bibitem{traj_smoothing}
+Tianyu Gu, John~M. Dolan, and Jin-Woo Lee.
+\newblock On-road trajectory planning for general autonomous driving with
+  enhanced tunability.
+\newblock In K.~Berns H. Yamaguchi) Springer Verlag ISBN 978-3-319-08337-7
+  (eds.: E.~Menegatti, N.~Michael, editor, {\em Proceedings of the 13th
+  International Conference on Intelligent Autonomous Systems (IAS-13)}, July
+  2014.
+
+\bibitem{egrrt}
+L.~Jaillet, J.~Hoffman, J.~van~den Berg, P.~Abbeel, J.~M. Porta, and
+  K.~Goldberg.
+\newblock Eg-rrt: Environment-guided random trees for kinodynamic motion
+  planning with uncertainty and obstacles.
+\newblock In {\em 2011 IEEE/RSJ International Conference on Intelligent Robots
+  and Systems}, pages 2646--2652, Sept 2011.
+
+\bibitem{anytimerrt}
+S.~Karaman, M.~R. Walter, A.~Perez, E.~Frazzoli, and S.~Teller.
+\newblock Anytime motion planning using the rrt*.
+\newblock In {\em 2011 IEEE International Conference on Robotics and
+  Automation}, pages 1478--1483, May 2011.
+
+\bibitem{motion_planning_techniques}
+Christos Katrakazas, Mohammed Quddus, Wen-Hua Chen, and Lipika Deka.
+\newblock Real-time motion planning methods for autonomous on-road driving:
+  State-of-the-art and future research directions.
+\newblock {\em Transportation Research Part C: Emerging Technologies}, 60:416
+  -- 442, 2015.
+
+\bibitem{prm}
+Lydia~E. Kavraki and Jean-Claude Latombe.
+\newblock Probabilistic roadmaps for robot path planning, 1998.
+
 \bibitem{Wangrobustand}
 Joseph Kearney, Hongling Wang, and Kendall Atkinson.
 \newblock Robust and efficient computation of the closest point on a spline
@@ -98,6 +157,20 @@ Sascha Kolski.
 \newblock {\em Autonomous Driving in Dynamic Environments}.
 \newblock PhD thesis, ÉCOLE POLYTECHNIQUE FÉDÉRALE DE LAUSANNE, 2008.
 
+\bibitem{potential_field_3}
+Y.~Koren and J.~Borenstein.
+\newblock Potential field methods and their inherent limitations for mobile
+  robot navigation.
+\newblock In {\em Proceedings. 1991 IEEE International Conference on Robotics
+  and Automation}, pages 1398--1404 vol.2, Apr 1991.
+
+\bibitem{birrt}
+J.~J. Kuffner and S.~M. LaValle.
+\newblock Rrt-connect: An efficient approach to single-query path planning.
+\newblock In {\em Proceedings 2000 ICRA. Millennium Conference. IEEE
+  International Conference on Robotics and Automation. Symposia Proceedings
+  (Cat. No.00CH37065)}, volume~2, pages 995--1001 vol.2, 2000.
+
 \bibitem{rrt_urban_driv}
 Y.~Kuwata, G.~A. Fiore, J.~Teo, E.~Frazzoli, and J.~P. How.
 \newblock Motion planning for urban driving using rrt.
@@ -108,6 +181,11 @@ Y.~Kuwata, G.~A. Fiore, J.~Teo, E.~Frazzoli, and J.~P. How.
 Jean-Claude Latombe.
 \newblock {\em Robot Motion Planning}.
 \newblock Kluwer Academic Publishers, Norwell, MA, USA, 1991.
+
+\bibitem{Lavalle_rrt}
+Steven~M. Lavalle.
+\newblock Rapidly-exploring random trees: A new tool for path planning.
+\newblock Technical report, 1998.
 
 \bibitem{book_lavelle_planning}
 Steven~M. LaValle.
@@ -120,6 +198,14 @@ X.~Li, Z.~Sun, D.~Cao, Z.~He, and Q.~Zhu.
   Framework, algorithms, and verifications.
 \newblock {\em IEEE/ASME Transactions on Mechatronics}, 21(2):740--753, April
   2016.
+
+\bibitem{A_star}
+Maxim Likhachev, Dave Ferguson, Geoff Gordon, Anthony Stentz, and Sebastian
+  Thrun.
+\newblock Anytime dynamic a*: An anytime, replanning algorithm.
+\newblock In {\em Proceedings of the Fifteenth International Conference on
+  International Conference on Automated Planning and Scheduling}, ICAPS'05,
+  pages 262--271. AAAI Press, 2005.
 
 \bibitem{ppt_teqniqs_coll_Avdnce}
 D.~Madås, M.~Nosratinia, M.~Keshavarz, P.~Sundström, R.~Philippsen,
@@ -145,6 +231,32 @@ Arpan Mehar, Satish Chandra, and Senathipathi Velmurugan.
   on multi-lane highways.
 \newblock In {\em European Transport, 2013 - istiee.org}, 2013.
 
+\bibitem{rrtx}
+Michael~W. Otte and Emilio Frazzoli.
+\newblock Rrtx: Real-time motion planning/replanning for environments with
+  unpredictable obstacles.
+\newblock In {\em WAFR}, 2014.
+
+\bibitem{survey_planning_techniques}
+B.~Paden, M.~Čáp, S.~Z. Yong, D.~Yershov, and E.~Frazzoli.
+\newblock A survey of motion planning and control techniques for self-driving
+  urban vehicles.
+\newblock {\em IEEE Transactions on Intelligent Vehicles}, 1(1):33--55, March
+  2016.
+
+\bibitem{potential_field_1}
+Y.~Rasekhipour, A.~Khajepour, S.~K. Chen, and B.~Litkouhi.
+\newblock A potential field-based model predictive path-planning controller for
+  autonomous road vehicles.
+\newblock {\em IEEE Transactions on Intelligent Transportation Systems},
+  18(5):1255--1267, May 2017.
+
+\bibitem{lattice_2}
+M.~Rufli and R.~Siegwart.
+\newblock On the design of deformable input- / state-lattice graphs.
+\newblock In {\em 2010 IEEE International Conference on Robotics and
+  Automation}, pages 3071--3077, May 2010.
+
 \bibitem{mobile_eye_safety_distance}
 Shai Shalev{-}Shwartz, Shaked Shammah, and Amnon Shashua.
 \newblock On a formal model of safe and scalable self-driving cars.
@@ -168,6 +280,17 @@ M.~Werling, J.~Ziegler, S.~Kammel, and S.~Thrun.
   frenet frame.
 \newblock In {\em 2010 IEEE International Conference on Robotics and
   Automation}, pages 987--993, May 2010.
+
+\bibitem{rrt_higher_dimension}
+Marios Xanthidis, Ioannis~M. Rekleitis, and Jason~M. O'Kane.
+\newblock {RRT+} : Fast planning for high-dimensional configuration spaces.
+\newblock {\em CoRR}, abs/1612.07333, 2016.
+
+\bibitem{potential_field_2}
+Xi~Xiong, Jianqiang Wang, Fang Zhang, and Keqiang Li.
+\newblock Combining deep reinforcement learning and safety based control for
+  autonomous driving.
+\newblock {\em CoRR}, abs/1612.00147, 2016.
 
 \bibitem{traj_planner_optimization}
 Wenda Xu, Junqing Wei, J.~M. Dolan, Huijing Zhao, and Hongbin Zha.

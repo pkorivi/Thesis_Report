@@ -32,23 +32,36 @@ Route Planner is responsible for finding a global route between the vehicle curr
 
 This chapter details about the RNDF file \cite{rndf_darpa} that defines the road network(set of roads/ areas connected together) over which the vehicle can traverse. This representation of road is developed by DARPA for its Autonomous Vehicles Urban Grand Challenge. RNDF representation first divides the traversable areas into two parts, segments and free zones and mentions regarding connections across these areas. Free zones represent areas such as parking lots and road segments are drivable lanes. Each segment has multiple lanes, each lane has way points along the driving direction. More significant information about way points such as whether it is a stop sign etc can be added. Each segment/zone is connected to one another using exits, they represent the connections between one segment way points at start/end to another. Figures \ref{rndf_segment} \ref{rndf_exits} \ref{zone_segment} \cite{rndf_darpa} represent various portions of the route representation and Figure \ref{map_rndf} details regarding one of the route network of map used in Lab experiments. 
 
+-------------
+
+-------
+-----
+
+------    Make images smaller, only use one image for lab rndf and shortest path and path decomposition. 
+
+----------
+
+-------
+
+-------------
+
 \begin{figure}
     \centering
-    \includegraphics[width=0.8\textwidth]{Images/rndf_segment.png}
+    \includegraphics[width=0.6\textwidth]{Images/rndf_segment.png}
     \caption{Segment representation in RNDF - Segement M has two lanes M1, M2 and each lane has way points 1-N}
     \label{rndf_segment}
 \end{figure}
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.8\textwidth]{Images/rndf_exits.png}
+    \includegraphics[width=0.5\textwidth]{Images/rndf_exits.png}
     \caption{Exit representation in RNDF - Connections between two segments in a T-Junction}
     \label{rndf_exits}
 \end{figure}
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.8\textwidth]{Images/zone_segment.png}
+    \includegraphics[width=0.5\textwidth]{Images/zone_segment.png}
     \caption{Zone Representation in RNDF - Connection between Segments and Zone}
     \label{zone_segment}
 \end{figure}
@@ -216,6 +229,9 @@ l_0 = \Delta_d$ and $ \theta_0 = \Delta\theta$.}
 
 The constants $ { c_0,c_1,c_2,c_3}  $ in equation \ref{lat_shift_one} can be obtained by solving equations \ref{lat_vel} to \ref{th_bundary}.
 
+\todo{Check if this below suggestion which is not implemented OK to be written here - or mention in implementation due to time constraints}
+Even the short changes in lateral shift create long trajectories that take $T_m$ time, to optimize and increase number of samples, trajectories that traverse lateral shifts in shorter horizon can be added. By ensuring that the samples from last selected trajectory are included in current sample set, smoother and consistent trajectories can be created.  
+
 In summary, combining samples in acceleration and lateral shifts, multiple trajectories with different final states are created over the time horizon. In the next sections how these trajectories are tested for collision with respect to other dynamic obstacles is discussed. 
 
 \todo{add a picture of how this will look in the end - various trajectories in planning}
@@ -248,7 +264,8 @@ It is clearly representative from figure \ref{static_check} that the trajectory 
 
 \subsection{Checking for Dynamic Obstacles} \label{obstacle_check_dynamic}
 
-In dynamic environments such as cities it is key to plan trajectories predicting the position of other obstacles and not colliding into them. Predicting the future behavior of obstaclesis a challenging part in urban driving, some of the existing approaches assume dynamic obstacles as quasi-static, some assume obstacles to continue in their current detected heading, in contrast this thesis models dynamic obstacles as squares continuing with their current speed in their detected lane for planning duration similar to \ref{unit_A_star} or moving in opposite direction in lane or moving across the lane based on angle between the obstacle and road. This assumption can be justified by the fact that the trajectories are re-evaluated at high frequencies and any changes in obstacles lateral distance will be evaluated in next cycle thus keeping the vehicle safe from collision. 
+In dynamic environments such as cities it is key to plan trajectories predicting the position of other obstacles and not colliding into them. Predicting the future behavior of obstacles
+is a challenging part in urban driving, some of the existing approaches assume dynamic obstacles as quasi-static, some assume obstacles to continue in their current detected heading, in contrast this thesis models dynamic obstacles as squares continuing with their current speed in their detected lane for planning duration similar to \ref{unit_A_star} or moving in opposite direction in lane or moving across the lane based on angle between the obstacle and road. This assumption can be justified by the fact that the trajectories are re-evaluated at high frequencies and any changes in obstacles lateral distance will be evaluated in next cycle thus keeping the vehicle safe from collision. 
 
 The collision check for dynamic obstacles has one extra check in time over checking for static obstacles, it is inspired from forbidden regions calculation as discussed in \cite{graff_thesis}. In step one the intersection in S coordinate for obstacle and ego vehicle is found, here the length of obstacle is dilated over the distance traveled by obstacle as represented by dotted line ahead of obstacle in figure \ref{dynamic_check}. Then if the collision in S dimension exists, then the collision between ego vehicle and obstacle in lateral dimension(d) in the intersection region I1 to I2 is tested in similar way to static obstacle collision check. If the collision in d dimension exists then the s dimension where there is collision in lateral dimension(d) is found, represented with J1-J2 in figure \ref{dynamic_check} (generally this will be shorter than I1 - I2). For the range J1-J2 it is checked if they collide in time also i.e., if they reach the same location in same time, buffer of time is added to be safe. As per instructions for safe driving it is required for the car to maintain a minimum time gap 2s with the vehicle ahead. There are more formal methods \cite{mobile_eye_safety_distance} on safety distances for self driving cars. This thesis implements simple 2s rule to safety and this is a tunable parameter which can be used to increase driving aggression. Sub Figure d of \ref{dynamic_time_check} indicates the collision in time dimension for scenario presented in Figure \ref{dynamic_check}.
 
