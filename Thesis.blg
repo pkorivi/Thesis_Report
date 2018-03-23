@@ -19,7 +19,7 @@ Warning--entry type for "rndf_darpa" isn't style-file defined
 --line 21 of file Thesis.bib
 Warning--entry type for "denmark_breaking" isn't style-file defined
 --line 30 of file Thesis.bib
-Repeated entry---line 501 of file Thesis.bib
+Repeated entry---line 519 of file Thesis.bib
  : @article{mit_rrt
  :                 ,
 I'm skipping whatever remains of this entry
@@ -31,45 +31,45 @@ while executing---line 1090 of file plain.bst
 Too many commas in name 1 of "(eds.: E. Menegatti, N. Michael, K. Berns, H. Yamaguchi), Springer Verlag, ISBN 978-3-319-08337-7" for entry traj_smoothing
 while executing---line 1090 of file plain.bst
 Warning--empty institution in Lavalle_rrt
-You've used 49 entries,
+You've used 54 entries,
             2118 wiz_defined-function locations,
-            776 strings with 13454 characters,
-and the built_in function-call counts, 18693 in all, are:
-= -- 1796
-> -- 866
-< -- 23
-+ -- 346
-- -- 290
-* -- 1217
-:= -- 2929
-add.period$ -- 148
-call.type$ -- 49
-change.case$ -- 283
+            799 strings with 14516 characters,
+and the built_in function-call counts, 20927 in all, are:
+= -- 1989
+> -- 1059
+< -- 24
++ -- 423
+- -- 362
+* -- 1408
+:= -- 3334
+add.period$ -- 163
+call.type$ -- 54
+change.case$ -- 332
 chr.to.int$ -- 0
-cite$ -- 51
-duplicate$ -- 790
-empty$ -- 1495
-format.name$ -- 290
-if$ -- 4098
+cite$ -- 56
+duplicate$ -- 850
+empty$ -- 1605
+format.name$ -- 362
+if$ -- 4527
 int.to.chr$ -- 0
-int.to.str$ -- 49
-missing$ -- 44
-newline$ -- 246
-num.names$ -- 102
-pop$ -- 359
+int.to.str$ -- 54
+missing$ -- 47
+newline$ -- 271
+num.names$ -- 112
+pop$ -- 409
 preamble$ -- 1
-purify$ -- 241
+purify$ -- 287
 quote$ -- 0
-skip$ -- 645
+skip$ -- 688
 stack$ -- 0
-substring$ -- 1108
-swap$ -- 274
-text.length$ -- 23
+substring$ -- 1177
+swap$ -- 287
+text.length$ -- 24
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 188
+type$ -- 208
 warning$ -- 2
-while$ -- 155
-width$ -- 51
-write$ -- 534
+while$ -- 168
+width$ -- 56
+write$ -- 588
 (There were 4 error messages)

@@ -6,6 +6,13 @@ R.~Behringer and N.~Muller.
 \newblock {\em IEEE Transactions on Robotics and Automation}, 14(5):810--815,
   Oct 1998.
 
+\bibitem{partialmotionplanning}
+R.~Benenson, S.~Petti, T.~Fraichard, and M.~Parent.
+\newblock Integrating perception and planning for autonomous navigation of
+  urban vehicles.
+\newblock In {\em 2006 IEEE/RSJ International Conference on Intelligent Robots
+  and Systems}, pages 98--104, Oct 2006.
+
 \bibitem{accelerations_study_2}
 P.S. Bokare and A.K. Maurya.
 \newblock Acceleration-deceleration behaviour of various vehicle types.
@@ -19,6 +26,13 @@ Z.~Boroujeni, D.~Goehring, F.~Ulbrich, D.~Neumann, and R.~Rojas.
   structured road maps.
 \newblock In {\em 2017 IEEE International Conference on Vehicular Electronics
   and Safety (ICVES)}, pages 7--12, June 2017.
+
+\bibitem{Broggi2012}
+Alberto Broggi, Paolo Medici, Paolo Zani, Alessandro Coati, and Matteo
+  Panciroli.
+\newblock Autonomous vehicles control in the vislab intercontinental autonomous
+  challenge.
+\newblock {\em Annual Reviews in Control}, 36:161--171, 2012.
 
 \bibitem{darpa_urban_challenge}
 Martin Buehler, Karl Iagnemma, and Sanjiv Singh.
@@ -112,6 +126,12 @@ Tianyu Gu, John~M. Dolan, and Jin-Woo Lee.
   (eds.: E.~Menegatti, N.~Michael, editor, {\em Proceedings of the 13th
   International Conference on Intelligent Autonomous Systems (IAS-13)}, July
   2014.
+
+\bibitem{howard_phd}
+THOMAS~M. HOWARD.
+\newblock {\em Adaptive model predictive motion planning for navigation in
+  complex environments}.
+\newblock PhD thesis, Carnegie Mellon University, 2009.
 
 \bibitem{egrrt}
 L.~Jaillet, J.~Hoffman, J.~van~den Berg, P.~Abbeel, J.~M. Porta, and
@@ -207,6 +227,12 @@ Maxim Likhachev, Dave Ferguson, Geoff Gordon, Anthony Stentz, and Sebastian
   International Conference on Automated Planning and Scheduling}, ICAPS'05,
   pages 262--271. AAAI Press, 2005.
 
+\bibitem{urbansafetyeth}
+KRISTIJAN MACEK.
+\newblock {\em Autonomous vehicle navigation in dynamic urban environments for
+  increased traffic safety}.
+\newblock PhD thesis, ETH ZURICH, 201o.
+
 \bibitem{ppt_teqniqs_coll_Avdnce}
 D.~Madås, M.~Nosratinia, M.~Keshavarz, P.~Sundström, R.~Philippsen,
   A.~Eidehall, and K.~M. Dahlén.
@@ -230,6 +256,15 @@ Arpan Mehar, Satish Chandra, and Senathipathi Velmurugan.
 \newblock Speed and acceleration characteristics of different types of vehicles
   on multi-lane highways.
 \newblock In {\em European Transport, 2013 - istiee.org}, 2013.
+
+\bibitem{juniorstanford}
+M.~Montemerlo, J.~Becker, S.~Bhat, H.~Dahlkamp, D.~Dolgov, S.~Ettinger,
+  D.~Haehnel, T.~Hilden, G.~Hoffmann, B.~Huhnke, D.~Johnston, S.~Klumpp,
+  D.~Langer, A.~Levandowski, J.~Levinson, J.~Marcil, D.~Orenstein, J.~Paefgen,
+  I.~Penny, A.~Petrovskaya, M.~Pflueger, G.~Stanek, D.~Stavens, A.~Vogt, and
+  S.~Thrun.
+\newblock Junior: The stanford entry in the urban challenge.
+\newblock {\em Journal of Field Robotics}, 2008.
 
 \bibitem{rrtx}
 Michael~W. Otte and Emilio Frazzoli.

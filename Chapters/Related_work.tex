@@ -54,16 +54,13 @@ In summary lattice planners create trajectories that are smooth, optimal and com
 
 \begin{figure}
 	\centering
-	\begin{subfigure}{.5\textwidth}
+	\begin{subfigure}{.52\textwidth}
 		\centering
 		\includegraphics[width=1.0\linewidth]{Images/related_work/traj_optim_1.png}
-		\caption{Path set. blue vehicle represents the current
-			vehicle pose, and grey vehicles represent sampled endpoints.
-			The red paths are quartic curvature polynomials and the
-			green paths are cubic ones}
+		\caption{Path set. blue vehicle - current vehicle pose, and grey vehicles - sampled endpoints, red paths-quartic curvature polynomials and green paths - cubic ones}
 		\label{trajoptsub1}
 	\end{subfigure}%
-	\begin{subfigure}{.5\textwidth}
+	\begin{subfigure}{.48\textwidth}
 		\centering
 		\includegraphics[width=1.0\linewidth]{Images/related_work/traj_optim_2.png}
 		\caption{Speed set. The green points are sampled speeds, thered curves are beyond the acceleration limit, and the greycurves are valid ones}
@@ -76,17 +73,14 @@ In summary lattice planners create trajectories that are smooth, optimal and com
 \subsection{Local Search}
 \label{rw_local_search}
 
-Local Search or forward projecting trajectories
-Different types of curves, 
-forward samples, 
+Local search is probably the most popular technique in autonomous driving, in this method instead of searching the complete graph a local state space is searched for feasible solution as shown in \ref{cmubossduc}. The planners proposed in \cite{darpa_urban_challenge} \cite{juniorstanford} \cite{kolski_thesis} \cite{Broggi2012} \cite{real_time_traj_plan_article} \cite{urbansafetyeth} follow some format of local search.The generated candidate trajectories are evaluated with a set of cost functions for collision checking and comfort to finalize the final trajectory. Paths with lateral shifts can generally be split into two categories i.e., lateral shifts in action(controls as function of time and controls as function of time and state) and state(position, orientation, linear and angular velocities, curvature) space of vehicle\cite{howard_phd}. Partial motion planning is another technique used to search locally reducing computational power significantly \cite{partialmotionplanning}. In summary local search algorithms can create short term trajectories at a low computational cost with limitations in the maneuvers robot can perform, these are especially suitable for low speed driving.  
 
-Velocity planning - different approaches - check if needed
-
-sampling
-Action space - something similar to this thesis, 
-State Space - final states
-
-Combining Path and Velocity Werling, Lattices, Unit A* approach
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\textwidth]{Images/related_work/trajectorysetbossduc.png}
+	\caption{CMU Darpa Urban Challenge - Forward projected trajectories}
+	\label{cmubossduc}
+\end{figure} 
 
 
 %\subsection{Sampling Approaches}
