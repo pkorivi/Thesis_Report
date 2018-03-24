@@ -286,6 +286,11 @@ Y.~Rasekhipour, A.~Khajepour, S.~K. Chen, and B.~Litkouhi.
 \newblock {\em IEEE Transactions on Intelligent Transportation Systems},
   18(5):1255--1267, May 2017.
 
+\bibitem{reedsshepp}
+James Reeds and Lawrence Shepp.
+\newblock Optimal paths for a car that goes both forwards and backwards.
+\newblock {\em Pacific journal of mathematics}, 145(2):367--393, 1990.
+
 \bibitem{lattice_2}
 M.~Rufli and R.~Siegwart.
 \newblock On the design of deformable input- / state-lattice graphs.

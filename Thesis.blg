@@ -31,45 +31,45 @@ while executing---line 1090 of file plain.bst
 Too many commas in name 1 of "(eds.: E. Menegatti, N. Michael, K. Berns, H. Yamaguchi), Springer Verlag, ISBN 978-3-319-08337-7" for entry traj_smoothing
 while executing---line 1090 of file plain.bst
 Warning--empty institution in Lavalle_rrt
-You've used 54 entries,
+You've used 55 entries,
             2118 wiz_defined-function locations,
-            799 strings with 14516 characters,
-and the built_in function-call counts, 20927 in all, are:
-= -- 1989
-> -- 1059
+            807 strings with 14696 characters,
+and the built_in function-call counts, 21260 in all, are:
+= -- 2024
+> -- 1072
 < -- 24
-+ -- 423
-- -- 362
-* -- 1408
-:= -- 3334
-add.period$ -- 163
-call.type$ -- 54
-change.case$ -- 332
++ -- 428
+- -- 366
+* -- 1434
+:= -- 3389
+add.period$ -- 166
+call.type$ -- 55
+change.case$ -- 337
 chr.to.int$ -- 0
-cite$ -- 56
-duplicate$ -- 850
-empty$ -- 1605
-format.name$ -- 362
-if$ -- 4527
+cite$ -- 57
+duplicate$ -- 861
+empty$ -- 1632
+format.name$ -- 366
+if$ -- 4595
 int.to.chr$ -- 0
-int.to.str$ -- 54
-missing$ -- 47
-newline$ -- 271
-num.names$ -- 112
-pop$ -- 409
+int.to.str$ -- 55
+missing$ -- 48
+newline$ -- 276
+num.names$ -- 114
+pop$ -- 412
 preamble$ -- 1
-purify$ -- 287
+purify$ -- 291
 quote$ -- 0
-skip$ -- 688
+skip$ -- 696
 stack$ -- 0
-substring$ -- 1177
-swap$ -- 287
+substring$ -- 1207
+swap$ -- 288
 text.length$ -- 24
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 208
+type$ -- 212
 warning$ -- 2
-while$ -- 168
-width$ -- 56
-write$ -- 588
+while$ -- 172
+width$ -- 57
+write$ -- 599
 (There were 4 error messages)
