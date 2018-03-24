@@ -73,7 +73,7 @@ In summary lattice planners create trajectories that are smooth, optimal and com
 \subsection{Local Search}
 \label{rw_local_search}
 
-Local search is probably the most popular technique in autonomous driving, in this method instead of searching the complete graph a local state space is searched for feasible solution as shown in \ref{cmubossduc}. The planners proposed in \cite{darpa_urban_challenge} \cite{juniorstanford} \cite{kolski_thesis} \cite{Broggi2012} \cite{real_time_traj_plan_article} \cite{urbansafetyeth} follow some format of local search.The generated candidate trajectories are evaluated with a set of cost functions for collision checking and comfort to finalize the final trajectory. Paths with lateral shifts can generally be split into two categories i.e., lateral shifts in action(controls as function of time and controls as function of time and state) and state(position, orientation, linear and angular velocities, curvature) space of vehicle\cite{howard_phd}. Partial motion planning is another technique used to search locally reducing computational power significantly \cite{partialmotionplanning}. In summary local search algorithms can create short term trajectories at a low computational cost with limitations in the maneuvers robot can perform, these are especially suitable for low speed driving.  
+Local search is probably the most popular technique in autonomous driving, in this method instead of searching the complete graph a local state space is searched for feasible solution as shown in \ref{cmubossduc}. The planners proposed in \cite{darpa_urban_challenge} \cite{juniorstanford} \cite{kolski_thesis} \cite{Broggi2012} \cite{real_time_traj_plan_article} \cite{urbansafetyeth} perform some format of local search.The generated candidate trajectories are evaluated with a set of cost functions for collision checking and comfort to finalize the final trajectory. Paths with lateral shifts can generally be split into two categories i.e., lateral shifts in action(controls as function of time and controls as function of time and state) and state(position, orientation, linear and angular velocities, curvature) space of vehicle\cite{howard_phd}. Partial motion planning is another technique used to search locally reducing computational power significantly \cite{partialmotionplanning}. In summary local search algorithms can create short term trajectories at a low computational cost with limitations in the maneuvers robot can perform, these are especially suitable for low speed driving.  
 
 \begin{figure}
 	\centering
@@ -82,25 +82,44 @@ Local search is probably the most popular technique in autonomous driving, in th
 	\label{cmubossduc}
 \end{figure} 
 
-
-%\subsection{Sampling Approaches}
-%\label{sampling}
-
-
-
-%\subsection{Trajectory Representation}
-%\label{trajectory_rep}
-%splines? polynomials? lattice?
-
-
+\section{Trajectory Representation}
+\label{trajrep}
 
 \section{Trajectory Evaluation}
 \label{traj_eval}
+Trajectory created by different methods mentioned in previous section must be validated against various constraints to check feasibility,comfort, optimality and collision. \cite{traj_planner_optimization} uses cost functions to check each trajectory for path length, curvature, rate of change of curvature, lateral offset to closest center line, transformed distance to static obstacles, duration of plan, speed, acceleration, jerk, centripetal acceleration, distance to dynamic obstacles. All the planners test for some or all of the cost functions discussed previously, some weigh each cost differently based on optimizing factor, \cite{unit_A_star} penalize breaking to prefer long range trajectories, \cite{cmu_parallel_thesis} penalizes shorter horizons to ensure minimum horizon. Major criteria in trajectory evaluation is collision checking to ensure safe travel. 
 
-collison checking - different approaches 
+Simulation based techniques are widely used in collision checking where the vehicle is simulated in time to check for collision with other obstacles.
 
-cost functions - for different parameters
+In \cite{kolski_thesis}, for collision checking in static environments map is represented as grid cells and based on obstacles and traversable areas the cells are assigned cost and the trajectories that pass through these cells are added with corresponding costs. In dynamic environments vehicle shape is forwarded and checked for collision with static obstacles as represented in Figure \ref{kolskicollison}. 
+\begin{figure}
+	\centering
+	\begin{subfigure}{.50\textwidth}
+		\centering
+		\includegraphics[width=1.0\linewidth]{Images/related_work/kolskistaticobst.png}
+		\caption{Static Environments - Cost of path is computed based on cost of the cells it traverses through, darker the cell higher the cost.}
+		\label{kolski1}
+	\end{subfigure}%
+	\begin{subfigure}{.50\textwidth}
+		\centering
+		\includegraphics[width=1.0\linewidth]{Images/related_work/dynamiccollsionkolski.png}
+		\caption{Dynamic Environments Static Obstacles- For series of trajectories vehicle shape is forwarded and collision checking is performed}
+		\label{kolski2}
+	\end{subfigure}
+	\caption{Collision Checking \cite{kolski_thesis}}
+	\label{kolskicollison}
+\end{figure}
 
+For collision checking with dynamic obstacles, \cite{kolski_thesis} uses a hierarchical approach. In this method initially given vehicle trajectory and obstacle trajectory bounding boxes are constructed and checked for collision, if they intersect then in incremental time steps a pessimistic approximation of circles is used to check for collision, if they also collide then actual model of the car is used to check for collision as represented in Figure \ref{kolskidynamicobst}.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1.0\textwidth]{Images/related_work/kolskidynamicobstacles.png}
+	\caption{Collison checking for Dynamic Obstacles \cite{kolski_thesis}}
+	\label{kolskidynamicobst}
+\end{figure} 
+
+In \cite{cmu_parallel_thesis}, for collision checking with respect to static obstacles each (x,y) point in world is assigned a cost based on proximity to static obstacles, a path that intersects with obstacles has lethal cost, paths that have close proximity to these obstacles have high costs and paths that are away from obstacles are assigned zero cost. A Potential function is created based on the position of obstacles to that computes cost of the path. Similarly for dynamic obstacles a potential function is created by adding t dimension to create cost function in (x,y,t). Static and dynamic obstacles are dilated accordingly to remove errors in perception.  
 
 %Look if the sampling based, RRT based, lattice based etc etc should be combined together?
 %write about MDP, POMDP etc 
