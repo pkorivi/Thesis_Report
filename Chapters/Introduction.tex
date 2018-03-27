@@ -1,12 +1,35 @@
 \chapter{Introduction}
-\label{chap:intro}
+\label{introduction}
 %\minitoc
 \section{Motivation}
 
+Over the past years, autonomy has played a vital role in the development of automobiles. The vehicles have moved from being a pure mechanical wonder to a software and hardware combination. The developments are fueled by development in low-cost sensor technology and government regulations to improve the safety of road transportation. At the same time, there is an increasing demand for completely autonomous vehicles with its potential in business services and safety of passengers.
+
+The challenges in autonomous vehicles can be subdivided into sensing/perception, navigation and control. The navigation/trajectory planning challenge is special as it needs to be tailored individually for the platforms. The module highly depends on the available sensors, constraints in the control of vehicle, processing power of the system employed.  The challenge is to obtain safe travel with minimum resources at hand. 
+
+The underlying problem can be considered as a general robot path planning problem where the robot has to move on a planned route avoiding obstacles. There exist well-known methods within the domain of the robot path planning/ autonomous vehicles that can be utilized to achieve trajectory planning for auto model car. 
+
+why autonomous cars, why model cars what they can do.
+
 \section{Problem Statement}
 
+Though there is a great amount of research on the trajectory planning of autonomous cars, the concepts cannot be applied directly to the model cars. Model cars are limited in the available resources such as computational power, number of sensors, accuracy in measurements etc. Most of the approaches proposed for full autonomous cars cannot be applied due to these limitations and the approaches from robotics cannot be taken as the model car is non-holonomic and behavior similar to a full car is expected. 
+
+The main challenge of this thesis is to implement trajectory planning for the model car by considering the limitations of such small platforms. 
+
 \section{Thesis Statement}
+This thesis advocates that effective motion planning can be performed at a low computational cost by combining prediction and approximation techniques in trajectory creation and evaluation. 
 
 \section{Thesis Contributions}
 
+The main contribution of this thesis is the introduction of a trajectory generation framework and algorithms for driving in urban environments. To handle various traffic scenarios a hierarchical framework is employed which divides the problem across 4 layers of planning named route planner, behavioral layer, trajectory planner and control node. The main focus is development of trajectory creation algorithm using action space sampling (sampling in acceleration and lateral motion), algorithm to pre-assign costs to samples such that planner evaluates the paths based on pre-costs and converges faster to solution. The final contribution is collision detection algorithm that works in simple 2 step for detecting collision with static and 3 step for dynamic obstacles. 
+
 \section{Thesis Structure}
+
+
+
+Intro
+motivation
+Problem Statement
+Evaluation criteria
+Thesis Structure
