@@ -39,6 +39,12 @@ Martin Buehler, Karl Iagnemma, and Sanjiv Singh.
 \newblock {\em The DARPA Urban Challenge: Autonomous Vehicles in City Traffic}.
 \newblock Springer Publishing Company, Incorporated, 1st edition, 2009.
 
+\bibitem{citycongestion}
+Yu~Sang Chang, Yong~Joo Lee, and Sung Sup~Brian Choi.
+\newblock Is there more traffic congestion in larger cities?-scaling analysis
+  of the 101 largest us urban centers.
+\newblock {\em Transport Policy}, 59:54--63, 2017.
+
 \bibitem{volvo_reactive_traj}
 R.~G. Cofield and R.~Gupta.
 \newblock Reactive trajectory planning and tracking for pedestrian-aware
@@ -290,6 +296,14 @@ Y.~Rasekhipour, A.~Khajepour, S.~K. Chen, and B.~Litkouhi.
 James Reeds and Lawrence Shepp.
 \newblock Optimal paths for a car that goes both forwards and backwards.
 \newblock {\em Pacific journal of mathematics}, 145(2):367--393, 1990.
+
+\bibitem{singaporebanscars}
+News Report.
+\newblock Singapore: no more cars allowed on the road, 2018.
+
+\bibitem{whoaccidents}
+WHO Report.
+\newblock Road traffic injuries, January 2018.
 
 \bibitem{lattice_2}
 M.~Rufli and R.~Siegwart.
