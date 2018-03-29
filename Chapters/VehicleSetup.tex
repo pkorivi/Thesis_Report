@@ -9,8 +9,7 @@
 \end{figure}
 
 \section{Hardware Components}
-The target platform for validating the planner is a 1:10 scale model car (AutoNOMOS Mini V3) as shown in Figure \ref{model_car}, it is developed as an education and research purpose. The car is a modified RC platform,different hardware components used are described in Figure \ref{internalcar}. The main components are a Brushless DC-Servomotor (FAULHABER 2232) to drive and measure speed, servomotor (HS-645MG) to control the ackerman steering, IMU (MPU6050) to measure the orientation of the car. The 3 modules mentioned are controlled with an Arduino Nano which communicates the data to the main CPU (Odroid XU4). Other important components are a depth camera (intel realsense) for forward vision and perceiving shape of obstacles ahead, 2D-Lidar (RPLidar), WiFi Dongle,  Fish eye Camera for localizing car based on markers on roof. The Figure \ref{moduleconnections} presents connections across different modules present in the car.
-
+The target platform for validating the planner is a 1:10 scale model car (AutoNOMOS Mini V3) as shown in Figure \ref{model_car}, it is developed as an education and research purpose. The car is a modified RC platform,different hardware components used are described in Figure \ref{internalcar}. The main components are a Brushless DC-Servomotor (FAULHABER 2232) to drive and measure speed, servomotor (HS-645MG) to control the ackerman steering, IMU (MPU6050) to measure the orientation of the car. The 3 modules mentioned are controlled with an Arduino Nano which communicates the data to the main CPU (Odroid XU4 -  Embedded Computer). Other important components are a depth camera (realsense sr300) for forward vision and perceiving shape of obstacles ahead, 2D-Lidar (RPLidar), WiFi Dongle,  Fish eye Camera for localizing car based on markers on roof. The Figure \ref{moduleconnections} presents connections across different modules present in the car.
 
 \begin{figure}
 	\centering
@@ -27,9 +26,12 @@ The target platform for validating the planner is a 1:10 scale model car (AutoNO
 \end{figure}
 
 \section{Software Components}
+The CPU on board runs Robot Operating System (ROS) on top of Ubuntu. ROS is a widely known frame work for robotics applications due to its modularity and distributed nature. Modularity allows the application designer to choose which modules to be developed and which modules to be used directly. There are thousands of packages available open-source developed by the community which help to realize a project in a short time. The distributed nature of ROS allows to distribute modules across different platforms based on hardware requirements and communicate easily across them.
+
+The model car implements core components for motor control, reading data from sensors, Odometry, Camera interfaces etc. There have been community developed packages for visual GPS to track markers on roof and localize car, line detection, traffic sign detection etc. 
 
 
-
+In summary, model car features all the components to drive the car autonomously but there are limitations on accuracy of measurements, control and computational resources on board. 
 
 %\section{Sensors}
 %\section{Architecture \& Computational Power}

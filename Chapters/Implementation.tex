@@ -1,5 +1,66 @@
 \chapter{Implementation}
 \label{implementation}
+This chapter details on the implementation of the concepts discussed in previous chapter for route planner and trajectory planner modules. All the modules are implemented as independent nodes in Robot Operating System (ROS) and communicate with each other using ROS messages.
+
+\section{Route Planner}
+Route planner parses the RNDF file and stores way points, their relation to lanes and further to segments. The below code segment shows the declaration of the way point, here coordi indicates the coordinates of way points, idn is the unique id for each way point and parent is the lane to which way point belongs. Similarly there lane stores set of way points, parent is the segment to which the lane belongs. 
+
+\begin{lstlisting}
+class c_waypoint(object):
+	def __init__(self,name,coordi,parent, idn):
+		self.name = name
+		self.coordi = coordi
+		self.parent = parent
+		self.idn = idn
+	def __str__(self):
+		return '{}'.format(self.name)
+
+\end{lstlisting}
+
+
+\iffalse
+
+Code for storing 
+
+class c_exit(object):
+def __init__(self, entry, exit, parent):
+self.entry = entry
+self.exit = exit
+self.parent = parent
+
+class c_lane(object):
+def __init__(self,name,parent,idn):
+self.name = name
+self.parent = parent
+self.idn = idn
+self.waypoints = []
+self.exits = []
+def add_waypoint(self,waypoint):
+self.waypoints.append(waypoint)
+def add_exit(self,exit):
+self.exits.append(exit)
+def __str__(self):
+return '{}'.format(self.name)
+
+class c_segment(object):
+def __init__(self,name,parent,idn):
+self.name = name
+self.lanes = []
+self.parent = parent
+self.idn = idn
+def add_lane(self,lane):
+self.lanes.append(lane)
+def __str__(self):
+return '{}'.format(self.name)
+
+class c_rndf(object):
+def __init__(self,name):
+self.name = name
+self.segments= []
+def add_segment(self,segment):
+self.segments.append(segment)
+def __str__(self):
+return '{}'.format(self.name)
 Check if this chapter is needed, 
 
 Write a flow chart describing various functions implemented 
@@ -19,3 +80,4 @@ Inform when which order splines are good to implemented
 need for adding extra costs if this has to be ported for full scale cars
 
 Issues - 
+\fi

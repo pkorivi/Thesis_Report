@@ -14,41 +14,42 @@
 \contentsline {section}{\numberline {2.3}Trajectory Evaluation}{10}{section.2.3}
 \contentsline {chapter}{\numberline {3}Target Platform}{13}{chapter.3}
 \contentsline {section}{\numberline {3.1}Hardware Components}{13}{section.3.1}
-\contentsline {section}{\numberline {3.2}Software Components}{13}{section.3.2}
-\contentsline {chapter}{\numberline {4}Planning Algorithm}{15}{chapter.4}
-\contentsline {section}{\numberline {4.1}Introduction}{15}{section.4.1}
-\contentsline {section}{\numberline {4.2}Localization}{15}{section.4.2}
-\contentsline {section}{\numberline {4.3}Prediction}{16}{section.4.3}
-\contentsline {section}{\numberline {4.4}Route Planner}{17}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}RNDF}{17}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Path Representation and calculation}{18}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}Behavioral Layer}{18}{subsection.4.4.3}
-\contentsline {section}{\numberline {4.5}Motion Planner}{18}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}Temporal Horizon}{19}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}Path Modelling}{20}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3} Trajectory Creation}{22}{subsection.4.5.3}
-\contentsline {subsection}{\numberline {4.5.4}Checking for Static Obstacles}{26}{subsection.4.5.4}
-\contentsline {subsection}{\numberline {4.5.5}Checking for Dynamic Obstacles}{26}{subsection.4.5.5}
-\contentsline {subsection}{\numberline {4.5.6}Cost Functions and Trajectory Selection}{30}{subsection.4.5.6}
-\contentsline {subsection}{\numberline {4.5.7}Velocity Planning}{31}{subsection.4.5.7}
-\contentsline {section}{\numberline {4.6}Trajectory Follower}{31}{section.4.6}
-\contentsline {chapter}{\numberline {5}Implementation}{33}{chapter.5}
-\contentsline {chapter}{\numberline {6}Evaluation}{35}{chapter.6}
-\contentsline {section}{\numberline {6.1}Experiments}{35}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Lane blocked}{35}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Slow Moving Traffic}{36}{subsection.6.1.2}
-\contentsline {subsection}{\numberline {6.1.3}Merging into traffic}{36}{subsection.6.1.3}
-\contentsline {subsection}{\numberline {6.1.4}Merging into next lane with opposite traffic}{37}{subsection.6.1.4}
-\contentsline {subsection}{\numberline {6.1.5}Road Blocked or Pedestrian Ahead}{38}{subsection.6.1.5}
-\contentsline {subsection}{\numberline {6.1.6}Dynamic Obstacles - other vehicles}{38}{subsection.6.1.6}
-\contentsline {section}{\numberline {6.2}Criteria Based Evaluation}{39}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Optimality}{40}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Feasibility}{42}{subsection.6.2.2}
-\contentsline {subsection}{\numberline {6.2.3}Completeness}{42}{subsection.6.2.3}
-\contentsline {subsection}{\numberline {6.2.4}Runtime}{43}{subsection.6.2.4}
-\contentsline {subsection}{\numberline {6.2.5}Deliberative Approach}{44}{subsection.6.2.5}
-\contentsline {section}{\numberline {6.3}Comparisons to other Planners}{44}{section.6.3}
-\contentsline {chapter}{\numberline {7}Conclusions and Future Work}{45}{chapter.7}
-\contentsline {section}{\numberline {7.1}Conclusions}{45}{section.7.1}
-\contentsline {section}{\numberline {7.2}Future Work}{45}{section.7.2}
-\contentsline {chapter}{Bibliography}{47}{chapter*.65}
+\contentsline {section}{\numberline {3.2}Software Components}{15}{section.3.2}
+\contentsline {chapter}{\numberline {4}Planning Algorithm}{17}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction}{17}{section.4.1}
+\contentsline {section}{\numberline {4.2}Localization}{17}{section.4.2}
+\contentsline {section}{\numberline {4.3}Prediction}{18}{section.4.3}
+\contentsline {section}{\numberline {4.4}Route Planner}{18}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}RNDF}{19}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Path Representation and calculation}{19}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Behavioral Layer}{20}{subsection.4.4.3}
+\contentsline {section}{\numberline {4.5}Motion Planner}{20}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Temporal Horizon}{21}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Path Modelling}{22}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3} Trajectory Creation}{24}{subsection.4.5.3}
+\contentsline {subsection}{\numberline {4.5.4}Checking for Static Obstacles}{28}{subsection.4.5.4}
+\contentsline {subsection}{\numberline {4.5.5}Checking for Dynamic Obstacles}{28}{subsection.4.5.5}
+\contentsline {subsection}{\numberline {4.5.6}Cost Functions and Trajectory Selection}{32}{subsection.4.5.6}
+\contentsline {subsection}{\numberline {4.5.7}Velocity Planning}{33}{subsection.4.5.7}
+\contentsline {section}{\numberline {4.6}Trajectory Follower}{33}{section.4.6}
+\contentsline {chapter}{\numberline {5}Implementation}{35}{chapter.5}
+\contentsline {section}{\numberline {5.1}Route Planner}{35}{section.5.1}
+\contentsline {chapter}{\numberline {6}Evaluation}{37}{chapter.6}
+\contentsline {section}{\numberline {6.1}Experiments}{37}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Lane blocked}{37}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Slow Moving Traffic}{38}{subsection.6.1.2}
+\contentsline {subsection}{\numberline {6.1.3}Merging into traffic}{38}{subsection.6.1.3}
+\contentsline {subsection}{\numberline {6.1.4}Merging into next lane with opposite traffic}{39}{subsection.6.1.4}
+\contentsline {subsection}{\numberline {6.1.5}Road Blocked or Pedestrian Ahead}{40}{subsection.6.1.5}
+\contentsline {subsection}{\numberline {6.1.6}Dynamic Obstacles - other vehicles}{40}{subsection.6.1.6}
+\contentsline {section}{\numberline {6.2}Criteria Based Evaluation}{41}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Optimality}{42}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Feasibility}{44}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}Completeness}{44}{subsection.6.2.3}
+\contentsline {subsection}{\numberline {6.2.4}Runtime}{45}{subsection.6.2.4}
+\contentsline {subsection}{\numberline {6.2.5}Deliberative Approach}{46}{subsection.6.2.5}
+\contentsline {section}{\numberline {6.3}Comparisons to other Planners}{46}{section.6.3}
+\contentsline {chapter}{\numberline {7}Conclusions and Future Work}{47}{chapter.7}
+\contentsline {section}{\numberline {7.1}Conclusions}{47}{section.7.1}
+\contentsline {section}{\numberline {7.2}Future Work}{47}{section.7.2}
+\contentsline {chapter}{Bibliography}{49}{chapter*.65}
