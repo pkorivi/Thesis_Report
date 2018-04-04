@@ -1,52 +1,50 @@
 \chapter{Introduction}
 \label{introduction}
 
-Over the past years, autonomy has played a vital role in the development of automobiles. The vehicles have moved from being a pure mechanical wonder to a software and hardware combination. The developments are fueled by development in low-cost sensor technology and government regulations to improve the safety of road transportation. At the same time, there is an increasing demand for completely autonomous vehicles with its potential in business services and safety of passengers.
+Over the past years, autonomy has played a vital role in the development of automobiles. The vehicles have moved from being a pure mechanical wonder to a software and hardware combination. The developments are fuelled by development in low-cost sensor technology and government regulations to improve the safety of road transportation. At the same time, there is an increasing demand for fully autonomous vehicles with its potential in business services and safety of passengers.
 
-The past decade has seen a great improvement in the development of technology for the autonomous vehicles bringing the science fiction robots driving people a step closer. This technology has huge societal impacts by reducing the fatalities in car accidents to changing the ecosystem of transportation. It is reported by World Health Organization (WHO) that there are more than 1.25 million deaths and between 20-50 million people suffering non-fatal injuries worldwide because of road accidents \cite{whoaccidents}. The accidents are because of many reasons such as road conditions, vehicle condition, driver alertness etc. The advancements in self driving technology has a potential to reduce the risks by keeping track of road without distractions reducing human error and also react better in emergency situations. 
+The past decade has seen a great improvement in the development of technology for the autonomous vehicles bringing the science fiction of robots driving people a step closer. This technology has the potential for huge societal impacts by reducing the fatalities in car accidents to changing the ecosystem of transportation. It is reported by World Health Organization that there are more than 1.25 million deaths and between 20-50 million people suffering non-fatal injuries worldwide because of road accidents \cite{whoaccidents}. The accidents are because of many reasons such as road conditions, vehicle condition, driver alertness etc. The advancements in self-driving technology have a potential to reduce the risks by keeping track of road without distractions reducing human error and also react quicker in emergency situations.
 
-Due to increase in urban population many cities through out the world suffer from traffic congestion on roads increasing the fatigue and productivity of people \cite{citycongestion}. Increase in congestion is a result of increase in car ownership, due to space constraints cities like Singapore are banning new car ownership \cite{singaporebanscars}. Autonomous cars have the potential to shape the future of transportation by promoting shared economy and reducing car ownership, thus contributing to the reduction in congestion of cities. Shared Autonomous vehicles can play an important role in future to reduce the per capita car ownership thus bringing down the overall affects of resource usage. 
+Increase in the urban population in many cities around the world is leading to increased traffic congestion, this has effects on health and productivity of the people\cite{citycongestion}.Increase in congestion is a result of increase in car ownership, due to space constraints cities like Singapore are banning new car ownership \cite{singaporebanscars}. Autonomous cars have the potential to shape the future of transportation by promoting shared economy and reducing car ownership, thus contributing to the reduction in congestion of cities. 
 
 
 \section{Motivation}
 
-Autonomous vehicles are at the fore front of the research in current times, but to bring the technology closer to reality there needs to be further research to solve tougher problems of bringing autonomous vehicles to urban masses. Though robots can act deterministically, humans are not deterministic with unexpected behaviors, thus making autonomous vehicles safe needs further research into understanding these interactions. 
+Autonomous vehicles are at the forefront of the research in current times, but to bring the technology closer to reality there needs to be further research, mainly to solve tougher problems of bringing autonomous vehicles to urban masses. Though robots can act deterministically, humans and environment are not deterministic with unexpected behaviours, thus making autonomous vehicles safe needs further research into understanding these interactions.
 
-Full scale autonomous vehicles are expensive, time taking, and safety critical to test in emergency scenarios, though simulators provide easy ways to evaluate the situations, physical aspect of the vehicle control is missing. Research into autonomous vehicles is an expensive endeavor with high costs on platforms, operational constraints and large teams involved. Thus the research is limited to few research institutes and researchers. Model cars can break this barrier to bring the technology closer to a large number of researchers in the world thus being the enabler for greater innovation. 
+Full-scale autonomous vehicles are expensive, time taking, and safety critical to test in emergency scenarios, though simulators provide easy ways to evaluate the situations, physical aspect of the vehicle control is missing. Research into autonomous vehicles is an expensive endeavour with high costs on platforms, operational constraints and large teams involved. Model cars can break this barrier to bring the technology closer to a large number of researchers in the world thus being the enabler for greater innovation.
 
-\section{Challenges}
+The challenges in autonomous vehicles can be subdivided into sensing/perception, navigation and control. The challenge under consideration in this thesis is the navigation/planning problem of driving the robot to the destination with available resources. The problem of navigation/trajectory planning challenge is special as the module is responsible for understanding the behaviour of the surrounding objects and adjust the ego vehicle's (vehicle in consideration for planning) behaviour accordingly following certain rules.
 
-The challenges in autonomous vehicles can be subdivided into sensing/perception, navigation and control. The challenge under consideration in this thesis is the planning problem of driving the robot to the destination with available resources. The navigation/trajectory planning challenge is special as it needs to be tailored individually for the platforms. The module highly depends on the available sensors, constraints in the control of vehicle, processing power of the system employed.  The challenge is to obtain safe travel with minimum resources at hand. 
+\section{Problem Statement}
 
-The underlying problem of trajectory planning can be considered as a general robot path planning problem where the robot has to move on a planned route avoiding obstacles. There exist well-known methods within the domain of the robot path planning/ autonomous vehicles that can be utilized to achieve trajectory planning for auto model car. 
+The underlying problem of trajectory planning can be considered as a general robot path planning problem where the robot has to move on a planned route avoiding obstacles. There exist well-known methods within the domain of the robot path planning/ autonomous vehicles that can be adapted to achieve trajectory planning for model car. Model cars are limited to the available resources such as computational power, perception data, accuracy in measurements etc. Thus these approaches need to be tailor-made to suit the model car platforms.
 
-Though there is a great amount of research on the trajectory planning of autonomous cars, the concepts cannot be applied directly to the model cars. Model cars are limited in the available resources such as computational power, number of sensors, accuracy in measurements etc. Most of the approaches proposed for full autonomous cars cannot be applied due to these limitations and the approaches from robotics cannot be taken as the model car is non-holonomic and behavior similar to a full car is expected. 
+Trajectory planning problem can be formulated as an optimal control problem to determine set of states $x(t)$ or controls $u(t)$ for a dynamic system (ego vehicle) over a time (planning horizon) to minimize a performance index. The index in context is minimizing the distance to goal following various constraints such no collision, maintaining the speed limit.
 
-The challenge is to create trajectory planner considering limitations of these small platforms and providing all the features of a full scale autonomous car. 
+The challenge is to create trajectory planner considering limitations of these small platforms and achieving the behaviour of an autonomous car.
 
 \section{Thesis Statement}
 
-This thesis advocates that effective motion planning can be performed at a low computational cost by combining prediction and approximation techniques in trajectory creation and evaluation. 
-
-
+This thesis advocates that effective motion planning can be performed at a low computational cost by combining prediction and approximation techniques in trajectory creation and evaluation.
 
 \section{Thesis Contributions}
 
-The main contribution of this thesis is the introduction of a trajectory generation framework and algorithms for driving in urban environments. To handle various traffic scenarios a hierarchical framework is employed which divides the problem across 4 layers of planning named route planner, behavioral layer, trajectory planner and control node. The main focus is development of trajectory creation algorithm using action space sampling (sampling in acceleration and lateral motion), algorithm to pre-assign costs to samples such that planner evaluates the paths based on pre-costs and converges faster to solution. The final contribution is collision detection algorithm that works in simple 2 step for detecting collision with static and 3 step for dynamic obstacles. 
+The main contribution of this thesis is the introduction of a trajectory generation framework and algorithms for smaller model car platforms. The hierarchical framework employed divides the problem into four layers of planning named route planner, behavioural layer, trajectory planner and control node. The focus is the development of trajectory creation algorithm using samples of acceleration profiles and lateral shifts, an algorithm to pre-assign costs to samples such that planner evaluates the paths based on pre-costs and converges faster to the solution. The final contribution is collision detection algorithm that works in simple 2 steps for detecting collision with static and 3 steps for dynamic obstacles. 
 
 \section{Thesis Structure}
 
-The thesis is broadly organized as follows. The initial chapters present relevant research in this field, followed by a chapter outlining the target hardware and software platform setup, approach to motion planning. Approach is followed by implementation overview, evaluation and conclusion. 
 
+The thesis is broadly organized as follows. The initial chapters present relevant research in this field, followed by a chapter outlining the target hardware and software platform setup, approach to motion planning. The approach is followed by implementation overview, evaluation and conclusion.
 
-Firstly Chapter \ref{related_work} introduces the research direction in autonomous vehicles, followed by different planning approaches in on road driving. Next an overview of different trajectory representation and evaluation techniques is presented. 
+Firstly Chapter \ref{related_work} introduces the research direction in autonomous vehicles, followed by different planning approaches in on-road driving. Next, an overview of different trajectory representation and evaluation techniques is presented.
 
-Chapter \ref{vehicle_info} provides a basic overview of the software and hard ware architecture of the target platform. 
+Chapter \ref{vehicle_info} provides a basic overview of the software and hardware architecture of the target platform.
 
-Chapter \ref{planning_algo} provides detailed illustration on the motion planning algorithms developed for this thesis followed by evaluation techniques to validate that the trajectories are collision free. 
+Chapter \ref{planning_algo} provides a detailed illustration of the motion planning algorithms developed for this thesis followed by evaluation techniques to validate that the trajectories by checking for collision.
 
-Chapter \ref{implementation} provides basic overview on the implementation of the planning algorithm, communication protocols etc. 
+Chapter \ref{implementation} provides a basic overview of the implementation of the proposed planning algorithm, messages exchanged between layers.
 
-Chapter \ref{evaluation} details on the different experiments performed to validate the thesis followed by general criteria based evaluation of the proposed planner. 
+Chapter \ref{evaluation} details on the different experiments performed to validate the planner followed by general criteria-based evaluation of the proposed planner.
 
-Finally. Chapter \ref{conclusion} concludes regarding the work done in the thesis and throws some light at the future directions for the thesis. 
+Finally. Chapter \ref{conclusion} concludes regarding the work done in the thesis and throws some light at the future directions for the thesis.
