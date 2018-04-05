@@ -18,15 +18,15 @@ Database file #1: Thesis.bib
 Warning--entry type for "rndf_darpa" isn't style-file defined
 --line 21 of file Thesis.bib
 Warning--entry type for "denmark_breaking" isn't style-file defined
---line 30 of file Thesis.bib
-Repeated entry---line 518 of file Thesis.bib
+--line 35 of file Thesis.bib
+Repeated entry---line 523 of file Thesis.bib
  : @article{mit_rrt
  :                 ,
 I'm skipping whatever remains of this entry
 Warning--entry type for "whoaccidents" isn't style-file defined
---line 688 of file Thesis.bib
+--line 693 of file Thesis.bib
 Warning--entry type for "singaporebanscars" isn't style-file defined
---line 697 of file Thesis.bib
+--line 702 of file Thesis.bib
 Warning--empty booktitle in mit_rrt
 Too many commas in name 1 of "(eds.: E. Menegatti, N. Michael, K. Berns, H. Yamaguchi), Springer Verlag, ISBN 978-3-319-08337-7" for entry traj_smoothing
 while executing---line 1090 of file plain.bst
@@ -35,45 +35,45 @@ while executing---line 1090 of file plain.bst
 Too many commas in name 1 of "(eds.: E. Menegatti, N. Michael, K. Berns, H. Yamaguchi), Springer Verlag, ISBN 978-3-319-08337-7" for entry traj_smoothing
 while executing---line 1090 of file plain.bst
 Warning--empty institution in Lavalle_rrt
-You've used 58 entries,
+You've used 59 entries,
             2118 wiz_defined-function locations,
-            821 strings with 15020 characters,
-and the built_in function-call counts, 21997 in all, are:
-= -- 2093
-> -- 1104
+            825 strings with 15344 characters,
+and the built_in function-call counts, 22513 in all, are:
+= -- 2134
+> -- 1162
 < -- 24
-+ -- 441
-- -- 376
-* -- 1474
-:= -- 3512
-add.period$ -- 173
-call.type$ -- 58
-change.case$ -- 351
++ -- 464
+- -- 398
+* -- 1522
+:= -- 3611
+add.period$ -- 176
+call.type$ -- 59
+change.case$ -- 364
 chr.to.int$ -- 0
-cite$ -- 60
-duplicate$ -- 886
-empty$ -- 1700
-format.name$ -- 376
-if$ -- 4749
+cite$ -- 61
+duplicate$ -- 896
+empty$ -- 1717
+format.name$ -- 398
+if$ -- 4842
 int.to.chr$ -- 0
-int.to.str$ -- 58
-missing$ -- 49
-newline$ -- 289
-num.names$ -- 120
-pop$ -- 434
+int.to.str$ -- 59
+missing$ -- 50
+newline$ -- 294
+num.names$ -- 122
+pop$ -- 447
 preamble$ -- 1
-purify$ -- 302
+purify$ -- 314
 quote$ -- 0
-skip$ -- 719
+skip$ -- 727
 stack$ -- 0
-substring$ -- 1241
-swap$ -- 291
+substring$ -- 1246
+swap$ -- 292
 text.length$ -- 24
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 224
+type$ -- 228
 warning$ -- 2
-while$ -- 180
-width$ -- 60
-write$ -- 626
+while$ -- 182
+width$ -- 61
+write$ -- 636
 (There were 4 error messages)

@@ -316,6 +316,12 @@ Shai Shalev{-}Shwartz, Shaked Shammah, and Amnon Shashua.
 \newblock On a formal model of safe and scalable self-driving cars.
 \newblock {\em CoRR}, abs/1708.06374, 2017.
 
+\bibitem{morgenstanleyreport}
+Ravi Shanker, Adam Jonas, Scott Devitt, Katy Huberty, Simon Flannery, William
+  Greene, Benjamin Swinburne, Gregory Locraft, Adam Wood, Keith Weiss, et~al.
+\newblock Autonomous cars: self-driving the new auto industry paradigm.
+\newblock {\em Morgan Stanley Blue Paper, Morgan Stanley \& Co. LLC}, 2013.
+
 \bibitem{lengthparameterized}
 Hongling Wang, Joseph Kearney, and Kendall Atkinson.
 \newblock Arc-length parameterized spline curves for real-time simulation.
