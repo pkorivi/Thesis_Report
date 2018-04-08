@@ -4,6 +4,7 @@ The top-level auxiliary file: Thesis.aux
 A level-1 auxiliary file: TitlePage.aux
 A level-1 auxiliary file: Chapters/Abstract.aux
 A level-1 auxiliary file: Chapters/german_abstrakt.aux
+A level-1 auxiliary file: acknowledgements.aux
 A level-1 auxiliary file: DeclAuthorship.aux
 A level-1 auxiliary file: Chapters/Introduction.aux
 A level-1 auxiliary file: Chapters/Related_work.aux
@@ -14,6 +15,7 @@ A level-1 auxiliary file: Chapters/Discussion.aux
 A level-1 auxiliary file: Chapters/Evaluation.aux
 A level-1 auxiliary file: Chapters/Conclusion.aux
 The style file: plain.bst
+A level-1 auxiliary file: Chapters/Appendix.aux
 Database file #1: Thesis.bib
 Warning--entry type for "rndf_darpa" isn't style-file defined
 --line 21 of file Thesis.bib
@@ -37,7 +39,7 @@ while executing---line 1090 of file plain.bst
 Warning--empty institution in Lavalle_rrt
 You've used 59 entries,
             2118 wiz_defined-function locations,
-            825 strings with 15344 characters,
+            827 strings with 15385 characters,
 and the built_in function-call counts, 22513 in all, are:
 = -- 2134
 > -- 1162

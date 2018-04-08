@@ -1,21 +1,50 @@
-\chapter{Conclusions and Future Work}
+\chapter{Conclusion and Future Work}
 \label{conclusion}
-\section{Conclusions}
+\section{Conclusion}
+
+The motion planning algorithm developed in this thesis is mainly aimed at small like robots operating in uncertain environments. The planner creates reasonable road parallel trajectories avoiding obstacles as required for on-road driving. 
+
+The major contributions of this thesis are as follows:
+
+\begin{itemize}
+	\item Creating a planning framework suitable for small cars operating with low computational costs and inaccuracies in measurement. 
+	\item Heuristic based evaluation of samples (acceleration profiles and lateral shifts) to reduce number of samples evaluated to find collision free trajectory. 
+	\item Two step algorithm for detecting collision with static obstacles operating.
+	\item Three step algorithm for detecting collision with dynamic obstacles.
+\end{itemize}
+
+The planner employs a combination of predefined acceleration profiles and lateral shifts to create samples, these sampled profiles are assigned pre-costs based on the target velocity and target lateral shift. These sampled profiles create trajectories that vary from straight constant velocity paths to one containing lateral shifts, acceleration and deceleration. The wide range of acceleration and deceleration profiles enable ego vehicle to react quickly in case of an emergency. The trajectories are evaluated based on the pre-costs, thus, only creating and evaluating all trajectories only in worst case scenario. 
+
+The created trajectories are evaluated to check if they are collision free and comfortable. As the planner is mainly aimed at small car like robots, comfort is not a mandatory criteria in trajectory selection. The two step collision checking proposed checks maximum at 4 points on trajectory to decide whether it is collision free. It exploits the trajectory representation in Frenet frame and geometry of the path to achieve this. Similarly a 3 step approach to collision checking in dynamic environments is developed, it detects if the ego vehicle is colliding with dynamic obstacles by checking time gap between the ego and obstacle at the start and end of the common traversal area. Checking time gap allows the ego vehicle to maintain appropriate distance to obstacles based on velocity of ego. 
+
+The proposed planner has been evaluated on a simulator with multiple scenarios that are experienced in urban driving, i.e., with road blockades, pedestrians/vehicles moving laterally across street, merging into traffic, overtaking a slow moving obstacle etc. The planner has been tested on the car platform without obstacles. 
 
 \section{Future Work}
-Replace by smoother polynomials over splines, especially in curves and when not following centre lane, they tend to be very bad. 
+The developed framework is a step taken as a contribution towards the development of trajectory planner for model car platform. This thesis presents various techniques to create trajectories and validate them at a lower computational cost. However, there is still large scope for improvement and modifications to the present developed work. They are as follows
 
-// Diss shui thesis - read though page 80 and understand further on benefits and demerits of polynomials vs splines. Add some in evaluation and some in future work
+\begin{itemize}
+	\item The approximation technique used for path representation in Frenet frame and conversion between Frenet and Cartesian frame, is not perfect and has scope for future improvement. 
+	\item Improve trajectory creation and representation by using higher order polynomials to obtain continuity in path and curvature. 
+	\item Improve the collision checking for dynamic obstacles, mainly for objects moving laterally. The current proposal slows down or stops the ego vehicle when a laterally moving obstacle is found, it can be improved to estimate the future position of dynamic obstacle and check for collision. 
+	\item Improve the evaluation of planner by testing in different road networks, traffic scenarios, on car and determine failing scenarios. 
+	\item Optimize code and improve number of samples in trajectory creation and selection. 
+	
+\end{itemize}
 
 
-Prediction of state from where the planner should start planning instead of current position. 
-Due to inaccuracies in current planners measurement of speed and acceleration it is tough to estimate where the vehicle will be when the planner is under execution. Currently based on assumption that the vehicle will follow the current path for next few ms, it is made offset in control node. This can be improved to have better synchronizaton between planner and controller. 
+%Replace by smoother polynomials over splines, especially in curves and when not following centre lane, they tend to be very bad. 
+
+% Diss shui thesis - read though page 80 and understand further on benefits and demerits of polynomials vs splines. Add some in evaluation and some in future work
 
 
-Create two functions to map lateral shift as a function of time and distance based on speed over current function only mapping based on distance.  
+%Prediction of state from where the planner should start planning instead of current position. 
+%Due to inaccuracies in current planners measurement of speed and acceleration it is tough to estimate where the vehicle will be when the planner is under execution. Currently based on assumption that the vehicle will follow the current path for next few ms, it is made offset in control node. This can be improved to have better synchronizaton between planner and controller. 
 
-Improve the lateral shift function to have an option to include where the ego vehicle is in current state with respect to lane change. If lets say the ego vehicle creates a trajectory to go from ds to dt in 5s, then when the trajectory is evaluated next time the ego vehicle is at d1 and it will choose 5s to travel to dt from there thus delaying the lane shift and this process repeats indefinitely and the robot will never exactly reach the target d. Thus the d\_final for lane shift from previous trajectory should be associated with the s\_final previous thus making the trajectory to be executed in the required distance ahead. This is similar to classical Proportional controller issue.  
 
-Use quintic polynomials at high speeds and cubic at low speeds. 
+%Create two functions to map lateral shift as a function of time and distance based on speed over current function only mapping based on distance.  
 
-Improve collision checking with respect to pedestrians following the huge research published in this specific domain of pedestrian tracking in autonomous cars. 
+%Improve the lateral shift function to have an option to include where the ego vehicle is in current state with respect to lane change. If lets say the ego vehicle creates a trajectory to go from ds to dt in 5s, then when the trajectory is evaluated next time the ego vehicle is at d1 and it will choose 5s to travel to dt from there thus delaying the lane shift and this process repeats indefinitely and the robot will never exactly reach the target d. Thus the d\_final for lane shift from previous trajectory should be associated with the s\_final previous thus making the trajectory to be executed in the required distance ahead. This is similar to classical Proportional controller issue.  
+
+%Use quintic polynomials at high speeds and cubic at low speeds. 
+
+%Improve collision checking with respect to pedestrians following the huge research published in this specific domain of pedestrian tracking in autonomous cars. 
