@@ -2,32 +2,33 @@
 \label{conclusion}
 \section{Conclusion}
 
-The motion planning algorithm developed in this thesis is mainly aimed at small like robots operating in uncertain environments. The planner creates reasonable road parallel trajectories avoiding obstacles as required for on-road driving. 
+The motion planning algorithm developed in this thesis is mainly aimed towards small car like robots operating in uncertain urban environments. The planner creates reasonable road parallel trajectories avoiding obstacles as required for on-road driving.
 
 The major contributions of this thesis are as follows:
 
 \begin{itemize}
-	\item Creating a planning framework suitable for small cars operating with low computational costs and inaccuracies in measurement. 
-	\item Heuristic based evaluation of samples (acceleration profiles and lateral shifts) to reduce number of samples evaluated to find collision free trajectory. 
-	\item Two step algorithm for detecting collision with static obstacles operating.
+	\item Creating a planning framework suitable for small cars operating with low computational costs and inaccuracies in measurement.
+	\item Heuristic based evaluation of samples (acceleration profiles and lateral shifts) to reduce the number of samples evaluated to find collision-free trajectory.
+	\item Two step algorithm for detecting collision with static obstacles.
 	\item Three step algorithm for detecting collision with dynamic obstacles.
 \end{itemize}
 
-The planner employs a combination of predefined acceleration profiles and lateral shifts to create samples, these sampled profiles are assigned pre-costs based on the target velocity and target lateral shift. These sampled profiles create trajectories that vary from straight constant velocity paths to one containing lateral shifts, acceleration and deceleration. The wide range of acceleration and deceleration profiles enable ego vehicle to react quickly in case of an emergency. The trajectories are evaluated based on the pre-costs, thus, only creating and evaluating all trajectories only in worst case scenario. 
+The planner employs a combination of predefined acceleration profiles and lateral shifts to create samples, these sampled profiles are assigned pre-costs based on the target velocity and target lateral shift. The sampled profiles create trajectories that vary from straight, constant velocity paths to one containing lateral shifts, acceleration and deceleration. The wide range of acceleration and deceleration profiles enable ego vehicle to react quickly in case of an emergency. The trajectories are evaluated based on the pre-costs, thus, only creating and evaluating all trajectories only in the worst case scenario. This heuristic algorithm saves computational effort while driving in obstacle free or sparse environments.
 
-The created trajectories are evaluated to check if they are collision free and comfortable. As the planner is mainly aimed at small car like robots, comfort is not a mandatory criteria in trajectory selection. The two step collision checking proposed checks maximum at 4 points on trajectory to decide whether it is collision free. It exploits the trajectory representation in Frenet frame and geometry of the path to achieve this. Similarly a 3 step approach to collision checking in dynamic environments is developed, it detects if the ego vehicle is colliding with dynamic obstacles by checking time gap between the ego and obstacle at the start and end of the common traversal area. Checking time gap allows the ego vehicle to maintain appropriate distance to obstacles based on velocity of ego. 
+The created trajectories are evaluated to check if they are collision free and comfortable. As the planner is mainly aimed at small car like robots, comfort is not a mandatory criterion in trajectory selection and major effort has been kept in reducing computational effort in collision checking. The two-step collision checking algorithm proposed checks maximum at 4 points on the trajectory to decide whether it is collision free with respect to the static obstacle. It exploits the trajectory representation in Frenet frame and geometry of the path to achieve this. Similarly, a 3 step approach for collision checking in dynamic environments is developed, it detects if the ego vehicle is colliding with dynamic obstacles by checking time gap between the ego and obstacle at the start and end of the common traversal area. Checking time gap allows the ego vehicle to maintain appropriate distance to obstacles independent of its velocity.
 
-The proposed planner has been evaluated on a simulator with multiple scenarios that are experienced in urban driving, i.e., with road blockades, pedestrians/vehicles moving laterally across street, merging into traffic, overtaking a slow moving obstacle etc. The planner has been tested on the car platform without obstacles. 
+The proposed planner has been evaluated on a simulator with multiple scenarios similar to situations experienced in urban driving, i.e., with road blockades, pedestrians/vehicles moving laterally across the street, merging into traffic, overtaking a slow-moving obstacle etc. The planner successfully navigated the environment avoiding the traffic and stopping when no path could be found. The planner has been tested on the car platform without obstacles and performed reasonably because of the tracking errors from the control module.
 
 \section{Future Work}
-The developed framework is a step taken as a contribution towards the development of trajectory planner for model car platform. This thesis presents various techniques to create trajectories and validate them at a lower computational cost. However, there is still large scope for improvement and modifications to the present developed work. They are as follows
+The developed framework is a step taken towards the development of trajectory planner for model car platform. This thesis presents various techniques to create trajectories and validate them at a lower computational cost. However, there is still a large scope for improvement and modifications to the present developed work. Some major improvements needed are as follows:
 
 \begin{itemize}
-	\item The approximation technique used for path representation in Frenet frame and conversion between Frenet and Cartesian frame, is not perfect and has scope for future improvement. 
-	\item Improve trajectory creation and representation by using higher order polynomials to obtain continuity in path and curvature. 
-	\item Improve the collision checking for dynamic obstacles, mainly for objects moving laterally. The current proposal slows down or stops the ego vehicle when a laterally moving obstacle is found, it can be improved to estimate the future position of dynamic obstacle and check for collision. 
-	\item Improve the evaluation of planner by testing in different road networks, traffic scenarios, on car and determine failing scenarios. 
-	\item Optimize code and improve number of samples in trajectory creation and selection. 
+	\item The approximation technique used for path representation in Frenet frame and conversion between Frenet and Cartesian frame is not perfect. This could be improved by considering the curvature of the road and using spline approximation instead of lines.
+	\item Improve trajectory creation and representation by using higher order polynomials to obtain continuity in path and curvature.
+	\item Improve the collision checking for dynamic obstacles, mainly for objects moving laterally. The current proposal slows down or stops the ego vehicle when a laterally moving obstacle is found, it can be improved to estimate the future position of the dynamic obstacle for collision checking.
+	\item Improve the evaluation of planner by testing in different road networks, traffic scenarios, on the car and determine failing scenarios. Improve the simulator to create continuous dynamic and random traffic to test limits of the planner.
+	\item Improve the heuristics employed in the planner for calculating pre-costs of samples and also the cost functions in trajectory selection.
+	\item Optimize code and increase number of samples in trajectory creation.
 	
 \end{itemize}
 
