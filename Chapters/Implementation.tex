@@ -1,6 +1,6 @@
 \chapter{Implementation}
 \label{implementation}
-This chapter details on the implementation of the concepts discussed in previous chapter for route planner and trajectory planner modules. All the modules are implemented as independent nodes in Robot Operating System (ROS) and communicate with each other using ROS messages. Figure \ref{message_flow} describes the communication across different modules. 
+This chapter details on the implementation of the concepts discussed in the previous chapter for route planner and trajectory planner modules. All the modules are implemented as independent nodes in Robot Operating System (ROS) and communicate with each other using ROS messages. Figure \ref{message_flow} describes the communication across different modules. 
 
 \begin{figure}[H]
 	\centering
@@ -11,7 +11,7 @@ This chapter details on the implementation of the concepts discussed in previous
 
 
 \section{Route Planner}
-Route planner parses the RNDF file and stores way points, their relation to lanes and further to segments. The below code segment shows the declaration of the way point, here coordi indicates the coordinates of way points, idn is the unique id for each way point and parent is the lane to which way point belongs. Similarly there lane stores set of way points, parent is the segment to which the lane belongs. 
+Route planner parses the RNDF file and stores waypoints, their relation to lanes and further to segments. The below code segment shows the declaration of the waypoint, here coordi indicates the coordinates of waypoints, idn is the unique id for each waypoint and parent is the lane to which waypoint belongs. Similarly there lane stores set of waypoints, parent is the segment to which the lane belongs. 
 
 \begin{lstlisting}
 class c_waypoint(object):
@@ -33,12 +33,12 @@ class c_waypoint(object):
 \end{figure}
 
 \section{Motion Planner}
-Motion Planner is sub divided into three sub classes names motion planner, vehicle path and vehicle state. Vehicle path class stores the path to be traversed, performs all the conversions from Cartesian frame to Frenet frame and vice versa. The module also calculates speed limit based on the curvature of the road. Figure \ref{vehicle_path_class} further details on the structure of the vehicle path class. 
+Motion Planner is subdivided into three subclasses names motion planner, vehicle path and vehicle state. Vehicle path class stores the path to be traversed, performs all the conversions from Cartesian frame to Frenet frame and vice versa. The module also calculates speed limit based on the curvature of the road. Figure \ref{vehicle_path_class} further details on the structure of the vehicle path class. 
 
-Vehicle state class maintains the information regarding current position and, orientation from odometry messages, and list of obstacles including information about their position, orientation, speed, size. In every planning cycle, initially a snapshot of vehicle state is used to create trajectories and evaluate them to remove affects of changes in states in one planning cycle. Figure \ref{vehicle_state_class} details further on structure of the Vehicle state class. 
+Vehicle state class maintains the information regarding the current position and, orientation from odometry messages, and list of obstacles including information about their position, orientation, speed, size. In every planning cycle, initially, a snapshot of vehicle state is used to create trajectories and evaluate them to remove effects of changes in states in one planning cycle. Figure \ref{vehicle_state_class} details further on structure of the Vehicle state class. 
 
 
-Motion planner class is the core of the planner, it initially creates samples, assigns pre-costs to these samples, creates trajectories based on the samples and pre costs, evaluates the trajectories find the best trajectory which is collision free and closer to destination. Once the best trajectory is found it converts to the format specific to the controller and transmits it. Figure \ref{motion_planner_class} describes the interactions between different functions in motion planning.
+Motion planner class is the core of the planner, it initially creates samples, assigns pre-costs to these samples, creates trajectories based on the samples and pre costs, evaluates the trajectories find the best trajectory which is collision free and closer to the destination. Once the best trajectory is found it is converted to the controller-specific format and transmitted. Figure \ref{motion_planner_class} describes the interactions between different functions in motion planning.
 
 
 \begin{figure}
