@@ -21,9 +21,9 @@
 \contentsline {section}{\numberline {4.3}Prediction}{18}{section.4.3}
 \contentsline {section}{\numberline {4.4}Route Planner}{18}{section.4.4}
 \contentsline {subsection}{\numberline {4.4.1}RNDF}{19}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Path Representation and calculation}{19}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.2}Path Representation and calculation}{20}{subsection.4.4.2}
 \contentsline {subsection}{\numberline {4.4.3}Behavioral Layer}{20}{subsection.4.4.3}
-\contentsline {section}{\numberline {4.5}Motion Planner}{20}{section.4.5}
+\contentsline {section}{\numberline {4.5}Motion Planner}{21}{section.4.5}
 \contentsline {subsection}{\numberline {4.5.1}Temporal Horizon}{21}{subsection.4.5.1}
 \contentsline {subsection}{\numberline {4.5.2}Path Modelling}{22}{subsection.4.5.2}
 \contentsline {subsection}{\numberline {4.5.3} Trajectory Creation}{24}{subsection.4.5.3}
@@ -52,5 +52,5 @@
 \contentsline {chapter}{\numberline {7}Conclusion and Future Work}{49}{chapter.7}
 \contentsline {section}{\numberline {7.1}Conclusion}{49}{section.7.1}
 \contentsline {section}{\numberline {7.2}Future Work}{50}{section.7.2}
-\contentsline {chapter}{Bibliography}{51}{chapter*.67}
+\contentsline {chapter}{Bibliography}{51}{chapter*.66}
 \contentsline {chapter}{\numberline {A}Appendix}{57}{appendix.A}
