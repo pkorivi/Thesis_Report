@@ -51,5 +51,7 @@
 \BOOKMARK [0][]{chapter.7}{Conclusion and Future Work}{}% 51
 \BOOKMARK [1][]{section.7.1}{Conclusion}{chapter.7}% 52
 \BOOKMARK [1][]{section.7.2}{Future Work}{chapter.7}% 53
-\BOOKMARK [0][]{chapter*.66}{Bibliography}{}% 54
+\BOOKMARK [0][]{chapter*.65}{Bibliography}{}% 54
 \BOOKMARK [0][]{appendix.A}{Appendix}{}% 55
+\BOOKMARK [1][]{section.A.1}{Static Obstacle Collision checking}{appendix.A}% 56
+\BOOKMARK [1][]{section.A.2}{Dynamic Obstacle Collision checking}{appendix.A}% 57

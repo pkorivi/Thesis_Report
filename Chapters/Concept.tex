@@ -250,11 +250,18 @@ In summary, combining samples in acceleration and lateral shifts, multiple traje
 
 
 \subsection{Checking for Static Obstacles} \label{osbtacle_check_satic}
-The main objective of the motion planner is to derive a path that is collision free. The generated trajectories must be evaluated for collision or driving close to obstacles. There are various techniques for collision detection as discussed in the background study. This thesis developed a simple two-step collision checking technique for static obstacles. A road parallel model in the Frenet frame is employed for collision checking ignoring the orientation of obstacles with respect to the road as described in \cite{cmu_parallel_thesis}. Using a road parallel method and dilating the obstacle for safety reduces computational complexity. 
+The main objective of the motion planner is to derive a path that is collision free. The generated trajectories must be evaluated for collision or driving close to obstacles. There are various techniques for collision detection as discussed in the background study. This thesis developed a simple two-step collision checking technique for static obstacles. A road parallel model in the Frenet frame is employed for collision checking ignoring the orientation of obstacles with respect to the road as described in \cite{cmu_parallel_thesis}. Using a road parallel method and dilating the obstacle helps reduces computational complexity. 
 
-\todo{check if all things described in road parallel model for collision checking should be discussed here}
+In the first step of collision checking, obstacle coordinates are transformed into Frenet frame and represented by a length and width parallel to the road. In the second step, the trajectory in consideration is checked if it has a collision in longitudinal dimension (S coordinate) for the length of the obstacle with formula \ref{intersection_reg}. As shown in Figure \ref{static_check} trajectories T0, T1 intersect in S for obstacle O1 and not for obstacle O2. The next step is to find this intersection region, I1 to I2 in Figure \ref{static_check}, the values are dilated for safety. In final it is checked whether from I1 to I2 there is a collision in lateral dimension(d) for trajectory and obstacle. For all points between I1 and I2, the lateral distance between trajectory and obstacle must always be larger than safety value as described in \ref{static_obst_safety_dist}. As the function representing lateral motion is a continuous function, it is sufficient to check for collision at the start and end of the intersection interval and at critical points (where derivative of the function is zero or does not exist) if they fall in the intersection region. If the distance at any of these points is less than the minimum required then there is a collision. Appendix \ref{static_obst_appendix} details further on sufficiency to check only at critical points and borders. 
 
-In the first step of collision checking, obstacle coordinates are transformed into Frenet frame and represented by a length and width parallel to the road. In the second step, the trajectory in consideration is checked if it has a collision in longitudinal dimension (S coordinate) for the length of the obstacle. As shown in Figure \ref{static_check} trajectories T0, T1 intersect in S for obstacle O1 and not for obstacle O2. The next step is to find this intersection region, I1 to I2 in Figure \ref{static_check}, the values are dilated for safety. In final it is checked whether from I1 to I2 there is a collision in lateral dimension(d) for trajectory and obstacle. For all points between I1 and I2, the lateral distance between trajectory and obstacle must always be larger than safety value as described in \ref{static_obst_safety_dist}. 
+\begin{equation}\label{intersection_reg}
+\begin{aligned}
+intersection = [max(min(obst_s.begin(),obst_s.end()),path.front()),\\ min(max(obst_s.begin(),obst_s.end()),path.back())]
+\end{aligned}
+\end{equation}
+
+If $(intersection[1]<intersection[0])$  then there is no intersection in the two paths. 
+
 
 \begin{equation}
     |d\textsubscript{ego} - d\textsubscript{obst}| > car\_width/2 + obstacle\_width/2 + safety\_margin
@@ -262,8 +269,7 @@ In the first step of collision checking, obstacle coordinates are transformed in
 \end{equation}
 \todo{represent the parameters in terms of $d_e , c_w, o_w$ etc}
 
-It is representative from figure \ref{static_check} that the trajectory T1 has collision and trajectory T0 has no collision. Different costs can be added based on how close the ego vehicle is with respect to the static obstacle. Due to properties of cubic polynomials, it is sufficient to check for the collision at the start, end, middle and min-max D if that falls in the intersected path. 
-
+It is representative from figure \ref{static_check} that the trajectory T1 has collision and trajectory T0 has no collision. Different costs can be added based on how close the ego vehicle is with respect to the static obstacle.  
 
  \begin{figure}
     \centering

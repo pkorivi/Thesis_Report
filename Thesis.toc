@@ -29,28 +29,30 @@
 \contentsline {subsection}{\numberline {4.5.3} Trajectory Creation}{24}{subsection.4.5.3}
 \contentsline {subsection}{\numberline {4.5.4}Checking for Static Obstacles}{27}{subsection.4.5.4}
 \contentsline {subsection}{\numberline {4.5.5}Checking for Dynamic Obstacles}{30}{subsection.4.5.5}
-\contentsline {subsection}{\numberline {4.5.6}Cost Functions and Trajectory Selection}{34}{subsection.4.5.6}
+\contentsline {subsection}{\numberline {4.5.6}Cost Functions and Trajectory Selection}{32}{subsection.4.5.6}
 \contentsline {subsection}{\numberline {4.5.7}Velocity Planning}{34}{subsection.4.5.7}
-\contentsline {section}{\numberline {4.6}Trajectory Follower}{34}{section.4.6}
-\contentsline {chapter}{\numberline {5}Implementation}{35}{chapter.5}
-\contentsline {section}{\numberline {5.1}Route Planner}{35}{section.5.1}
-\contentsline {section}{\numberline {5.2}Motion Planner}{36}{section.5.2}
-\contentsline {chapter}{\numberline {6}Evaluation}{39}{chapter.6}
-\contentsline {section}{\numberline {6.1}Experiments}{39}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Lane blocked}{39}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Slow Moving Traffic}{40}{subsection.6.1.2}
-\contentsline {subsection}{\numberline {6.1.3}Merging into traffic}{40}{subsection.6.1.3}
-\contentsline {subsection}{\numberline {6.1.4}Merging into next lane with opposite traffic}{41}{subsection.6.1.4}
-\contentsline {subsection}{\numberline {6.1.5}Road Blocked or Pedestrian Ahead}{42}{subsection.6.1.5}
-\contentsline {subsection}{\numberline {6.1.6}Dynamic Obstacles - other vehicles}{43}{subsection.6.1.6}
-\contentsline {section}{\numberline {6.2}Criteria Based Evaluation}{44}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Optimality}{44}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Feasibility}{46}{subsection.6.2.2}
-\contentsline {subsection}{\numberline {6.2.3}Completeness}{46}{subsection.6.2.3}
-\contentsline {subsection}{\numberline {6.2.4}Runtime}{47}{subsection.6.2.4}
-\contentsline {subsection}{\numberline {6.2.5}Deliberative Approach}{48}{subsection.6.2.5}
-\contentsline {chapter}{\numberline {7}Conclusion and Future Work}{49}{chapter.7}
-\contentsline {section}{\numberline {7.1}Conclusion}{49}{section.7.1}
-\contentsline {section}{\numberline {7.2}Future Work}{50}{section.7.2}
-\contentsline {chapter}{Bibliography}{51}{chapter*.66}
-\contentsline {chapter}{\numberline {A}Appendix}{57}{appendix.A}
+\contentsline {section}{\numberline {4.6}Trajectory Follower}{35}{section.4.6}
+\contentsline {chapter}{\numberline {5}Implementation}{37}{chapter.5}
+\contentsline {section}{\numberline {5.1}Route Planner}{37}{section.5.1}
+\contentsline {section}{\numberline {5.2}Motion Planner}{38}{section.5.2}
+\contentsline {chapter}{\numberline {6}Evaluation}{41}{chapter.6}
+\contentsline {section}{\numberline {6.1}Experiments}{41}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Lane blocked}{41}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Slow Moving Traffic}{42}{subsection.6.1.2}
+\contentsline {subsection}{\numberline {6.1.3}Merging into traffic}{42}{subsection.6.1.3}
+\contentsline {subsection}{\numberline {6.1.4}Merging into next lane with opposite traffic}{43}{subsection.6.1.4}
+\contentsline {subsection}{\numberline {6.1.5}Road Blocked or Pedestrian Ahead}{44}{subsection.6.1.5}
+\contentsline {subsection}{\numberline {6.1.6}Dynamic Obstacles - other vehicles}{45}{subsection.6.1.6}
+\contentsline {section}{\numberline {6.2}Criteria Based Evaluation}{46}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Optimality}{46}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Feasibility}{48}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}Completeness}{48}{subsection.6.2.3}
+\contentsline {subsection}{\numberline {6.2.4}Runtime}{49}{subsection.6.2.4}
+\contentsline {subsection}{\numberline {6.2.5}Deliberative Approach}{50}{subsection.6.2.5}
+\contentsline {chapter}{\numberline {7}Conclusion and Future Work}{51}{chapter.7}
+\contentsline {section}{\numberline {7.1}Conclusion}{51}{section.7.1}
+\contentsline {section}{\numberline {7.2}Future Work}{52}{section.7.2}
+\contentsline {chapter}{Bibliography}{53}{chapter*.65}
+\contentsline {chapter}{\numberline {A}Appendix}{59}{appendix.A}
+\contentsline {section}{\numberline {A.1}Static Obstacle Collision checking}{59}{section.A.1}
+\contentsline {section}{\numberline {A.2}Dynamic Obstacle Collision checking}{59}{section.A.2}
