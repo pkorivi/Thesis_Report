@@ -29,7 +29,7 @@
 \contentsline {subsection}{\numberline {4.5.3} Trajectory Creation}{24}{subsection.4.5.3}
 \contentsline {subsection}{\numberline {4.5.4}Checking for Static Obstacles}{27}{subsection.4.5.4}
 \contentsline {subsection}{\numberline {4.5.5}Checking for Dynamic Obstacles}{30}{subsection.4.5.5}
-\contentsline {subsection}{\numberline {4.5.6}Cost Functions and Trajectory Selection}{32}{subsection.4.5.6}
+\contentsline {subsection}{\numberline {4.5.6}Cost Functions and Trajectory Selection}{34}{subsection.4.5.6}
 \contentsline {subsection}{\numberline {4.5.7}Velocity Planning}{34}{subsection.4.5.7}
 \contentsline {section}{\numberline {4.6}Trajectory Follower}{35}{section.4.6}
 \contentsline {chapter}{\numberline {5}Implementation}{37}{chapter.5}

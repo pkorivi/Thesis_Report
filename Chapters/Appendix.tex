@@ -26,6 +26,9 @@ In the figure \ref{cstat_coll_appen}, for obstacle O1 it is necessary to check c
 %https://www.math.wvu.edu/~hjlai/Words2Algebra/MinMax_Closed_Interva.pdf
 
 \section{Dynamic Obstacle Collision checking}
+\label{dynamic_obst_appendix}
+
+In the proposed algorithm in section \ref{obstacle_check_dynamic}, for collision checking with respect to dynamic obstacles time difference only at the borders where lateral and longitudinal coordinates intersect is checked. This is a valid assumption when the vehicle velocity is linear but the trajectory will end in collision if a minimum buffer time is not maintained. 
 
 \begin{figure}
 	\centering
@@ -33,6 +36,8 @@ In the figure \ref{cstat_coll_appen}, for obstacle O1 it is necessary to check c
 	\caption{ddd.}
 	\label{dynamic_appendix}
 \end{figure}
+
+
 
 
 Proof that the approximating collision checking for dynamic obstacles as straight line is fine. 
