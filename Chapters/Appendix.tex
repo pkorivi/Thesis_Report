@@ -11,7 +11,7 @@ If $f(x)$ is continuous on $[a, b]$ and differentiable in $(a, b)$, a point $c$ 
 If $f(x)$ is continuous on $[a,b]$ and differentiable in (a,b), and if for some $c$ in $(a,b)$, if $f(c)$ is local minima or maxima then $c$ must be a critical point. Any absolute maximum or minimum will take place at boundaries or critical points inside the interval $(a,b)$. 
 
 
-\begin{figure}
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{Images/appendix/staticpoints.jpg}
 	\caption{Static Obstacle Collision check - Lateral distance between obstacle O1 and trajectory is checked at points with black dots, distance at green dots is checked for obstacle O2.}
@@ -28,17 +28,99 @@ In the figure \ref{cstat_coll_appen}, for obstacle O1 it is necessary to check c
 \section{Dynamic Obstacle Collision checking}
 \label{dynamic_obst_appendix}
 
-In the proposed algorithm in section \ref{obstacle_check_dynamic}, for collision checking with respect to dynamic obstacles time difference only at the borders where lateral and longitudinal coordinates intersect is checked. This is a valid assumption when the vehicle velocity is linear but the trajectory will end in collision if a minimum buffer time is not maintained. 
+In the proposed algorithm in section \ref{obstacle_check_dynamic}, for collision checking with respect to dynamic obstacles time difference only at the borders where lateral and longitudinal coordinates intersect is checked. This assumption is valid only of the maximum non linearity introduced by the ego vehicle acceleration is not more than 2s. The next set of equations define why the assumption is valid. 
+
+Figure \ref{dynamic_approx_appen} shows where there is a difference between the linear approximation and the parabolic path. The maximum is represented by a black line in the orange region (non linearity at every point). 
 
 \begin{figure}
 	\centering
-	\includegraphics[width=1.1\textwidth]{Images/appendix/dynamic_collision_lines.jpg}
-	\caption{ddd.}
-	\label{dynamic_appendix}
+	\includegraphics[width=0.8\textwidth]{Images/appendix/dynamic_approx.png}
+	\caption{ss}
+	\label{dynamic_approx_appen}
 \end{figure}
 
+Equation of the parabolic path. 
+\begin{equation}
+\label{curve_eq}
+S_{curve} = ut + 0.5at^2
+\end{equation}
+
+Values of the function \ref{curve_eq} at start $0$ and time horizon $t_h = 5s$ 
+\begin{equation}
+S_0 = 0; S_f = 5u + 12.5a
+\end{equation}
+
+Corresponding approximated line equation $y=mx+c$, as both start at same point consider at origin. 
+\begin{equation}
+\label{line_eq}
+S_{line} = \frac{5u+12.5a}{5}(t)
+\end{equation}
+
+Converting the \ref{curve_eq} as a function of distance, we get
+\begin{equation}
+t_{orig} = \frac{-u \pm \sqrt{u^2 + 2as}}{a}
+\end{equation}
+
+Converting the \ref{line_eq} as function of distance, we get
+\begin{equation}
+\label{line_eq}
+t_{approx} = \frac{s}{u+2.5a}
+\end{equation}
+
+Time difference between original and approximated values is 
+
+\begin{equation}
+\label{t_diff_eq}
+t_{diff} = \frac{-u \pm \sqrt{u^2 + 2as}}{a} - \frac{s}{u+2.5a}
+\end{equation}
+
+Maximum value of $t_{diff}$ between start and end of the path gives us the value required, as the equation is in 3 unknown variables, it is not possible to solve it directly to find the maximum value. Therefore exhaustive values are plotted to find the maximum value. The Figure \ref{time_diff_plot} shows the values of time difference for different values of acceleration from $-0.7ms^{-2}$ to $-0.3ms^{-2}$, initial velocity of $0ms^{-1}$ to $1ms^{-s}$ is used to plot in the region of $[0,u+12.5a]$ as s dimension. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{Images/appendix/time_diff.png}
+	\caption{Maximum time difference for different samples in \ref{t_diff_eq}}
+	\label{time_diff_plot}
+\end{figure}
+
+The maximum difference at any point is 1s, thus the approximation holds good. The following python code is used to plot the results and find the maximum value
+
+\newpage
+\begin{lstlisting}
+from mpl_toolkits.mplot3d import Axes3D
+import matplotlib.pyplot as plt
+import numpy as np
+from math import sqrt
+
+def frange(start,stop, step=1.0):
+	while start < stop:
+		yield start
+		start +=step
+t = [] #time difference
+r = [] #series number
+co =[] #color differentiator
+val =0 #series counter
+for x in range(10):#u
+	for y in range(10):#a
+		k = 5*x+12.5*y #max distance range in multiple of 10
+		if k<=0:
+			k=0
+		for z in  frange(0, k, 1):#s
+			try:
+				u=x/10.0
+				a = -0.7+(y/1.0)
+				s = z/10.0
+				t_diff = ((-u+sqrt(u*u + 2*a*s))/a)-(s/(u+2*a))
+				t.append(t_diff)
+				r.append(val)
+				co.append(z)
+				val+=1
+			except Exception as e:
+				pass
+plt.scatter(r,t,c=co)
+plt.ylabel('time')
+plt.xlabel('series')
+plt.show()
 
 
-
-Proof that the approximating collision checking for dynamic obstacles as straight line is fine. 
-
+\end{lstlisting}

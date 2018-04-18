@@ -55,4 +55,4 @@
 \contentsline {chapter}{Bibliography}{53}{chapter*.63}
 \contentsline {chapter}{\numberline {A}Appendix}{59}{appendix.A}
 \contentsline {section}{\numberline {A.1}Static Obstacle Collision checking}{59}{section.A.1}
-\contentsline {section}{\numberline {A.2}Dynamic Obstacle Collision checking}{59}{section.A.2}
+\contentsline {section}{\numberline {A.2}Dynamic Obstacle Collision checking}{60}{section.A.2}

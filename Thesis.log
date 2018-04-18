@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.29)  18 APR 2018 15:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.29)  18 APR 2018 20:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1148,7 +1148,11 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 (./Chapters/Related_work.aux) (./Chapters/VehicleSetup.aux)
 (./Chapters/Concept.aux) (./Chapters/Implementation.aux)
 (./Chapters/Discussion.aux) (./Chapters/Evaluation.aux)
-(./Chapters/Conclusion.aux) (./Chapters/Appendix.aux))
+(./Chapters/Conclusion.aux) (./Chapters/Appendix.aux
+
+LaTeX Warning: Label `line_eq' multiply defined.
+
+))
 \openout1 = `Thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
@@ -1959,37 +1963,29 @@ File: Images/appendix/staticpoints.jpg Graphic file (type jpg)
 Package pdftex.def Info: Images/appendix/staticpoints.jpg used on input line 16
 .
 (pdftex.def)             Requested size: 345.03064pt x 190.29764pt.
+ [59
 
 
-LaTeX Warning: File `Images/appendix/dynamic_collision_lines.jpg' not found on 
-input line 35.
+ <./Images/appendix/staticpoints.jpg>] <Images/appendix/dynamic_approx.png, id=
+1119, 429.605pt x 213.79875pt>
+File: Images/appendix/dynamic_approx.png Graphic file (type png)
 
+<use Images/appendix/dynamic_approx.png>
+Package pdftex.def Info: Images/appendix/dynamic_approx.png used on input line 
+37.
+(pdftex.def)             Requested size: 345.03064pt x 171.71126pt.
+ [60 <./Images/appendix/dynamic_approx.png>] <Images/appendix/time_diff.png, id
+=1132, 1675.2186pt x 922.8879pt>
+File: Images/appendix/time_diff.png Graphic file (type png)
 
-! Package pdftex.def Error: File `Images/appendix/dynamic_collision_lines.jpg' 
-not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.35 ...ages/appendix/dynamic_collision_lines.jpg}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 35.
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+<use Images/appendix/time_diff.png>
+Package pdftex.def Info: Images/appendix/time_diff.png used on input line 81.
+(pdftex.def)             Requested size: 431.28667pt x 237.59348pt.
+ [61 <./Images/appendix/time_diff.png>]
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 105.
 )
-Overfull \hbox (43.13129pt too wide) in paragraph at lines 35--36
- [][] 
- []
-
-) [59
-
-
-] [60 <./Images/appendix/staticpoints.jpg>] [61]
+[62]
 Package minitoc Info: I0009
 (minitoc)             Listing minitoc auxiliary files. 
 (minitoc)             Creating the Thesis.maf file.
@@ -2011,7 +2007,7 @@ Package minitoc(hints) Warning: W0024
 (minitoc(hints))                Some hints have been written 
 (minitoc(hints))                in the Thesis.log file.
 
-[62
+[63
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 81.
@@ -2034,39 +2030,39 @@ Package rerunfilecheck Info: File `Thesis.brf' has not changed.
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 81.
  ) 
 Here is how much of TeX's memory you used:
- 24775 strings out of 494910
- 431123 string characters out of 6179836
- 564831 words of memory out of 5000000
- 26985 multiletter control sequences out of 15000+600000
- 21791 words of font info for 58 fonts, out of 8000000 for 9000
+ 24904 strings out of 494910
+ 432334 string characters out of 6179836
+ 654831 words of memory out of 5000000
+ 27073 multiletter control sequences out of 15000+600000
+ 22123 words of font info for 60 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  66i,12n,80p,1810b,2439s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/korivi/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk> </home/
-korivi/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </home/korivi/.te
-xmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/korivi/.texmf-var/fo
-nts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/korivi/.texmf-var/fonts/pk/ljf
-our/jknappen/ec/ecrm0800.600pk> </home/korivi/.texmf-var/fonts/pk/ljfour/jknapp
-en/ec/eccc1728.600pk> </home/korivi/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx
-1200.600pk> </home/korivi/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk
-> </home/korivi/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk> </home/k
-orivi/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </home/korivi/.tex
-mf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/korivi/.texmf-var/fon
-ts/pk/ljfour/jknappen/ec/ecbx1728.600pk></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Thesis.pdf (74 pages, 12524661 bytes).
+ </home/korivi/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </home/
+korivi/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/korivi/.te
+xmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/korivi/.texmf-var/fo
+nts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/korivi/.texmf-var/fonts/pk/ljf
+our/jknappen/ec/eccc1728.600pk> </home/korivi/.texmf-var/fonts/pk/ljfour/jknapp
+en/ec/ecbx1200.600pk> </home/korivi/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm
+1200.600pk> </home/korivi/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk
+> </home/korivi/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </home/k
+orivi/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/korivi/.tex
+mf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.p
+fb>
+Output written on Thesis.pdf (75 pages, 13155110 bytes).
 PDF statistics:
- 1772 PDF objects out of 2073 (max. 8388607)
- 1092 compressed objects within 11 object streams
- 264 named destinations out of 1000 (max. 500000)
- 699 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1838 PDF objects out of 2073 (max. 8388607)
+ 1148 compressed objects within 12 object streams
+ 307 named destinations out of 1000 (max. 500000)
+ 709 words of extra memory for PDF output out of 10000 (max. 10000000)
 
