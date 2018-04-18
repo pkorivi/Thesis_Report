@@ -88,7 +88,7 @@ Dave Ferguson and Anthony Stentz.
   {\em Robotics Research}, pages 239--253, Berlin, Heidelberg, 2007. Springer
   Berlin Heidelberg.
 
-\bibitem{mit_rrt}
+\bibitem{mit_rrt1}
 Gaston~A. Fiore and David~L. Darmofal.
 \newblock A robust motion planning approach for autonomous driving in urban
   areas.
@@ -106,6 +106,11 @@ L.~Garrote, C.~Premebida, M.~Silva, and U.~Nunes.
   vehicles.
 \newblock In {\em 2014 12th IEEE International Conference on Industrial
   Informatics (INDIN)}, pages 326--331, July 2014.
+
+\bibitem{mig_controller}
+Daniel Gohring.
+\newblock Controller architecture for the autonomous cars: Madeingermany and
+  e-instein.
 
 \bibitem{graff_thesis}
 Daniel Graff.
@@ -202,6 +207,13 @@ Y.~Kuwata, G.~A. Fiore, J.~Teo, E.~Frazzoli, and J.~P. How.
 \newblock Motion planning for urban driving using rrt.
 \newblock In {\em 2008 IEEE/RSJ International Conference on Intelligent Robots
   and Systems}, pages 1681--1686, Sept 2008.
+
+\bibitem{mit_rrt}
+Y.~Kuwata, J.~Teo, G.~Fiore, S.~Karaman, E.~Frazzoli, and J.~P. How.
+\newblock Real-time motion planning with applications to autonomous urban
+  driving.
+\newblock {\em IEEE Transactions on Control Systems Technology},
+  17(5):1105--1118, Sept 2009.
 
 \bibitem{book_robot_motion_planning}
 Jean-Claude Latombe.

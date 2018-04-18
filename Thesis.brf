@@ -26,7 +26,7 @@
 \backcite {darpa_urban_challenge}{{6}{2.1}{figure.caption.5}}
 \backcite {rrt_star}{{6}{2.1}{figure.caption.5}}
 \backcite {rrt_urban_driv}{{6}{2.1}{figure.caption.5}}
-\backcite {mit_rrt}{{6}{2.1}{figure.caption.5}}
+\backcite {mit_rrt1}{{6}{2.1}{figure.caption.5}}
 \backcite {Lavalle_rrt}{{7}{2.1.1}{subsection.2.1.1}}
 \backcite {prm}{{7}{2.1.1}{subsection.2.1.1}}
 \backcite {rrt_higher_dimension}{{7}{2.1.1}{subsection.2.1.1}}
@@ -98,6 +98,7 @@
 \backcite {unit_A_star}{{31}{4.5.5}{subsection.4.5.5}}
 \backcite {graff_thesis}{{31}{4.5.5}{subsection.4.5.5}}
 \backcite {mobile_eye_safety_distance}{{31}{4.5.5}{subsection.4.5.5}}
+\backcite {mig_controller}{{35}{4.6}{section.4.6}}
 \backcite {cmu_parallel_thesis}{{48}{6.2.2}{subsection.6.2.2}}
 \backcite {ppt_teqniqs_coll_Avdnce}{{48}{6.2.2}{subsection.6.2.2}}
 \backcite {cmu_parallel_thesis}{{49}{6.2.4}{subsection.6.2.4}}

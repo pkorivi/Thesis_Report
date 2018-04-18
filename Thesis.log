@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.29)  18 APR 2018 20:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.29)  18 APR 2018 23:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1494,7 +1494,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 1237) has occurred while \output is active []
 
  [8 <./Images/related_work/mit_urban_planning.png>]
-<Images/related_work/traj_optim_1.png, id=496, 791.95876pt x 391.4625pt>
+<Images/related_work/traj_optim_1.png, id=497, 791.95876pt x 391.4625pt>
 File: Images/related_work/traj_optim_1.png Graphic file (type png)
 
 <use Images/related_work/traj_optim_1.png>
@@ -1502,7 +1502,7 @@ Package pdftex.def Info: Images/related_work/traj_optim_1.png used on input lin
 e 61.
 (pdftex.def)             Requested size: 224.2709pt x 110.85118pt.
 
-<Images/related_work/traj_optim_2.png, id=497, 744.7825pt x 356.33125pt>
+<Images/related_work/traj_optim_2.png, id=498, 744.7825pt x 356.33125pt>
 File: Images/related_work/traj_optim_2.png Graphic file (type png)
 
 <use Images/related_work/traj_optim_2.png>
@@ -1511,7 +1511,7 @@ e 67.
 (pdftex.def)             Requested size: 207.01575pt x 99.04347pt.
  [9 <./Images/related_work/traj_optim_1.png> <./Images/related_work/traj_optim_
 2.png>]
-<Images/related_work/trajectorysetbossduc.png, id=522, 844.15375pt x 323.2075pt
+<Images/related_work/trajectorysetbossduc.png, id=523, 844.15375pt x 323.2075pt
 >
 File: Images/related_work/trajectorysetbossduc.png Graphic file (type png)
  <use Images/related_work/trajectorysetbossduc.png>
@@ -1519,7 +1519,7 @@ Package pdftex.def Info: Images/related_work/trajectorysetbossduc.png used on i
 nput line 84.
 (pdftex.def)             Requested size: 258.77463pt x 99.0787pt.
  [10 <./Images/related_work/trajectorysetbossduc.png>]
-<Images/related_work/kolskistaticobst.png, id=539, 630.355pt x 369.38pt>
+<Images/related_work/kolskistaticobst.png, id=540, 630.355pt x 369.38pt>
 File: Images/related_work/kolskistaticobst.png Graphic file (type png)
 
 <use Images/related_work/kolskistaticobst.png>
@@ -1527,14 +1527,14 @@ Package pdftex.def Info: Images/related_work/kolskistaticobst.png used on input
  line 105.
 (pdftex.def)             Requested size: 215.64333pt x 126.36534pt.
 
-<Images/related_work/dynamiccollsionkolski.png, id=540, 652.4375pt x 373.395pt>
+<Images/related_work/dynamiccollsionkolski.png, id=541, 652.4375pt x 373.395pt>
 File: Images/related_work/dynamiccollsionkolski.png Graphic file (type png)
 <use Images/related_work/dynamiccollsionkolski.png>
 Package pdftex.def Info: Images/related_work/dynamiccollsionkolski.png used on 
 input line 111.
 (pdftex.def)             Requested size: 215.64333pt x 123.41444pt.
 
-<Images/related_work/kolskidynamicobstacles.png, id=545, 829.0975pt x 243.91125
+<Images/related_work/kolskidynamicobstacles.png, id=546, 829.0975pt x 243.91125
 pt>
 File: Images/related_work/kolskidynamicobstacles.png Graphic file (type png)
  <use Images/related_work/kolskidynamicobstacles.png>
@@ -1548,14 +1548,14 @@ ccollsionkolski.png> <./Images/related_work/kolskidynamicobstacles.png>]) [12]
 
 (./Chapters/VehicleSetup.tex
 Chapter 3.
-<Images/platform/car.jpg, id=563, 963.6pt x 722.7pt>
+<Images/platform/car.jpg, id=564, 963.6pt x 722.7pt>
 File: Images/platform/car.jpg Graphic file (type jpg)
 
 <use Images/platform/car.jpg>
 Package pdftex.def Info: Images/platform/car.jpg used on input line 6.
 (pdftex.def)             Requested size: 258.77463pt x 194.07297pt.
 
-<Images/platform/car_internals.png, id=567, 3100.58376pt x 1637.11626pt>
+<Images/platform/car_internals.png, id=568, 3100.58376pt x 1637.11626pt>
 File: Images/platform/car_internals.png Graphic file (type png)
 
 <use Images/platform/car_internals.png>
@@ -1563,7 +1563,7 @@ Package pdftex.def Info: Images/platform/car_internals.png used on input line 1
 5.
 (pdftex.def)             Requested size: 345.03064pt x 182.15671pt.
 
-<Images/platform/hardware_Connections.png, id=568, 626.34pt x 337.26pt>
+<Images/platform/hardware_Connections.png, id=569, 626.34pt x 337.26pt>
 File: Images/platform/hardware_Connections.png Graphic file (type png)
 
 <use Images/platform/hardware_Connections.png>
@@ -1587,7 +1587,7 @@ es/platform/hardware_Connections.png>]) [15]
 
 ]
 Chapter 4.
-<Images/path_planner.jpg, id=596, 722.7pt x 542.025pt>
+<Images/path_planner.jpg, id=597, 722.7pt x 542.025pt>
 File: Images/path_planner.jpg Graphic file (type jpg)
 
 <use Images/path_planner.jpg>
@@ -1598,21 +1598,21 @@ Package pdftex.def Info: Images/path_planner.jpg used on input line 12.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [17] [18 <./Images/path_planner.jpg>]
-<Images/rndf_segment.png, id=618, 478.78876pt x 213.79875pt>
+<Images/rndf_segment.png, id=619, 478.78876pt x 213.79875pt>
 File: Images/rndf_segment.png Graphic file (type png)
 
 <use Images/rndf_segment.png>
 Package pdftex.def Info: Images/rndf_segment.png used on input line 52.
 (pdftex.def)             Requested size: 241.51947pt x 107.84843pt.
 
-<Images/rndf_exits.png, id=619, 469.755pt x 283.0575pt>
+<Images/rndf_exits.png, id=620, 469.755pt x 283.0575pt>
 File: Images/rndf_exits.png Graphic file (type png)
 
 <use Images/rndf_exits.png>
 Package pdftex.def Info: Images/rndf_exits.png used on input line 58.
 (pdftex.def)             Requested size: 189.76718pt x 114.34395pt.
 
-<Images/zone_segment.png, id=622, 472.76625pt x 364.36125pt>
+<Images/zone_segment.png, id=623, 472.76625pt x 364.36125pt>
 File: Images/zone_segment.png Graphic file (type png)
 
 <use Images/zone_segment.png>
@@ -1626,14 +1626,14 @@ LaTeX Warning: Marginpar on page 20 moved.
 
 LaTeX Warning: Marginpar on page 20 moved.
 
-<Images/path_Segmentation.png, id=633, 765.86125pt x 516.93124pt>
+<Images/path_Segmentation.png, id=634, 765.86125pt x 516.93124pt>
 File: Images/path_Segmentation.png Graphic file (type png)
 
 <use Images/path_Segmentation.png>
 Package pdftex.def Info: Images/path_Segmentation.png used on input line 91.
 (pdftex.def)             Requested size: 345.03064pt x 232.88509pt.
  [20 <./Images/path_Segmentation.png>]
-[21] <Images/sl_over_xy.png, id=662, 739.76375pt x 397.485pt>
+[21] <Images/sl_over_xy.png, id=663, 739.76375pt x 397.485pt>
 File: Images/sl_over_xy.png Graphic file (type png)
 
 <use Images/sl_over_xy.png>
@@ -1643,7 +1643,7 @@ Package pdftex.def Info: Images/sl_over_xy.png used on input line 127.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [22]
-<Images/xy_sl_conversion.png, id=679, 615.29875pt x 263.98625pt>
+<Images/xy_sl_conversion.png, id=680, 615.29875pt x 263.98625pt>
 File: Images/xy_sl_conversion.png Graphic file (type png)
 
 <use Images/xy_sl_conversion.png>
@@ -1653,14 +1653,14 @@ Package pdftex.def Info: Images/xy_sl_conversion.png used on input line 140.
 Underfull \vbox (badness 1014) has occurred while \output is active []
 
  [23 <./Images/sl_over_xy.png>] [24 <./Images/xy_sl_conversion.png>]
-<Images/accelerations2.jpg, id=711, 1139.25626pt x 673.51625pt>
+<Images/accelerations2.jpg, id=712, 1139.25626pt x 673.51625pt>
 File: Images/accelerations2.jpg Graphic file (type jpg)
 
 <use Images/accelerations2.jpg>
 Package pdftex.def Info: Images/accelerations2.jpg used on input line 159.
 (pdftex.def)             Requested size: 345.03064pt x 203.97823pt.
 
-<Images/concept/distvstime2.jpg, id=712, 704.6325pt x 599.23875pt>
+<Images/concept/distvstime2.jpg, id=713, 704.6325pt x 599.23875pt>
 File: Images/concept/distvstime2.jpg Graphic file (type jpg)
 
 <use Images/concept/distvstime2.jpg>
@@ -1668,7 +1668,7 @@ Package pdftex.def Info: Images/concept/distvstime2.jpg used on input line 166.
 
 (pdftex.def)             Requested size: 345.03064pt x 293.41925pt.
 
-<Images/concept/distvsvel2.jpg, id=715, 1202.4925pt x 469.755pt>
+<Images/concept/distvsvel2.jpg, id=716, 1202.4925pt x 469.755pt>
 File: Images/concept/distvsvel2.jpg Graphic file (type jpg)
 
 <use Images/concept/distvsvel2.jpg>
@@ -1676,14 +1676,14 @@ Package pdftex.def Info: Images/concept/distvsvel2.jpg used on input line 173.
 (pdftex.def)             Requested size: 345.03064pt x 134.78471pt.
  [25 <./Images/accelerations2.jpg>] [26 <./Images/concept/distvstime2.jpg> <./I
 mages/concept/distvsvel2.jpg>]
-<Images/lateral_planning.png, id=737, 642.4pt x 701.62125pt>
+<Images/lateral_planning.png, id=738, 642.4pt x 701.62125pt>
 File: Images/lateral_planning.png Graphic file (type png)
 
 <use Images/lateral_planning.png>
 Package pdftex.def Info: Images/lateral_planning.png used on input line 225.
 (pdftex.def)             Requested size: 345.03064pt x 376.84642pt.
 
-<Images/concept/searchspace2.jpg, id=744, 599.23875pt x 654.445pt>
+<Images/concept/searchspace2.jpg, id=745, 599.23875pt x 654.445pt>
 File: Images/concept/searchspace2.jpg Graphic file (type jpg)
 
 <use Images/concept/searchspace2.jpg>
@@ -1695,7 +1695,7 @@ Package pdftex.def Info: Images/concept/searchspace2.jpg used on input line 240
 LaTeX Warning: Marginpar on page 27 moved.
 
 [27] [28 <./Images/lateral_planning.png>] [29 <./Images/concept/searchspace2.jp
-g>] <Images/static_check.png, id=774, 1086.0575pt x 561.09625pt>
+g>] <Images/static_check.png, id=775, 1086.0575pt x 561.09625pt>
 File: Images/static_check.png Graphic file (type png)
 
 <use Images/static_check.png>
@@ -1710,40 +1710,37 @@ LaTeX Warning: Reference `dynamic_close1' on page 31 undefined on input line 28
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [31]
-
-LaTeX Warning: Marginpar on page 32 moved.
-
-<Images/dynamic_check.png, id=805, 1003.75pt x 481.8pt>
+<Images/dynamic_check.png, id=807, 1003.75pt x 481.8pt>
 File: Images/dynamic_check.png Graphic file (type png)
 
 <use Images/dynamic_check.png>
-Package pdftex.def Info: Images/dynamic_check.png used on input line 303.
+Package pdftex.def Info: Images/dynamic_check.png used on input line 301.
 (pdftex.def)             Requested size: 345.03064pt x 165.61833pt.
 
-<Images/concept/dynamic_collision_lines.jpg, id=806, 2057.6875pt x 2343.75626pt
+<Images/concept/dynamic_collision_lines.jpg, id=808, 2057.6875pt x 2343.75626pt
 >
 File: Images/concept/dynamic_collision_lines.jpg Graphic file (type jpg)
  <use Images/concept/dynamic_collision_lines.jpg>
 Package pdftex.def Info: Images/concept/dynamic_collision_lines.jpg used on inp
-ut line 367.
+ut line 365.
 (pdftex.def)             Requested size: 474.41795pt x 540.37584pt.
 
-Overfull \hbox (43.13129pt too wide) in paragraph at lines 367--371
+Overfull \hbox (43.13129pt too wide) in paragraph at lines 365--369
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 6.09297pt on input line 373.
+LaTeX Warning: Float too large for page by 6.09297pt on input line 371.
 
-<Images/concept/dynamic_obstacle_new.png, id=807, 660.4675pt x 310.15875pt>
+<Images/concept/dynamic_obstacle_new.png, id=809, 660.4675pt x 310.15875pt>
 File: Images/concept/dynamic_obstacle_new.png Graphic file (type png)
 
 <use Images/concept/dynamic_obstacle_new.png>
 Package pdftex.def Info: Images/concept/dynamic_obstacle_new.png used on input 
-line 378.
+line 376.
 (pdftex.def)             Requested size: 345.03064pt x 162.03123pt.
 
-Underfull \vbox (badness 3884) has occurred while \output is active []
+Underfull \vbox (badness 7576) has occurred while \output is active []
 
  [32 <./Images/dynamic_check.png>] [33 <./Images/concept/dynamic_collision_line
 s.jpg>]
@@ -1757,7 +1754,7 @@ s.jpg>]
 
 ]
 Chapter 5.
-<Images/implementation/message_flow.png, id=841, 1217.54875pt x 885.3075pt>
+<Images/implementation/message_flow.png, id=844, 1217.54875pt x 885.3075pt>
 File: Images/implementation/message_flow.png Graphic file (type png)
 
 <use Images/implementation/message_flow.png>
@@ -1765,7 +1762,7 @@ Package pdftex.def Info: Images/implementation/message_flow.png used on input l
 ine 7.
 (pdftex.def)             Requested size: 388.15536pt x 282.237pt.
  [37 <./Images/implementation/message_flow.png>]
-<Images/implementation/route_planner.png, id=848, 1035.87pt x 925.4575pt>
+<Images/implementation/route_planner.png, id=851, 1035.87pt x 925.4575pt>
 File: Images/implementation/route_planner.png Graphic file (type png)
 
 <use Images/implementation/route_planner.png>
@@ -1773,7 +1770,7 @@ Package pdftex.def Info: Images/implementation/route_planner.png used on input
 line 30.
 (pdftex.def)             Requested size: 388.15536pt x 346.7774pt.
  [38 <./Images/implementation/route_planner.png>]
-<Images/implementation/vehicle_path.png, id=867, 1286.8075pt x 852.18375pt>
+<Images/implementation/vehicle_path.png, id=870, 1286.8075pt x 852.18375pt>
 File: Images/implementation/vehicle_path.png Graphic file (type png)
 
 <use Images/implementation/vehicle_path.png>
@@ -1781,7 +1778,7 @@ Package pdftex.def Info: Images/implementation/vehicle_path.png used on input l
 ine 46.
 (pdftex.def)             Requested size: 301.89934pt x 199.92511pt.
 
-<Images/implementation/vehicle_state.png, id=868, 1061.9675pt x 520.94624pt>
+<Images/implementation/vehicle_state.png, id=871, 1061.9675pt x 520.94624pt>
 File: Images/implementation/vehicle_state.png Graphic file (type png)
 
 <use Images/implementation/vehicle_state.png>
@@ -1789,7 +1786,7 @@ Package pdftex.def Info: Images/implementation/vehicle_state.png used on input
 line 53.
 (pdftex.def)             Requested size: 345.03064pt x 169.25783pt.
 
-<Images/implementation/motion_planner.png, id=869, 794.97pt x 923.45pt>
+<Images/implementation/motion_planner.png, id=872, 794.97pt x 923.45pt>
 File: Images/implementation/motion_planner.png Graphic file (type png)
 
 <use Images/implementation/motion_planner.png>
@@ -1806,7 +1803,7 @@ No file Chapters/Discussion.tex.
 
 (./Chapters/Evaluation.tex
 Chapter 6.
-<Images/evaluation/lane_blocked1.jpg, id=885, 1015.795pt x 343.2825pt>
+<Images/evaluation/lane_blocked1.jpg, id=888, 1015.795pt x 343.2825pt>
 File: Images/evaluation/lane_blocked1.jpg Graphic file (type jpg)
 
 <use Images/evaluation/lane_blocked1.jpg>
@@ -1814,7 +1811,7 @@ Package pdftex.def Info: Images/evaluation/lane_blocked1.jpg used on input line
  13.
 (pdftex.def)             Requested size: 345.03064pt x 116.59926pt.
 
-<Images/evaluation/slow_moving1.jpg, id=888, 1027.84pt x 169.63374pt>
+<Images/evaluation/slow_moving1.jpg, id=891, 1027.84pt x 169.63374pt>
 File: Images/evaluation/slow_moving1.jpg Graphic file (type jpg)
 
 <use Images/evaluation/slow_moving1.jpg>
@@ -1828,7 +1825,7 @@ Package pdftex.def Info: Images/evaluation/slow_moving1.jpg used on input line
 
 
  <./Images/evaluation/lane_blocked1.jpg>] <Images/evaluation/slow_moving2.jpg, 
-id=894, 1027.84pt x 602.25pt>
+id=897, 1027.84pt x 602.25pt>
 File: Images/evaluation/slow_moving2.jpg Graphic file (type jpg)
 
 <use Images/evaluation/slow_moving2.jpg>
@@ -1837,14 +1834,14 @@ Package pdftex.def Info: Images/evaluation/slow_moving2.jpg used on input line
 (pdftex.def)             Requested size: 345.03064pt x 202.17082pt.
  [42 <./Images/evaluation/slow_moving1.jpg> <./Images/evaluation/slow_moving2.j
 pg>]
-<Images/evaluation/merging1.jpg, id=903, 1027.84pt x 602.25pt>
+<Images/evaluation/merging1.jpg, id=906, 1027.84pt x 602.25pt>
 File: Images/evaluation/merging1.jpg Graphic file (type jpg)
 
 <use Images/evaluation/merging1.jpg>
 Package pdftex.def Info: Images/evaluation/merging1.jpg used on input line 40.
 (pdftex.def)             Requested size: 345.03064pt x 202.17082pt.
 
-<Images/evaluation/series_lane_blocked1.jpg, id=905, 910.40125pt x 374.39874pt>
+<Images/evaluation/series_lane_blocked1.jpg, id=908, 910.40125pt x 374.39874pt>
 File: Images/evaluation/series_lane_blocked1.jpg Graphic file (type jpg)
 <use Images/evaluation/series_lane_blocked1.jpg>
 Package pdftex.def Info: Images/evaluation/series_lane_blocked1.jpg used on inp
@@ -1858,7 +1855,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Underfull \vbox (badness 1052) has occurred while \output is active []
 
  [43 <./Images/evaluation/merging1.jpg>]
-<Images/evaluation/road_blocked1.jpg, id=913, 1027.84pt x 443.6575pt>
+<Images/evaluation/road_blocked1.jpg, id=916, 1027.84pt x 443.6575pt>
 File: Images/evaluation/road_blocked1.jpg Graphic file (type jpg)
 
 <use Images/evaluation/road_blocked1.jpg>
@@ -1866,7 +1863,7 @@ Package pdftex.def Info: Images/evaluation/road_blocked1.jpg used on input line
  64.
 (pdftex.def)             Requested size: 431.28667pt x 186.15886pt.
 
-<Images/evaluation/pedestrian_ahead.jpg, id=915, 877.2775pt x 693.59125pt>
+<Images/evaluation/pedestrian_ahead.jpg, id=918, 877.2775pt x 693.59125pt>
 File: Images/evaluation/pedestrian_ahead.jpg Graphic file (type jpg)
 
 <use Images/evaluation/pedestrian_ahead.jpg>
@@ -1882,7 +1879,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [44 <./Images/evaluation/series_lane_blocked1.jpg> <./Images/evaluation/road_b
 locked1.jpg>]
-<Images/evaluation/dynamic_ahead_breaking1.jpg, id=923, 1026.83624pt x 712.6625
+<Images/evaluation/dynamic_ahead_breaking1.jpg, id=926, 1026.83624pt x 712.6625
 pt>
 File: Images/evaluation/dynamic_ahead_breaking1.jpg Graphic file (type jpg)
  <use Images/evaluation/dynamic_ahead_breaking1.jpg>
@@ -1894,7 +1891,7 @@ input line 85.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-<Images/evaluation/dynamic_ahead_breaking2.jpg, id=925, 940.51375pt x 381.425pt
+<Images/evaluation/dynamic_ahead_breaking2.jpg, id=928, 940.51375pt x 381.425pt
 >
 File: Images/evaluation/dynamic_ahead_breaking2.jpg Graphic file (type jpg)
  <use Images/evaluation/dynamic_ahead_breaking2.jpg>
@@ -1910,7 +1907,7 @@ Underfull \vbox (badness 6141) has occurred while \output is active []
 
  [45 <./Images/evaluation/pedestrian_ahead.jpg>] [46 <./Images/evaluation/dynam
 ic_ahead_breaking1.jpg>]
-<Images/horizaon_optimality_2.png, id=939, 817.0525pt x 344.28625pt>
+<Images/horizaon_optimality_2.png, id=942, 817.0525pt x 344.28625pt>
 File: Images/horizaon_optimality_2.png Graphic file (type png)
 
 <use Images/horizaon_optimality_2.png>
@@ -1919,7 +1916,7 @@ Package pdftex.def Info: Images/horizaon_optimality_2.png used on input line 12
 (pdftex.def)             Requested size: 345.03064pt x 145.38724pt.
  [47 <./Images/evaluation/dynamic_ahead_breaking2.jpg> <./Images/horizaon_optim
 ality_2.png>]
-<Images/optimized_reference.png, id=947, 884.30376pt x 304.13625pt>
+<Images/optimized_reference.png, id=950, 884.30376pt x 304.13625pt>
 File: Images/optimized_reference.png Graphic file (type png)
 
 <use Images/optimized_reference.png>
@@ -1927,7 +1924,7 @@ Package pdftex.def Info: Images/optimized_reference.png used on input line 135.
 
 (pdftex.def)             Requested size: 345.03064pt x 118.6637pt.
  [48 <./Images/optimized_reference.png>]
-<Images/probablistically_complete.png, id=956, 712.6625pt x 333.245pt>
+<Images/probablistically_complete.png, id=959, 712.6625pt x 333.245pt>
 File: Images/probablistically_complete.png Graphic file (type png)
 
 <use Images/probablistically_complete.png>
@@ -1956,7 +1953,7 @@ Chapter 7.
 
 (./Chapters/Appendix.tex
 Appendix A.
-<Images/appendix/staticpoints.jpg, id=1110, 555.07375pt x 306.14375pt>
+<Images/appendix/staticpoints.jpg, id=1114, 555.07375pt x 306.14375pt>
 File: Images/appendix/staticpoints.jpg Graphic file (type jpg)
 
 <use Images/appendix/staticpoints.jpg>
@@ -1967,7 +1964,7 @@ Package pdftex.def Info: Images/appendix/staticpoints.jpg used on input line 16
 
 
  <./Images/appendix/staticpoints.jpg>] <Images/appendix/dynamic_approx.png, id=
-1119, 429.605pt x 213.79875pt>
+1123, 429.605pt x 213.79875pt>
 File: Images/appendix/dynamic_approx.png Graphic file (type png)
 
 <use Images/appendix/dynamic_approx.png>
@@ -1975,15 +1972,15 @@ Package pdftex.def Info: Images/appendix/dynamic_approx.png used on input line
 37.
 (pdftex.def)             Requested size: 345.03064pt x 171.71126pt.
  [60 <./Images/appendix/dynamic_approx.png>] <Images/appendix/time_diff.png, id
-=1132, 1675.2186pt x 922.8879pt>
+=1136, 2326.6925pt x 1281.78876pt>
 File: Images/appendix/time_diff.png Graphic file (type png)
 
 <use Images/appendix/time_diff.png>
-Package pdftex.def Info: Images/appendix/time_diff.png used on input line 81.
-(pdftex.def)             Requested size: 431.28667pt x 237.59348pt.
+Package pdftex.def Info: Images/appendix/time_diff.png used on input line 82.
+(pdftex.def)             Requested size: 431.28667pt x 237.5966pt.
  [61 <./Images/appendix/time_diff.png>]
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 105.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 106.
 )
 [62]
 Package minitoc Info: I0009
@@ -2022,9 +2019,9 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 81.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 81.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 81.
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: A7FD174BE077A0BD0F65D2FACC00B51F;3725.
+(rerunfilecheck)             Checksum: 22BD3EE99B08984ABE714DFDC7E0E744;3725.
 Package rerunfilecheck Info: File `Thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: 6A09727E2896941830F97FDDDBCEF96F;6175.
+(rerunfilecheck)             Checksum: C6A660F57DDCD5EB5AFB26F9136FD922;6227.
 
 
 LaTeX Warning: There were undefined references.
@@ -2035,8 +2032,8 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 81.
  ) 
 Here is how much of TeX's memory you used:
- 24904 strings out of 494910
- 432334 string characters out of 6179836
+ 24905 strings out of 494910
+ 432286 string characters out of 6179836
  654831 words of memory out of 5000000
  27073 multiletter control sequences out of 15000+600000
  22123 words of font info for 60 fonts, out of 8000000 for 9000
@@ -2059,10 +2056,10 @@ c/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.p
 fb>
-Output written on Thesis.pdf (75 pages, 13155110 bytes).
+Output written on Thesis.pdf (75 pages, 13165807 bytes).
 PDF statistics:
- 1838 PDF objects out of 2073 (max. 8388607)
- 1148 compressed objects within 12 object streams
- 307 named destinations out of 1000 (max. 500000)
+ 1842 PDF objects out of 2073 (max. 8388607)
+ 1152 compressed objects within 12 object streams
+ 308 named destinations out of 1000 (max. 500000)
  709 words of extra memory for PDF output out of 10000 (max. 10000000)
 

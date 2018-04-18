@@ -19,17 +19,15 @@ A level-1 auxiliary file: Chapters/Appendix.aux
 Database file #1: Thesis.bib
 Warning--entry type for "rndf_darpa" isn't style-file defined
 --line 21 of file Thesis.bib
+Warning--entry type for "mig_controller" isn't style-file defined
+--line 27 of file Thesis.bib
 Warning--entry type for "denmark_breaking" isn't style-file defined
---line 35 of file Thesis.bib
-Repeated entry---line 523 of file Thesis.bib
- : @article{mit_rrt
- :                 ,
-I'm skipping whatever remains of this entry
+--line 41 of file Thesis.bib
 Warning--entry type for "whoaccidents" isn't style-file defined
---line 693 of file Thesis.bib
+--line 699 of file Thesis.bib
 Warning--entry type for "singaporebanscars" isn't style-file defined
---line 702 of file Thesis.bib
-Warning--empty booktitle in mit_rrt
+--line 708 of file Thesis.bib
+Warning--empty booktitle in mit_rrt1
 Too many commas in name 1 of "(eds.: E. Menegatti, N. Michael, K. Berns, H. Yamaguchi), Springer Verlag, ISBN 978-3-319-08337-7" for entry traj_smoothing
 while executing---line 1090 of file plain.bst
 Too many commas in name 1 of "(eds.: E. Menegatti, N. Michael, K. Berns, H. Yamaguchi), Springer Verlag, ISBN 978-3-319-08337-7" for entry traj_smoothing
@@ -37,45 +35,45 @@ while executing---line 1090 of file plain.bst
 Too many commas in name 1 of "(eds.: E. Menegatti, N. Michael, K. Berns, H. Yamaguchi), Springer Verlag, ISBN 978-3-319-08337-7" for entry traj_smoothing
 while executing---line 1090 of file plain.bst
 Warning--empty institution in Lavalle_rrt
-You've used 59 entries,
+You've used 61 entries,
             2118 wiz_defined-function locations,
-            827 strings with 15385 characters,
-and the built_in function-call counts, 22513 in all, are:
-= -- 2134
-> -- 1162
+            836 strings with 15704 characters,
+and the built_in function-call counts, 23173 in all, are:
+= -- 2192
+> -- 1202
 < -- 24
-+ -- 464
-- -- 398
-* -- 1522
-:= -- 3611
-add.period$ -- 176
-call.type$ -- 59
-change.case$ -- 364
++ -- 480
+- -- 412
+* -- 1573
+:= -- 3722
+add.period$ -- 181
+call.type$ -- 61
+change.case$ -- 377
 chr.to.int$ -- 0
-cite$ -- 61
-duplicate$ -- 896
-empty$ -- 1717
-format.name$ -- 398
-if$ -- 4842
+cite$ -- 63
+duplicate$ -- 914
+empty$ -- 1768
+format.name$ -- 412
+if$ -- 4976
 int.to.chr$ -- 0
-int.to.str$ -- 59
-missing$ -- 50
-newline$ -- 294
-num.names$ -- 122
-pop$ -- 447
+int.to.str$ -- 61
+missing$ -- 51
+newline$ -- 303
+num.names$ -- 126
+pop$ -- 462
 preamble$ -- 1
-purify$ -- 314
+purify$ -- 325
 quote$ -- 0
-skip$ -- 727
+skip$ -- 744
 stack$ -- 0
-substring$ -- 1246
-swap$ -- 292
+substring$ -- 1283
+swap$ -- 294
 text.length$ -- 24
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 228
+type$ -- 236
 warning$ -- 2
-while$ -- 182
-width$ -- 61
-write$ -- 636
-(There were 4 error messages)
+while$ -- 187
+width$ -- 63
+write$ -- 654
+(There were 3 error messages)

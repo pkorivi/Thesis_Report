@@ -52,7 +52,7 @@
 \contentsline {chapter}{\numberline {7}Conclusion and Future Work}{51}{chapter.7}
 \contentsline {section}{\numberline {7.1}Conclusion}{51}{section.7.1}
 \contentsline {section}{\numberline {7.2}Future Work}{52}{section.7.2}
-\contentsline {chapter}{Bibliography}{53}{chapter*.63}
+\contentsline {chapter}{Bibliography}{53}{chapter*.62}
 \contentsline {chapter}{\numberline {A}Appendix}{59}{appendix.A}
 \contentsline {section}{\numberline {A.1}Static Obstacle Collision checking}{59}{section.A.1}
 \contentsline {section}{\numberline {A.2}Dynamic Obstacle Collision checking}{60}{section.A.2}
