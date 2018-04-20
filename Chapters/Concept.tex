@@ -79,7 +79,6 @@ This section details about the RNDF file \cite{rndf_darpa} which defines the roa
 %\end{figure}
 
 \todo{foot note - source of images}
-\todo{Add Appendix for how to create the RNDF file for model car}
 
 
 \subsection{Path Representation and calculation}
@@ -141,8 +140,6 @@ In summary, the curvilinear coordinate system makes planning easier but needs ex
     \caption{Showing projection of the current position of the car shown by green triangle to s coordinate system. Each circle represents a node, and the lines between them are links. \cite{volvo_reactive_traj}}
     \label{xy_sl_conversion}
 \end{figure}
-\todo{add VOLVO reference reference in foot note and also remove the orange dots}
-
 
 \subsection{ Trajectory Creation} \label{traj_creation}
 
@@ -223,12 +220,10 @@ The figure \ref{lat_planning} indicates how the initial orientation will affect 
  \begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth]{Images/lateral_planning.png}
-    \caption{Path candidates generation results. (a) $l_0 = 0$ and $\theta_0 = 0$ (b) $ 
+    \caption{Path candidates generation results. (a) Road parallel trajectories $l_0 = 0$ and $\theta_0 = 0$ (b) ego shifted with respect to center and driving at an angle $ 
 l_0 = \Delta_d$ and $ \theta_0 = \Delta\theta$. \cite{real_time_traj_plan_article}}
     \label{lat_planning}
 \end{figure}
-
-\todo{check if own figure is needed -  remove that sampling terminal states line}
 
 
 The constants $ { c_0,c_1,c_2,c_3}  $ in equation \ref{lat_shift_one} can be obtained by solving equations \ref{lat_vel} to \ref{th_bundary}.
@@ -267,7 +262,6 @@ If $(intersection[1]<intersection[0])$  then there is no intersection in the two
     |d\textsubscript{ego} - d\textsubscript{obst}| > car\_width/2 + obstacle\_width/2 + safety\_margin
     \label{static_obst_safety_dist}
 \end{equation}
-\todo{represent the parameters in terms of $d_e , c_w, o_w$ etc}
 
 It is representative from figure \ref{static_check} that the trajectory T1 has collision and trajectory T0 has no collision. Different costs can be added based on how close the ego vehicle is with respect to the static obstacle.  
 
@@ -399,7 +393,7 @@ In the Figure \ref{dynamic_obst_all} motion of the ego vehicle is approximated w
 
 
 \subsection{Cost Functions and Trajectory Selection} \label{traj_Selection}
-Selection of final trajectory is based on the different costs associated with it, and costs can be static and dynamic. Static costs are known before trajectory creation and dynamic costs are known after the trajectory is created and evaluated. There is wide research on different costs involved in trajectory selection as discussed in section \todo{add link to subchapter costs in related works}
+Selection of final trajectory is based on the different costs associated with it, and costs can be static and dynamic. Static costs are known before trajectory creation and dynamic costs are known after the trajectory is created and evaluated. There is wide research on different costs involved in trajectory selection as discussed in section \ref{traj_eval}
 
 This thesis implements a simple cost function as represented in \ref{cost_eqn}; explicit smoothness costs are not considered as the target validation platform is a model car with no humans inside and limitations of the model car to track a fine trajectory. 
 \begin{equation}
