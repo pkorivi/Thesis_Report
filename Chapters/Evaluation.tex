@@ -10,8 +10,8 @@ In driving scenario  \ref{lane_blocked_1}, driving lane is blocked by a static o
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.8\textwidth]{Images/evaluation/lane_blocked1.jpg}
-    \caption{Driving Lane Blocked}
+    \includegraphics[width=0.7\textwidth]{Images/evaluation/2_lane_blocked.jpg}
+    \caption{Driving Lane is blocked by a static obstacle with an obstacle moving in next lane. The ego vehicle avoids the static obstacle by driving into next lane and comes back to intended lane once it is free}
     \label{lane_blocked_1}
 \end{figure}
 
@@ -33,7 +33,7 @@ In situation one presented in Figure \ref{slow_moving_1} ego vehicle starts chan
 
 \subsection{Merging into traffic}
 
-In the scenario presented in Figure \ref{merging1}, lane changing is requested to merge into the traffic in the left lane. Here ego vehicle speed is $1ms^(-1)$ and obstacle speed is $0.6m^(-1)$. Initially, lane change does not occur as cost functions are tuned to maintain speed over maintaining required lane. As the vehicle enters the curve, target driving speed is reduced, and the vehicle merges into the traffic in the left lane. Depending on which portion of the lane the ego vehicle is in, i.e., near intersections or exits target lane should have higher priority over maintaining speed and during rest of the regions target speed should be of higher priority to reach a destination quickly. Cost functions implemented in this thesis provide flexibility in tuning behaviour of the ego vehicle. 
+In the scenario presented in Figure \ref{merging1}, lane changing is requested to merge into the traffic in the left lane. Here ego vehicle speed is $1ms^{-1}$ and obstacle speed is $0.6m^{-1}$. Initially, lane change does not occur as cost functions are tuned to maintain speed over maintaining required lane. As the vehicle enters the curve, target driving speed is reduced, and the vehicle merges into the traffic in the left lane. Depending on which portion of the lane the ego vehicle is in, i.e., near intersections or exits target lane should have higher priority over maintaining speed and during rest of the regions target speed should be of higher priority to reach a destination quickly. Cost functions implemented in this thesis provide flexibility in tuning behaviour of the ego vehicle. 
 
 \begin{figure}[h]
     \centering
