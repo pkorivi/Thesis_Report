@@ -1,5 +1,9 @@
 \begin{thebibliography}{10}
 
+\bibitem{model_car_archi}
+AutoModelCar.
+\newblock Hardware (autonomos model v3).
+
 \bibitem{prometheus}
 R.~Behringer and N.~Muller.
 \newblock Autonomous road vehicle guidance from autobahnen to narrow curves.
@@ -93,6 +97,10 @@ Gaston~A. Fiore and David~L. Darmofal.
 \newblock A robust motion planning approach for autonomous driving in urban
   areas.
 \newblock 2008.
+
+\bibitem{dcmlr}
+Dahlem~Center for Machine~Learning and Robotics.
+\newblock Autonomos model car.
 
 \bibitem{informed_rrt}
 Jonathan~D. Gammell, Siddhartha~S. Srinivasa, and Timothy~D. Barfoot.
