@@ -19,9 +19,9 @@ After DUC, research efforts have been increased to develop state of the art solu
 
  Planning approaches that are widely used in autonomous driving are classified as shown in Figure \ref{related_work_classification}. The following subsections discuss research in each of the described categories. 
 
-\begin{figure}[H]
+\begin{figure}
 	\centering
-	\includegraphics[width=0.8\textwidth]{Images/related_work/planning_division.png}
+	\includegraphics[width=0.8\textwidth]{Images/related_work/planning_division.jpg}
 	\caption{General Overview of On-road planners. a - \cite{cmu_parallel_thesis}  \cite{diss_shui_phd_thesis} \cite{traj_planner_optimization} \cite{lattice_Gu_Tiyanu} \cite{unit_A_star} , b - \cite{kolski_thesis} \cite{real_time_traj_plan_article} \cite{darpa_urban_challenge}, c -\cite{rrt_star} \cite{rrt_urban_driv} \cite{mit_rrt1}
 	}
 	\label{related_work_classification}
@@ -37,7 +37,7 @@ Different variants of RRT's are widely accepted in robot motion planning because
 \begin{figure}
 	\centering
 	\includegraphics[width=0.6\textwidth]{Images/related_work/mit_urban_planning.png}
-	\caption{MIT Darpa Urban Challenge - RRT based planning approach}
+	\caption{MIT Darpa Urban Challenge - RRT based planning. In this approach, motion plans are propagated using vehicles dynamic model, and these paths are evaluated for feasibility}
 	\label{mit_rrt_fig}
 \end{figure} 
 
@@ -55,18 +55,16 @@ In summary lattice planners create trajectories that are smooth, optimal and com
 
 \begin{figure}
 	\centering
-	\begin{subfigure}{.52\textwidth}
+	\begin{subfigure}{.51\textwidth}
 		\centering
 		\includegraphics[width=1.0\linewidth]{Images/related_work/traj_optim_1.png}
 		\caption{Path set. blue vehicle - current vehicle pose, and grey vehicles - sampled endpoints, red paths-quartic curvature polynomials and green paths - cubic ones}
 		\label{trajoptsub1}
-	\end{subfigure}%
-	\begin{subfigure}{.48\textwidth}
+	\end{subfigure}\hspace{.01\textwidth}
+	\begin{subfigure}{.47\textwidth}
 		\centering
 		\includegraphics[width=1.0\linewidth]{Images/related_work/traj_optim_2.png}
-		\caption{Speed set. The green points are sampled speeds, the
-red curves are beyond the acceleration limit, and the grey
-curves are valid ones}
+		\caption{Speed set. The green points are sampled speeds at sampled longitudinal states, the red curves are beyond the acceleration limit, and the grey curves are valid ones}
 		\label{trajoptsub2}
 	\end{subfigure}
 	\caption{Lattice Planner - Path velocity representation in \cite{traj_planner_optimization}}
@@ -76,7 +74,7 @@ curves are valid ones}
 \subsection{Local Search}
 \label{rw_local_search}
 
-Local search is the most popular technique in autonomous driving, in this method instead of searching the complete graph a local state space is searched for a feasible solution as shown in \ref{cmubossduc}. The planners proposed in \cite{darpa_urban_challenge} \cite{juniorstanford} \cite{kolski_thesis} \cite{Broggi2012} \cite{real_time_traj_plan_article} \cite{urbansafetyeth} perform a variation of local search. The generated candidate trajectories are evaluated with a set of cost functions for collision checking and comfort to finalise the final trajectory. Paths with lateral shifts can be split into two categories, i.e., lateral shifts in action space(controls as a function of time and controls as a function of time and state) and state space(position, orientation, linear and angular velocities, curvature) of vehicle\cite{howard_phd}. Partial motion planning is another technique used to search locally reducing computational power significantly \cite{partialmotionplanning}. In summary, local search algorithms can create short-term trajectories at a low computational cost with limitations in the manoeuvres robot can perform, these are especially suitable for low-speed and on-road driving.
+Local search is the most popular technique in autonomous driving, in this method instead of searching the complete graph a local state space is searched for a feasible solution as shown in \ref{cmubossduc}. The planners proposed in \cite{darpa_urban_challenge} \cite{juniorstanford} \cite{kolski_thesis} \cite{Broggi2012} \cite{real_time_traj_plan_article} \cite{urbansafetyeth} perform a variation of local search. In this approach a set of trajectories are forward projected based on vehicle dynamics, controls, to reach sampled states. The generated candidate trajectories are evaluated with a set of cost functions for collision checking and comfort to finalise the final trajectory. Paths with lateral shifts can be split into two categories, i.e., lateral shifts in action space(controls as a function of time and controls as a function of time and state) and state space(position, orientation, linear and angular velocities, curvature) of vehicle\cite{howard_phd}. Partial motion planning is another technique used to search locally reducing computational power significantly \cite{partialmotionplanning}. This technique has gained popularity due to ease in implementation and ability to perform rich sampling in short horizon for solving motion planning problem. In summary, local search algorithms can create short-term trajectories at a low computational cost with limitations in the manoeuvres robot can perform, these are especially suitable for low-speed and on-road driving.
 
 \begin{figure}
 	\centering
@@ -99,19 +97,19 @@ Simulation-based techniques are widely used in collision checking where the vehi
 In \cite{kolski_thesis}, for collision checking in static environments, a map is represented as grid cells and based on obstacles and traversable areas the cells are assigned cost, and the trajectories that pass through these cells are added with corresponding costs as shown in Figure \ref{kolski1}. Finally, the trajectory with the lowest cost is selected. In dynamic environments' vehicle shape is forwarded and checked for collision with static obstacles as represented in Figure \ref{kolski2}.
 \begin{figure}
 	\centering
-	\begin{subfigure}{.50\textwidth}
+	\begin{subfigure}{.49\textwidth}
 		\centering
 		\includegraphics[width=1.0\linewidth]{Images/related_work/kolskistaticobst.png}
-		\caption{Static Environments - Cost of path is computed based on cost of the cells it traverses through, darker the cell higher the cost.}
+		\caption{Static Environments - Map is represented by a set of grid cells; the cells are assigned cost based on the presence of obstacle and closeness to obstacles. Cost of the path is computed based on the cost of the cells it traverses through, darker the cell higher the cost.}
 		\label{kolski1}
-	\end{subfigure}%
-	\begin{subfigure}{.50\textwidth}
+	\end{subfigure}\hspace{.01\textwidth}
+	\begin{subfigure}{.49\textwidth}
 		\centering
 		\includegraphics[width=1.0\linewidth]{Images/related_work/dynamiccollsionkolski.png}
-		\caption{Dynamic Environments, Static Obstacles- For series of trajectories vehicle shape is forwarded and collision checking is performed}
+		\caption{Dynamic Environments - The vehicle shape is forward projected for each path, and the collision checking is performed at each step. If at any point the shape of the ego vehicle collides with an obstacle, the path is marked invalid.}
 		\label{kolski2}
 	\end{subfigure}
-	\caption{Collision Checking \cite{kolski_thesis}}
+	\caption{Collision Checking for Static Obstacles \cite{kolski_thesis}}
 	\label{kolskicollison}
 \end{figure}
 
@@ -120,7 +118,7 @@ For collision checking with dynamic obstacles, \cite{kolski_thesis} uses a hiera
 \begin{figure}
 	\centering
 	\includegraphics[width=1.0\textwidth]{Images/related_work/kolskidynamicobstacles.png}
-	\caption{Collison checking for Dynamic Obstacles \cite{kolski_thesis}}
+	\caption{Collison checking for Dynamic Obstacles \cite{kolski_thesis} a) Initially bounding boxes along length of trajectory are drawn to determine if the trajectories collide, if they collide b) circle approximating the shape of the ego is forward projected and checked for collision, if this is also colliding then c) shape of the ego is forward projected and checked for collision.}
 	\label{kolskidynamicobst}
 \end{figure} 
 
