@@ -6,7 +6,7 @@ In previous chapters detailed working of the planning algorithm has been discuss
 Due to time and resource constraint, most of the experiments to evaluate the planner are performed on the simulator. The test cases involve finding a collision-free path with obstruction in driving lane, avoiding slow moving traffic, merging into ongoing traffic, lane changes etc. The following subsections detail further on each experiment. 
 
 \subsection{Lane blocked}
-In driving scenario  \ref{lane_blocked_1}, driving lane is blocked by a static obstacle and a slow-moving obstacle is in the next lane, here ego vehicle drives slowly till it finds enough room in the next lane, once the obstacle is avoided the robot continues to shift into the intended lane and drives with increasing speed. 
+Scenario presented in \ref{lane_blocked_1} describes a situation when the driving lane is blocked by a static obstacle and there is a vehicle driving in next lane. The ego vehicle slows down till the left lane is free, overtakes the slow moving obstacle and shifts back to original lane at increased speed. 
 
 \begin{figure}[h]
     \centering
@@ -15,8 +15,51 @@ In driving scenario  \ref{lane_blocked_1}, driving lane is blocked by a static o
     \label{lane_blocked_1}
 \end{figure}
 
-\subsection{Slow Moving Traffic}
+\subsection{Overtaking and Merging into Traffic}
+
+Overtaking slow moving obstacles and merging into traffic are two scenarios which are always encountered by the vehicles during on road driving. The planner proposed in this thesis is capable of performing these two behaviors to enable autonomous driving. 
+
+In scenario presented in Figure \ref{slow_moving_1}, there are two slow moving obstacles ahead of the ego vehicle. Initially ego-vehicle picks up the speed but does not change lane as staying in same lane is prioritized over accelerating higher. Once ego vehicle is close to obstacle it has to brake or shift lane, as shifting lane is prioritized over braking ego vehicle shifts into left lane and starts accelerating. The velocity of obstacles is $0.3ms^{-1}$. 
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\textwidth]{Images/evaluation/overtake_1.jpg}
+	\caption{Ego vehicle initially picks up the speed, when the obstacle is in collision range ego vehicle starts shifting into left lane and overtakes the slow moving obstacle}
+	\label{slow_moving_1}
+\end{figure}
+
+
+Another general behavior encountered by vehicles during on road driving is merging between two obstacles. In the situation presented before, once the ego overtakes first slow moving obstacle, it can either merge into gap between the two obstacles as presented in Figure \ref{merging_1} or follow the left lane until second obstacle is cleared as presented in Figure \ref{no_merge}. The cost functions are tuned such that driving in intended lane (provided by behavioral layer) is preferred over accelerating, acceleration or driving in non intended lane is preferred over decelerating. These cost functions create behaviors of merging or non merging. The Figure \ref{time_vel} presents velocity change over time for the behavior of overtaking and merging into left intended lane. Though the planner produces smooth velocity trajectories as presented in Figure \ref{velocities}, due to limitations in controller and platform the final behavior is not smooth.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\textwidth]{Images/evaluation/merging_1.jpg}
+	\caption{After overtaking first obstacle as mentioned in \ref{slow_moving_1}, ego vehicle merges into right lane between two vehicles.}
+	\label{merging_1}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\textwidth]{Images/evaluation/no_merging.jpg}
+	\caption{After overtaking first obstacle as mentioned in \ref{slow_moving_1}, ego vehicle does not merge into right lane and continues in left lane.}
+	\label{no_merge}
+\end{figure}
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\textwidth]{Images/evaluation/overtaking_dist_vel.png}
+	\caption{Velocity variation of ego vehicle with respect to time for overtaking and merging back into right lane, figures \ref{slow_moving_1}, \ref{merging_1} indicate behavior of car on track.}
+	\label{time_vel}
+\end{figure}
+
+
+
+\iffalse 
+
 In situation one presented in Figure \ref{slow_moving_1} ego vehicle starts changing into left lane once a slow-moving obstacle is encountered, once the obstacle is passed it starts driving into right lane again. In situation two presented in Figure \ref{slow_moving_2} there are two slow-moving obstacles ahead, once the ego vehicle overtakes the initial obstacle it shifts to the first lane as intended but it encounters the second slow-moving obstacle and shifts to left lane again. This behaviour is caused because of locally optimal cost functions driving the ego vehicle into the intended lane without knowledge of long-term planning information. A behavioural layer with longer scenario analysis horizon will result in better path selection.
+
+
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{Images/evaluation/slow_moving1.jpg}
@@ -31,6 +74,8 @@ In situation one presented in Figure \ref{slow_moving_1} ego vehicle starts chan
     \label{slow_moving_2}
 \end{figure}
 
+
+
 \subsection{Merging into traffic}
 
 In the scenario presented in Figure \ref{merging1}, lane changing is requested to merge into the traffic in the left lane. Here ego vehicle speed is $1ms^{-1}$ and obstacle speed is $0.6m^{-1}$. Initially, lane change does not occur as cost functions are tuned to maintain speed over maintaining required lane. As the vehicle enters the curve, target driving speed is reduced, and the vehicle merges into the traffic in the left lane. Depending on which portion of the lane the ego vehicle is in, i.e., near intersections or exits target lane should have higher priority over maintaining speed and during rest of the regions target speed should be of higher priority to reach a destination quickly. Cost functions implemented in this thesis provide flexibility in tuning behaviour of the ego vehicle. 
@@ -42,36 +87,47 @@ In the scenario presented in Figure \ref{merging1}, lane changing is requested t
     \label{merging1}
 \end{figure}
 
+\fi
+
 \subsection{Merging into next lane with opposite traffic}
 
 In the scenario presented in Figure \ref{series_obstacles} driving lane is blocked by a series of obstacles and the left lane is occupied by a moving obstacle. Ego vehicle starts slowly in the driving lane and waits till the obstacle is passed in the left lane and starts driving forward. 
-\begin{figure}[h]
+\begin{figure}
     \centering
-    \includegraphics[width=0.8\textwidth]{Images/evaluation/series_lane_blocked1.jpg}
-    \caption{Lane blocked by series of static obstacles and vehicle in next lane driving opposite}
+    \includegraphics[width=1.0\textwidth]{Images/evaluation/vehicle_opp_1.jpg}
+    \caption{Lane blocked by series of static obstacles and vehicle in next lane driving opposite. Ego vehicle waits for the vehicle to pass then drives ahead avoiding the static obstacles. The time vs Velocity charts shows how the ego vehicle starts driving, then waits for obstacle to pass and continues accelerating further after passing obstacles.}
     \label{series_obstacles}
 \end{figure}
 
-This situation may lead to ego vehicle getting stuck in the middle of the road. If driving speed of ego vehicle is low, temporal horizon limits ego vehicles lookahead distance into future. If a fast-moving obstacle in left lane not visible in 5 seconds of temporal horizon then the ego vehicle starts lane change. If an obstacle is detected after the start of lane change manoeuvre, the ego vehicle aborts if there is time to abort and if not the ego vehicle will stop in the middle of the lane due to no path ahead, if the obstacle proceeds without stopping for the ego vehicle. It can be avoided by a behavioural layer with longer spatial scenario analysis horizon. As the planner discussed in this thesis is not created for controlling the vehicle to drive backwards, a different planner equivalent to off-road planner must be used to clear the way.  
+In scenario presented in Figure \ref{series_obstacles_2}, ego vehicle has enough slack to avoid the series of static obstacles and get back into the right lane avoiding the dynamic obstacle ahead. 
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1.0\textwidth]{Images/evaluation/vehicle_opp_2.jpg}
+	\caption{Obstacle is far away on the opposite lane, ego vehicle gets enough time to overtake the obstacles and shift into right lane.}
+	\label{series_obstacles_2}
+\end{figure}
+
+The ego vehicle may get stuck in the middle of the road if driving speed of ego vehicle is low, because of short temporal horizon it may not see the fast moving dynamic obstacle faraway and change the lanes. Once it's in opposite lane and sees a fast moving obstacle, ego will not to shift to right lane because of obstacles and will stop. Only if the opposite vehicle stops and provides enough slack ego will be able to drive forward. The planner does not allow reverse driving thus the ego has to switch to a different planner if the ego has to drive backwards in this scenario. 
 
 
 \subsection{Road Blocked or Pedestrian Ahead}
 
 In the scenario presented in Figure \ref{road_blocked}, the road is blocked by a series of static obstacles, the vehicle enters the empty left lane, slows down and finally stops when it cannot find route ahead. 
 
-\begin{figure}[h]
+\begin{figure}
     \centering
-    \includegraphics[width=1.0\textwidth]{Images/evaluation/road_blocked1.jpg}
-    \caption{Road Blocked by series of obstacles}
+    \includegraphics[width=1.0\textwidth]{Images/evaluation/stopping_lane_blocked.jpg}
+    \caption{Road Blocked by series of obstacles, ego vehicle initially plans a path with acceleration, as it nears obstacles it slows down and finally stops.}
     \label{road_blocked}
 \end{figure}
 
 A pedestrian on the road is considered similar to a road blocking, in this case as shown in Figure \ref{pedestrian_ahead} the ego vehicle initially drives at full speed, then the vehicle slows down(shorter blue line representing a slower speed), and the robot finally comes to a halt few meters ahead of the pedestrian. Buffer distance is a tunable parameter and currently at the maximum value for safety. 
 
-\begin{figure}[h]
+\begin{figure}
     \centering
-    \includegraphics[width=0.8\textwidth]{Images/evaluation/pedestrian_ahead.jpg}
-    \caption{Pedestrian Ahead on Road}
+    \includegraphics[width=0.8\textwidth]{Images/evaluation/stopping_pedestrian.jpg}
+    \caption{Pedestrian Ahead on Road, Pedestrian is assumed to occupy lane width. Ego vehicles behaves same as lane blocked. The distance Vs velocity graph shows how the ego accelerates, then slowly decelerated and finally halts. Ego stops with 1m gap to pedestrian.}
     \label{pedestrian_ahead}
 \end{figure}
 
@@ -80,7 +136,7 @@ The main objective of the planner is to adjust to the sudden changes in the envi
 
 In scenario presented in Figure \ref{dynamic_1}, there are two situations. In situation one the car aborts a lane change when the slow-moving dynamic obstacle in the left lane is detected, then once the dynamic obstacle is passed the vehicle shifts to the left lane to avoid the stopped dynamic obstacle in driving lane. This situation is similar when a vehicle ahead stops to drop off a passenger or waiting for a parking spot. In situation two, the car doesn't choose lane change initially and slows down till it finds enough room in the left lane to drive ahead of the stopped dynamic obstacle. 
 
-\begin{figure}[h]
+\begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth]{Images/evaluation/dynamic_ahead_breaking1.jpg}
     \caption{Dynamic Obstacle Ahead stops in middle of road}
@@ -88,7 +144,7 @@ In scenario presented in Figure \ref{dynamic_1}, there are two situations. In si
 \end{figure}
 
 In the scenario presented in Figure \ref{dynamic_2} there are two situations with different thresholds for safety, in situation one a safe 2s+ distance to obstacles ahead is chosen, here the ego vehicle stays far away from the vehicles ahead and when it stops it stops relatively farther from the vehicles ahead. In situation 2, the threshold has been adjusted to 0.5s leading to the aggressive behaviour of ego vehicle. The ego vehicle drives closer to the obstacles ahead, and when the dynamic obstacles ahead stop suddenly, the distance between the ego vehicle and the obstacles ahead is very narrow.   
-\begin{figure}[h]
+\begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth]{Images/evaluation/dynamic_ahead_breaking2.jpg}
     \caption{Two Dynamic Obstacles ahead stop suddenly}
