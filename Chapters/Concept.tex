@@ -78,8 +78,6 @@ This section details about the RNDF file \cite{rndf_darpa} which defines the roa
 %    \label{map_rndf}
 %\end{figure}
 
-\todo{foot note - source of images}
-
 
 \subsection{Path Representation and calculation}
 
@@ -93,7 +91,6 @@ The data in RNDF is represented in the form of a tree with connections across wa
 \end{figure}
 
 \subsection{Behavioral Layer}
-\todo{check if this should be moved to related work}
 Behavioural layer plays an important role in path planning, it is responsible for understanding the scenario and making decisions according to various traffic rules, constraints and choices that will make driving more efficient for the vehicle. For example, it decides on lane and speed to drive based on constraints such as emptiness of lane, other vehicles in the lane, next needed exit and turn, speed limit etc. The behavioural layer is a huge research topic in itself and not in the scope of this thesis. Currently, a simple simulated approach is implemented where the user can provide inputs to decide behaviour using mouse clicks for lane change and speed information from the map.
 
 \section{Motion Planner} \label{motion_planner}
@@ -101,8 +98,7 @@ Behavioural layer plays an important role in path planning, it is responsible fo
 This section discusses the planning algorithm to create short-term trajectories following the global path to reach the destination. The subsection \ref{timing_constraints} provides an overview of the timing Horizon and constraints in dynamic environments for different modules in planning. The next subsection \ref{frenet_frame} details regarding path modelling and how this will improve the efficiency of planning along with its constraints. It also discusses on approximation method used to convert coordinates from Cartesian to Frenet frame. The core of this section is the creation of trajectories which is discussed in detail in subsection \ref{traj_creation}. The next subsections \ref{osbtacle_check_satic} and \ref{obstacle_check_dynamic} explain further on how the created trajectories are evaluated for collision with static and dynamic obstacles. Next subsection \ref{traj_Selection} details on the selection of final trajectory from the set of evaluated trajectories for the trajectory following.
 
 \subsection{Temporal Horizon} \label{timing_constraints}
-Time is an essential aspect of planning in dynamic environments, and there are several timing variables associated with planning. This section is mainly adopted from the doctoral thesis \cite{eth_timing_constraints}. These timing parameters define how far into the future different sub-modules of planning will be valid. 
- \todo{ check if this name is needed and add footnote to link "Autonomous vehicle navigation in dynamic urban environments for increased traffic safety" of Macek kristijan doctoral work} 
+Time is an essential aspect of planning in dynamic environments, and there are several timing variables associated with planning. This section is mainly adopted from the doctoral thesis "Autonomous vehicle navigation in dynamic urban environments for increased traffic safety" \cite{eth_timing_constraints}. These timing parameters define how far into the future different sub-modules of planning will be valid. 
 
 The first timing variable in motion planning is timing horizon $ T_m $. It is the measure of how far into the future trajectory of the ego vehicle is planned. Second is the prediction horizon $ T_p $, it is the measure of how far into the future the motion of dynamic obstacles around the ego vehicle can be predicted. The fundamental requirement of planning to be valid is that $ T_m  \le  T_p $ such that planning is done only so far into the future as the environment is predictable. 
 
@@ -112,16 +108,13 @@ The next timing constraint in consideration is $ T_e $, control execution time o
 
 In summary, timing constraints described above identify the relation between different modules such as motion planning, motion prediction and execution. It is also important to predict farther into future than $T_s$ or $T_e$ for completeness of motion planner concerning goal objective. In general a farsighted uncertain motion plan potentially directing the vehicle towards goal is better, but this plan needs to be re-evaluated and re-executed in short intervals for correctness. 
 
-\todo{check if this should be moved to implementation}
 In general behaviour of obstacles and participants can be predicted for up-to 5s probabilistically. Thus the temporal $ T_m $ \& prediction $ T_p $ horizon are chosen to be 5s. The planner has an execution time $ T_d $ far less than 100ms on a low power computational hardware which allows a high update rate allowing lower values for $ T_e $. As obstacle detection is simulated a pessimistic value of 250ms for $ T_s $ is chosen, and even higher update frequency can be chosen as the planner is fast enough to react. 
-
-\todo{time to see minimum distance ahead with current speed, minimum time to bring car to halt at good speed etc etc. }
 
 \subsection{Path Modelling} \label{frenet_frame}
 
  The planned global path is in the Cartesian coordinate system. One of the problems with the Cartesian coordinate system is that the due to variation in curvature of the road, local planning becomes complex. To address this issue planning in curvilinear system or Frenet Frame or  lane adoptive (SL) coordinate system has been adopted by researchers, \cite{traj_planner_optimization} \cite{spatio_temporal_state_lattice} \cite{diss_shui_phd_thesis} \cite{real_time_traj_plan_article} \cite{volvo_reactive_traj} \cite{curvilinear_System_Automated_Drv} are some of the research works in which Frenet frame is adopted. In this method centre of the lane/road or preplanned global path is used as reference longitudinal coordinate (S) and perpendicular distance with respect to the lane centre is considered as lateral coordinate (L/D) as represented in Figure \ref{sl_over_xy} \cite{diss_shui_phd_thesis}.  Thus once converted, (S, L) coordinate system essentially is a straight road.
  
- \begin{figure}[H]
+ \begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth]{Images/sl_over_xy.png}
     \caption{SL coordinate system laid over XY coordinate system - \cite{diss_shui_phd_thesis}}
@@ -134,7 +127,7 @@ As observed in Figure \ref{sl_over_xy}, in SL coordinate system the size of the 
 
 In summary, the curvilinear coordinate system makes planning easier but needs extra computation in the conversion from one format to other. It also introduces some errors and inefficiencies in planning if the complete planning is done in SL coordinate system and these need to be addressed. 
  
- \begin{figure}[H]
+ \begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth]{Images/xy_sl_conversion.png}
     \caption{Showing projection of the current position of the car shown by green triangle to s coordinate system. Each circle represents a node, and the lines between them are links. \cite{volvo_reactive_traj}}
@@ -237,8 +230,6 @@ The Figure \ref{searchspace} represents final search space by ego vehicle in XYT
 	\label{searchspace}
 \end{figure}
 
-
-\todo{Check if this below suggestion which is not implemented OK to be written here - or mention in implementation due to time constraints}
 %Even the short changes in lateral shift create long trajectories that take $T_m$ time, to optimize and increase number of samples, trajectories that traverse lateral shifts in shorter horizon can be added. By ensuring that the samples from last selected trajectory are included in current sample set, smoother and consistent trajectories can be created
 
 In summary, combining samples in acceleration and lateral shifts, multiple trajectories with different final states are created over the time horizon. In the next subsections how these trajectories are tested for collision with respect to static and dynamic obstacles is discussed. 
@@ -408,7 +399,7 @@ Selection of final trajectory is based on the different costs associated with it
 
 This thesis implements a simple cost function as represented in \ref{cost_eqn}; explicit smoothness costs are not considered as the target validation platform is a model car with no humans inside and limitations of the model car to track a fine trajectory. 
 \begin{equation}
-cost = |V_a - V_t| + |a_t| + | (d_t - d_e)*k1 | + | (d_p - d_e)*k2 |\
+initial_cost = |V_a - V_t| + |a_t| + | (d_t - d_e)*k1 | + | (d_p - d_e)*k2 |\
 \label{cost_eqn}
 \end{equation}
 $V_a$ - velocity achieved by trajectory.
@@ -419,9 +410,16 @@ $d_e$ - Trajectory lateral distance.
 $d_p$ - Previous target lateral for trajectory.
 $k_1,k_2$ - Factors to adjust weights, currently used at 0.8 and 0.2
 
-The velocity and acceleration terms in cost function \ref{cost_eqn} promote higher accelerations if the target and current velocity difference are higher and lower accelerations if the difference is low. The next lateral terms promote the trajectories that are closer to the target lateral distance and also close to the previous selection thus limiting the shifts in path selection and maintaining continuity. 
+The velocity and acceleration terms in cost function \ref{cost_eqn} promote higher accelerations if the target and current velocity difference are higher and lower accelerations if the difference is low. The next lateral terms promote the trajectories that are closer to the target lateral distance and also close to the previous selection thus limiting the shifts in path selection and maintaining continuity. The initial cost of the previous path is kept to zero to promote ego to follow old path if there is no collision. 
 
-Initially, all the sampled trajectories are assigned the costs based on the cost function \ref{cost_eqn} and sorted, then the trajectory with the lowest cost is evaluated for collisions first. The list is sorted again and evaluated till the top of the list has the lowest cost, and the trajectory is evaluated. 
+The final cost for trajectory selection is the sum of the initial cost, collision detection cost for trajectory and horizon cost as mentioned in equation \ref{final_cost}. Horizon cost is added to samples if the created trajectory crosses the destination thus promoting the trajectories that stop at the goal. 
+
+\begin{equation}
+final_cost = initial_cost + collision_cost + horizon_cost
+\label{final_cost}
+\end{equation}
+
+Initially, all the sampled trajectories are assigned the costs based on the cost function \ref{cost_eqn} and sorted, then the trajectory with the lowest cost is evaluated and the final cost is calculated as per equation \ref{final_cost}. The list is sorted again and evaluated till the top of the list has the lowest cost, and the trajectory is evaluated. Thus the trajectories with initial assumption are validated, and best one is chosen in the end. 
 
 \subsection{Velocity Planning}
 Velocity planning is an important aspect of the planer, in general, behavioural layer defines the target velocity based on speed regulation, other traffic participants, required behaviour, road condition etc. In this thesis, a simple approach of velocity limiting is used based on road curvature to limit lateral accelerations. Max velocity  V\textsubscript{max} is calculated based on the equation \ref{max_vel}. 

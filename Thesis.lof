@@ -1,0 +1,64 @@
+\select@language {UKenglish}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Introduction}{1}{chapter.1}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Related Work}{5}{chapter.2}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces General Overview of On-road planners. a - \cite {cmu_parallel_thesis} \cite {diss_shui_phd_thesis} \cite {traj_planner_optimization} \cite {lattice_Gu_Tiyanu} \cite {unit_A_star} , b - \cite {kolski_thesis} \cite {real_time_traj_plan_article} \cite {darpa_urban_challenge}, c -\cite {rrt_star} \cite {rrt_urban_driv} \cite {mit_rrt1} \relax }}{7}{figure.caption.6}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces MIT Darpa Urban Challenge - RRT based planning. In this approach, motion plans are propagated using vehicles dynamic model, and these paths are evaluated for feasibility\relax }}{8}{figure.caption.7}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Lattice Planner - Path velocity representation in \cite {traj_planner_optimization}\relax }}{9}{figure.caption.8}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces CMU Darpa Urban Challenge - Local Search Forward projected trajectories\relax }}{10}{figure.caption.9}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Collision Checking for Static Obstacles \cite {kolski_thesis}\relax }}{11}{figure.caption.10}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Collison checking for Dynamic Obstacles \cite {kolski_thesis} a) Initially bounding boxes along length of trajectory are drawn to determine if the trajectories collide, if they collide b) circle approximating the shape of the ego is forward projected and checked for collision, if this is also colliding then c) shape of the ego is forward projected and checked for collision.\relax }}{12}{figure.caption.11}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Target Platform}{13}{chapter.3}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Model car external view\relax }}{13}{figure.caption.12}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Internal components of Model Car \cite {model_car_archi}\relax }}{14}{figure.caption.13}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Module Connections \cite {model_car_archi}\relax }}{14}{figure.caption.14}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Planning Algorithm}{17}{chapter.4}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Path Planning Module\relax }}{18}{figure.caption.15}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Path velocity representation in \cite {traj_planner_optimization}\relax }}{19}{figure.caption.16}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Zone Representation in RNDF - Connection between Segments and Zone\relax }}{19}{figure.caption.17}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Division of shortest path in road network into Sub paths across different segments\relax }}{20}{figure.caption.18}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces SL coordinate system laid over XY coordinate system - \cite {diss_shui_phd_thesis}\relax }}{23}{figure.caption.19}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Showing projection of the current position of the car shown by green triangle to s coordinate system. Each circle represents a node, and the lines between them are links. \cite {volvo_reactive_traj}\relax }}{24}{figure.caption.20}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Different acceleration profiles a car can follow from current state. If target velocity is reached target acceleration is switched to zero as indicated by dotted lines.\relax }}{25}{figure.caption.21}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Distance traversed vs time with accelerations A1-A8 from \ref {accelerations} in time horizon(5s), Initial position = (0,0) velocity = 0.6$ms^{-1}$, target velocity = 1.5 \& 0 $ms^{-1}$\relax }}{26}{figure.caption.22}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Distance traversed vs Velocity achieved with accelerations A1-A8 from \ref {accelerations} in time horizon(5s), Initial position = (0,0) velocity = 0.6$ms^{-1}$, target velocity = 1.5 \& 0 $ms^{-1}$\relax }}{26}{figure.caption.23}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Path candidates generation results. (a) Road parallel trajectories $l_0 = 0$ and $\theta _0 = 0$ (b) ego shifted with respect to center and driving at an angle $ l_0 = \Delta _d$ and $ \theta _0 = \Delta \theta $. \cite {real_time_traj_plan_article}\relax }}{28}{figure.caption.24}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Total search space in xyt\relax }}{29}{figure.caption.25}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Collision check for static obstacles\relax }}{30}{figure.caption.26}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Collision check for Dynamic obstacles\relax }}{32}{figure.caption.27}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces a),b) describe situations where ego vehicle's projected trajectory is close to obstacle ahead and behind respectively, but not colliding. \newline c),d) describe situations where ego vehicle's projected trajectory collides with obstacles ahead and obstacle in next lane respectively. \newline e) describes situation in which ego vehicle's projected trajectory collides with obstacle moving in opposite direction and f) describes situation where it will not collide. \relax }}{33}{figure.caption.28}
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Collision checking by considering the length of the car and the obstacle. Time gap at the intersection is the gap between the front of ego and back of ego to cross that point, represented by green arrowed lines.\relax }}{34}{figure.caption.29}
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Parabolic Path and collision checking\relax }}{35}{figure.caption.31}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Implementation}{37}{chapter.5}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Message Flow across Modules\relax }}{37}{figure.caption.32}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Route Planner Functions\relax }}{38}{figure.caption.33}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Vehicle Path Class\relax }}{39}{figure.caption.34}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Vehicle State Class\relax }}{40}{figure.caption.35}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Motion Planner Functions\relax }}{40}{figure.caption.36}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Evaluation}{41}{chapter.6}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Driving Lane is blocked by a static obstacle with an obstacle moving in next lane. The ego vehicle avoids the static obstacle by driving into next lane and comes back to intended lane once it is free\relax }}{42}{figure.caption.37}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Ego vehicle initially picks up the speed, when the obstacle is in collision range ego vehicle starts shifting into left lane and overtakes the slow moving obstacle\relax }}{43}{figure.caption.38}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces After overtaking first obstacle as mentioned in \ref {slow_moving_1}, ego vehicle merges into right lane between two vehicles.\relax }}{43}{figure.caption.39}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces After overtaking first obstacle as mentioned in \ref {slow_moving_1}, ego vehicle does not merge into right lane and continues in left lane.\relax }}{44}{figure.caption.40}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Velocity variation of ego vehicle with respect to time for overtaking and merging back into right lane, figures \ref {slow_moving_1}, \ref {merging_1} indicate behavior of car on track.\relax }}{44}{figure.caption.41}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Lane blocked by series of static obstacles and vehicle in next lane driving opposite. Ego vehicle waits for the vehicle to pass then drives ahead avoiding the static obstacles. The time vs Velocity charts shows how the ego vehicle starts driving, then waits for obstacle to pass and continues accelerating further after passing obstacles.\relax }}{45}{figure.caption.42}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Obstacle is far away on the opposite lane, ego vehicle gets enough time to overtake the obstacles and shift into right lane.\relax }}{46}{figure.caption.43}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Road Blocked by series of obstacles, ego vehicle initially plans a path with acceleration, as it nears obstacles it slows down and finally stops.\relax }}{47}{figure.caption.44}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Pedestrian Ahead on Road, Pedestrian is assumed to occupy lane width. Ego vehicles behaves same as lane blocked. The distance Vs velocity graph shows how the ego accelerates, then slowly decelerated and finally halts. Ego stops with 1m gap to pedestrian.\relax }}{47}{figure.caption.45}
+\contentsline {figure}{\numberline {6.10}{\ignorespaces The scenario has one obstacle moving along the road and other moving opposite as shown in a), ego slows down as the dynamic obstacle in the same lane stops suddenly and starts planning path in next lane once other lane is free as shown in b) and finally ego returns to original lane as presented in c) \relax }}{48}{figure.caption.46}
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Ego vehicle follows two dynamic obstacles moving at $0.6ms^{-1}$ and they stop suddenly, ego vehicle decelerates quickly to stop from colliding. The chart displays velocity variation for ego vehicle with respect to obstacle speed.\relax }}{49}{figure.caption.47}
+\contentsline {figure}{\numberline {6.12}{\ignorespaces Horizon Optimality reference\relax }}{50}{figure.caption.48}
+\contentsline {figure}{\numberline {6.13}{\ignorespaces With current reference path (solid black line) at low speeds ego will follow path similar to suggested in blue curve. While with an optimised reference (dotted line) ego will move straight without many shifts\relax }}{51}{figure.caption.50}
+\contentsline {figure}{\numberline {6.14}{\ignorespaces Probablistic Completeness\relax }}{52}{figure.caption.51}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Conclusion and Future Work}{55}{chapter.7}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Appendix}{63}{appendix.A}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Static Obstacle Collision check - Lateral distance between obstacle O1 and trajectory is checked at points with black dots, distance at green dots is checked for obstacle O2.\relax }}{63}{figure.caption.53}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces ss\relax }}{64}{figure.caption.54}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Maximum time difference for different samples in \ref {t_diff_eq}\relax }}{65}{figure.caption.55}

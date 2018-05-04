@@ -174,7 +174,7 @@ In the scenario presented in Figure \ref{dynamic_2} two dynamic obstacles are mo
 
 \section{Criteria Based Evaluation}
 \label{criteria_based_eval}
-In this section, the proposed planner is validated against the common criteria of evaluating any algorithm, i.e.\ optimality, feasibility, completeness, runtime and approach.
+In this section, the proposed planner is validated against the common criteria of evaluating any algorithm, i.e.\ optimality, feasibility, completeness, runtime and approach. Each subsection details on advantages and limitations of the planner concerning each criterion along with short comparisons to other approaches. 
 
 \subsection{Optimality}
  In this thesis, we discuss the optimality of the time horizon, subsection \ref{timing_constraints} already defines regarding various timing constraints chosen in this planner. A larger planning horizon will enable the planner to create a longer and better path, but due to the unpredictability of the environment, the plan created will not be valid after a specified duration, a broader horizon will also increase the run-time of the algorithm. The planner proposed in this thesis is only a local planner and always needs inputs from a behavioural layer or a global planner to choose target lane, velocity etc. thus a short planning horizon sufficient to bring the ego to a halt is suitable for the proposed planner. 
