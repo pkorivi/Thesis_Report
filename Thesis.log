@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.29)  3 MAY 2018 20:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.29)  4 MAY 2018 13:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1886,63 +1886,65 @@ Underfull \vbox (badness 3815) has occurred while \output is active []
 
  [46 <./Images/evaluation/vehicle_opp_2.jpg>] [47 <./Images/evaluation/stopping
 _lane_blocked.jpg> <./Images/evaluation/stopping_pedestrian.jpg>]
-<Images/evaluation/dynamic_ahead_breaking1.jpg, id=957, 1026.83624pt x 712.6625
-pt>
-File: Images/evaluation/dynamic_ahead_breaking1.jpg Graphic file (type jpg)
- <use Images/evaluation/dynamic_ahead_breaking1.jpg>
-Package pdftex.def Info: Images/evaluation/dynamic_ahead_breaking1.jpg used on 
-input line 141.
-(pdftex.def)             Requested size: 345.03064pt x 239.46384pt.
+<Images/evaluation/sudden_Stop_dyn_1.jpg, id=957, 960.58875pt x 409.53pt>
+File: Images/evaluation/sudden_Stop_dyn_1.jpg Graphic file (type jpg)
 
-<Images/evaluation/dynamic_ahead_breaking2.jpg, id=959, 940.51375pt x 381.425pt
->
-File: Images/evaluation/dynamic_ahead_breaking2.jpg Graphic file (type jpg)
- <use Images/evaluation/dynamic_ahead_breaking2.jpg>
-Package pdftex.def Info: Images/evaluation/dynamic_ahead_breaking2.jpg used on 
-input line 149.
-(pdftex.def)             Requested size: 345.03064pt x 139.9261pt.
+<use Images/evaluation/sudden_Stop_dyn_1.jpg>
+Package pdftex.def Info: Images/evaluation/sudden_Stop_dyn_1.jpg used on input 
+line 144.
+(pdftex.def)             Requested size: 345.03064pt x 147.09949pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [48 <./Images/evaluation/dynamic_ahead_breaking1.jpg>]
+<Images/evaluation/sudden_stopping_lane_blocked_2.jpg, id=958, 963.6pt x 722.7p
+t>
+File: Images/evaluation/sudden_stopping_lane_blocked_2.jpg Graphic file (type j
+pg)
+ <use Images/evaluation/sudden_stopping_lane_blocked_2.jpg>
+Package pdftex.def Info: Images/evaluation/sudden_stopping_lane_blocked_2.jpg u
+sed on input line 151.
+(pdftex.def)             Requested size: 345.03064pt x 258.7713pt.
+ [48 <./Images/evaluation/sudden_Stop_dyn_1.jpg>]
 <Images/horizaon_optimality_2.png, id=968, 817.0525pt x 344.28625pt>
 File: Images/horizaon_optimality_2.png Graphic file (type png)
 
 <use Images/horizaon_optimality_2.png>
-Package pdftex.def Info: Images/horizaon_optimality_2.png used on input line 17
-7.
+Package pdftex.def Info: Images/horizaon_optimality_2.png used on input line 18
+4.
 (pdftex.def)             Requested size: 345.03064pt x 145.38724pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[49 <./Images/evaluation/dynamic_ahead_breaking2.jpg>]
+[49 <./Images/evaluation/sudden_stopping_lane_blocked_2.jpg>]
+
+LaTeX Warning: Marginpar on page 50 moved.
+
 <Images/optimized_reference.png, id=977, 884.30376pt x 304.13625pt>
 File: Images/optimized_reference.png Graphic file (type png)
 
 <use Images/optimized_reference.png>
-Package pdftex.def Info: Images/optimized_reference.png used on input line 191.
+Package pdftex.def Info: Images/optimized_reference.png used on input line 198.
 
 (pdftex.def)             Requested size: 345.03064pt x 118.6637pt.
 
-Underfull \vbox (badness 7133) has occurred while \output is active []
 
- [50 <./Images/horizaon_optimality_2.png> <./Images/optimized_reference.png>]
-<Images/probablistically_complete.png, id=986, 712.6625pt x 333.245pt>
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[50 <./Images/horizaon_optimality_2.png>]
+<Images/probablistically_complete.png, id=987, 712.6625pt x 333.245pt>
 File: Images/probablistically_complete.png Graphic file (type png)
 
 <use Images/probablistically_complete.png>
 Package pdftex.def Info: Images/probablistically_complete.png used on input lin
-e 208.
+e 215.
 (pdftex.def)             Requested size: 345.03064pt x 161.33887pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 3229) has occurred while \output is active []
 
- [51]
+ [51 <./Images/optimized_reference.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [52 <./Images/probablistically_complete.png>]) [53]
@@ -2034,9 +2036,14 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 81.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 81.
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 18C72EC65D3F2A4821314E18AA5AB62F;3668.
-Package rerunfilecheck Info: File `Thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: 78958CA01E1F27CE9DF1B81BB5FDDB49;6388.
 
+
+Package rerunfilecheck Warning: File `Thesis.brf' has changed.
+(rerunfilecheck)                Rerun to get bibliographical references right.
+
+Package rerunfilecheck Info: Checksums for `Thesis.brf':
+(rerunfilecheck)             Before: 78958CA01E1F27CE9DF1B81BB5FDDB49;6388
+(rerunfilecheck)             After:  AFCCCC5E5144C8915E9B773FDFC667BB;6388.
 
 LaTeX Warning: There were undefined references.
 
@@ -2046,10 +2053,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 81.
  ) 
 Here is how much of TeX's memory you used:
- 24884 strings out of 494910
- 431921 string characters out of 6179836
- 655831 words of memory out of 5000000
- 27047 multiletter control sequences out of 15000+600000
+ 24886 strings out of 494910
+ 431956 string characters out of 6179836
+ 653831 words of memory out of 5000000
+ 27049 multiletter control sequences out of 15000+600000
  22123 words of font info for 60 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  66i,12n,80p,1810b,2439s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2070,7 +2077,7 @@ c/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.p
 fb>
-Output written on Thesis.pdf (79 pages, 13045178 bytes).
+Output written on Thesis.pdf (79 pages, 12822703 bytes).
 PDF statistics:
  1883 PDF objects out of 2073 (max. 8388607)
  1175 compressed objects within 12 object streams

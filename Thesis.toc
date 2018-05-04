@@ -42,9 +42,9 @@
 \contentsline {subsection}{\numberline {6.1.3}Merging into next lane with opposite traffic}{42}{subsection.6.1.3}
 \contentsline {subsection}{\numberline {6.1.4}Road Blocked or Pedestrian Ahead}{46}{subsection.6.1.4}
 \contentsline {subsection}{\numberline {6.1.5}Dynamic Obstacles - other vehicles}{48}{subsection.6.1.5}
-\contentsline {section}{\numberline {6.2}Criteria Based Evaluation}{49}{section.6.2}
+\contentsline {section}{\numberline {6.2}Criteria Based Evaluation}{48}{section.6.2}
 \contentsline {subsection}{\numberline {6.2.1}Optimality}{49}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Feasibility}{51}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.2}Feasibility}{50}{subsection.6.2.2}
 \contentsline {subsection}{\numberline {6.2.3}Completeness}{51}{subsection.6.2.3}
 \contentsline {subsection}{\numberline {6.2.4}Runtime}{52}{subsection.6.2.4}
 \contentsline {subsection}{\numberline {6.2.5}Deliberative Approach}{53}{subsection.6.2.5}

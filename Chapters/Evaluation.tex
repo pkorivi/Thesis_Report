@@ -136,20 +136,27 @@ The main objective of the planner is to adjust to the sudden changes in the envi
 
 In scenario presented in Figure \ref{dynamic_1}, there are two situations. In situation one the car aborts a lane change when the slow-moving dynamic obstacle in the left lane is detected, then once the dynamic obstacle is passed the vehicle shifts to the left lane to avoid the stopped dynamic obstacle in driving lane. This situation is similar when a vehicle ahead stops to drop off a passenger or waiting for a parking spot. In situation two, the car doesn't choose lane change initially and slows down till it finds enough room in the left lane to drive ahead of the stopped dynamic obstacle. 
 
+\iffalse 
+
+\fi
 \begin{figure}
     \centering
-    \includegraphics[width=0.8\textwidth]{Images/evaluation/dynamic_ahead_breaking1.jpg}
-    \caption{Dynamic Obstacle Ahead stops in middle of road}
+    \includegraphics[width=0.8\textwidth]{Images/evaluation/sudden_Stop_dyn_1.jpg}
+    \caption{The scenario has one obstacle moving along the road and other moving opposite as shown in a), ego slows down as the dynamic obstacle in the same lane stops suddenly and starts planning path in next lane once other lane is free as shown in b) and finally ego returns to original lane as presented in c) }
     \label{dynamic_1}
 \end{figure}
 
-In the scenario presented in Figure \ref{dynamic_2} there are two situations with different thresholds for safety, in situation one a safe 2s+ distance to obstacles ahead is chosen, here the ego vehicle stays far away from the vehicles ahead and when it stops it stops relatively farther from the vehicles ahead. In situation 2, the threshold has been adjusted to 0.5s leading to the aggressive behaviour of ego vehicle. The ego vehicle drives closer to the obstacles ahead, and when the dynamic obstacles ahead stop suddenly, the distance between the ego vehicle and the obstacles ahead is very narrow.   
 \begin{figure}
-    \centering
-    \includegraphics[width=0.8\textwidth]{Images/evaluation/dynamic_ahead_breaking2.jpg}
-    \caption{Two Dynamic Obstacles ahead stop suddenly}
-    \label{dynamic_2}
+	\centering
+	\includegraphics[width=0.8\textwidth]{Images/evaluation/sudden_stopping_lane_blocked_2.jpg}
+	\caption{Ego vehicle follows two dynamic obstacles moving at $0.6ms^{-1}$ and they stop suddenly, ego vehicle decelerates quickly to stop from colliding. The chart displays velocity variation for ego vehicle with respect to obstacle speed.}
+	\label{dynamic_2}
 \end{figure}
+
+
+
+In the scenario presented in Figure \ref{dynamic_2} there are two situations with different thresholds for safety, in situation one a safe 2s+ distance to obstacles ahead is chosen, here the ego vehicle stays far away from the vehicles ahead and when it stops it stops relatively farther from the vehicles ahead. In situation 2, the threshold has been adjusted to 0.5s leading to the aggressive behaviour of ego vehicle. The ego vehicle drives closer to the obstacles ahead, and when the dynamic obstacles ahead stop suddenly, the distance between the ego vehicle and the obstacles ahead is very narrow.   
+
 
 %\subsection{Avoiding Static Obstacles}
 %\subsection{Avoiding Dynamic Obstacles}
