@@ -3,10 +3,10 @@
 In previous chapters detailed working of the planning algorithm has been discussed, this chapter discusses the evaluation criteria and results in detail. Various concepts discussed previously will be examined here through a series of experiments reflecting real-life driving scenarios. This chapter is organised as follows: Section \ref{experiments} discusses the systematic evaluation of the planner by exposing it to various situations equivalent to on-road driving conditions. The next section \ref{criteria_based_eval} discusses a criteria-based assessment for the planner by examining factors such as feasibility, optimality, completeness, run-time etc.
 
 \section{Experiments}\label{experiments}
-Due to time and resource constraint, most of the experiments to evaluate the planner are performed on the simulator. The test cases involve finding a collision-free path with obstruction in driving lane, avoiding slow moving traffic, merging into ongoing traffic, lane changes etc. The following subsections detail further on each experiment. 
+Due to time and resource constraint, most of the experiments to evaluate the planner are performed on the simulator. The test cases involve finding a collision-free path with obstruction in driving lane, avoiding slow moving traffic, merging into ongoing traffic, lane changes etc. The following subsections detail further about each experiment. 
 
 \subsection{Lane blocked}
-Scenario presented in \ref{lane_blocked_1} describes a situation when the driving lane is blocked by a static obstacle and there is a vehicle driving in next lane. The ego vehicle slows down till the left lane is free, overtakes the slow moving obstacle and shifts back to original lane at increased speed. 
+The scenario presented in \ref{lane_blocked_1} describes a situation when the driving lane is blocked by a static obstacle, and there is a vehicle driving in next lane. The ego vehicle slows down till the left lane is free, overtakes the slow-moving obstacle and shifts back to original lane and drives at increased speed. 
 
 \begin{figure}[h]
     \centering
@@ -17,9 +17,9 @@ Scenario presented in \ref{lane_blocked_1} describes a situation when the drivin
 
 \subsection{Overtaking and Merging into Traffic}
 
-Overtaking slow moving obstacles and merging into traffic are two scenarios which are always encountered by the vehicles during on road driving. The planner proposed in this thesis is capable of performing these two behaviors to enable autonomous driving. 
+Overtaking slow moving obstacles and merging into traffic are two scenarios which are always encountered by the vehicles during on-road driving. The planner proposed in this thesis is capable of performing these two behaviours to enable autonomous driving. 
 
-In scenario presented in Figure \ref{slow_moving_1}, there are two slow moving obstacles ahead of the ego vehicle. Initially ego-vehicle picks up the speed but does not change lane as staying in same lane is prioritized over accelerating higher. Once ego vehicle is close to obstacle it has to brake or shift lane, as shifting lane is prioritized over braking ego vehicle shifts into left lane and starts accelerating. The velocity of obstacles is $0.3ms^{-1}$. 
+In the scenario presented in Figure \ref{slow_moving_1}, there are two slow-moving obstacles ahead of the ego vehicle. Initially, ego-vehicle picks up the speed but does not change lane as staying in the same lane is prioritised over accelerating higher. Once ego vehicle is close to the obstacle, it has to brake or shift lane, as shifting lane is prioritized over braking ego vehicle shifts into the left lane and starts accelerating. The velocity of obstacles is $0.3ms^{-1}$. 
 
 \begin{figure}
 	\centering
@@ -29,7 +29,7 @@ In scenario presented in Figure \ref{slow_moving_1}, there are two slow moving o
 \end{figure}
 
 
-Another general behavior encountered by vehicles during on road driving is merging between two obstacles. In the situation presented before, once the ego overtakes first slow moving obstacle, it can either merge into gap between the two obstacles as presented in Figure \ref{merging_1} or follow the left lane until second obstacle is cleared as presented in Figure \ref{no_merge}. The cost functions are tuned such that driving in intended lane (provided by behavioral layer) is preferred over accelerating, acceleration or driving in non intended lane is preferred over decelerating. These cost functions create behaviors of merging or non merging. The Figure \ref{time_vel} presents velocity change over time for the behavior of overtaking and merging into left intended lane. Though the planner produces smooth velocity trajectories as presented in Figure \ref{velocities}, due to limitations in controller and platform the final behavior is not smooth.
+Another general behaviour encountered by vehicles during on-road driving is merging between two obstacles. In the situation presented before, once the ego overtakes first slow-moving obstacle, it can either merge into the gap between the two obstacles as presented in Figure \ref{merging_1} or follow the left lane until the second obstacle is cleared as presented in Figure \ref{no_merge}. The cost functions are tuned such that driving in intended lane (provided by behavioural layer) is preferred over accelerating, acceleration or driving in non-intended lane is preferred over decelerating. These cost functions create behaviours of merging or non-merging. The Figure \ref{time_vel} presents velocity change over time for the behaviour of overtaking and merging into the left intended lane. Though the planner produces smooth velocity trajectories as presented in Figure \ref{velocities}, due to limitations in controller and platform the final behaviour is not smooth.
 
 \begin{figure}
 	\centering
@@ -99,7 +99,7 @@ In the scenario presented in Figure \ref{series_obstacles} driving lane is block
     \label{series_obstacles}
 \end{figure}
 
-In scenario presented in Figure \ref{series_obstacles_2}, ego vehicle has enough slack to avoid the series of static obstacles and get back into the right lane avoiding the dynamic obstacle ahead. 
+In the scenario presented in Figure \ref{series_obstacles_2}, ego vehicle has enough slack to avoid the series of static obstacles and get back into the right lane avoiding a collision with the dynamic obstacle ahead. 
 
 \begin{figure}
 	\centering
@@ -113,7 +113,7 @@ The ego vehicle may get stuck in the middle of the road if driving speed of ego 
 
 \subsection{Road Blocked or Pedestrian Ahead}
 
-In the scenario presented in Figure \ref{road_blocked}, the road is blocked by a series of static obstacles, the vehicle enters the empty left lane, slows down and finally stops when it cannot find route ahead. 
+In the scenario presented in Figure \ref{road_blocked}, the road is blocked by a series of static obstacles, the ego accelerates initially when obstacles are far away, then slows down and finally stops when it cannot find route ahead. 
 
 \begin{figure}
     \centering
@@ -122,7 +122,7 @@ In the scenario presented in Figure \ref{road_blocked}, the road is blocked by a
     \label{road_blocked}
 \end{figure}
 
-A pedestrian on the road is considered similar to a road blocking, in this case as shown in Figure \ref{pedestrian_ahead} the ego vehicle initially drives at full speed, then the vehicle slows down(shorter blue line representing a slower speed), and the robot finally comes to a halt few meters ahead of the pedestrian. Buffer distance is a tunable parameter and currently at the maximum value for safety. 
+A pedestrian on the road is considered similar to a road blocking, in this thesis pedestrians moving across the street are set to occupy the width of the lane. In the situation as shown in Figure \ref{pedestrian_ahead} the ego vehicle initially drives at full speed, then the ego slows down (shorter blue line representing a slower speed), and the robot finally comes to a halt few meters ahead of the pedestrian. Buffer distance is a tunable parameter and currently at the maximum value for safety. 
 
 \begin{figure}
     \centering
@@ -132,9 +132,9 @@ A pedestrian on the road is considered similar to a road blocking, in this case 
 \end{figure}
 
 \subsection{Dynamic Obstacles - other vehicles}
-The main objective of the planner is to adjust to the sudden changes in the environment caused by the dynamic obstacles in surroundings, here two sub-scenarios are described where the ego vehicle has to react to unexpected breaking of vehicles ahead. 
+The main objective of the planner is to adjust to the sudden changes in the environment caused by the dynamic obstacles in surroundings, here two sub-scenarios are described where the ego vehicle has to react to an unexpected breaking of vehicles ahead. 
 
-In scenario presented in Figure \ref{dynamic_1}, there are two situations. In situation one the car aborts a lane change when the slow-moving dynamic obstacle in the left lane is detected, then once the dynamic obstacle is passed the vehicle shifts to the left lane to avoid the stopped dynamic obstacle in driving lane. This situation is similar when a vehicle ahead stops to drop off a passenger or waiting for a parking spot. In situation two, the car doesn't choose lane change initially and slows down till it finds enough room in the left lane to drive ahead of the stopped dynamic obstacle. 
+In the scenario presented in Figure \ref{dynamic_1}, the obstacle ahead stops suddenly, and the ego vehicle has to find a path avoiding a collision. This situation is similar to when a car ahead stops to drop off a passenger or stops for a parking spot. In this situation, ego follows the obstacle ahead, once it stops ego slows down till it finds enough room in the left lane to drive ahead of the stopped dynamic obstacle and continues driving. 
 
 \iffalse 
 
@@ -146,6 +146,8 @@ In scenario presented in Figure \ref{dynamic_1}, there are two situations. In si
     \label{dynamic_1}
 \end{figure}
 
+In the scenario presented in Figure \ref{dynamic_2} two dynamic obstacles are moving ahead of the ego and threshold for safety has been chosen to be 1s. The obstacles ahead stop suddenly representing a situation of a crash for the vehicle forward or emergency stop and ego vehicle comes to a halt in next 2s. Higher deceleration profiles used in planning allow for ego vehicle to act reactively and stop without collision. 
+
 \begin{figure}
 	\centering
 	\includegraphics[width=0.8\textwidth]{Images/evaluation/sudden_stopping_lane_blocked_2.jpg}
@@ -155,7 +157,7 @@ In scenario presented in Figure \ref{dynamic_1}, there are two situations. In si
 
 
 
-In the scenario presented in Figure \ref{dynamic_2} there are two situations with different thresholds for safety, in situation one a safe 2s+ distance to obstacles ahead is chosen, here the ego vehicle stays far away from the vehicles ahead and when it stops it stops relatively farther from the vehicles ahead. In situation 2, the threshold has been adjusted to 0.5s leading to the aggressive behaviour of ego vehicle. The ego vehicle drives closer to the obstacles ahead, and when the dynamic obstacles ahead stop suddenly, the distance between the ego vehicle and the obstacles ahead is very narrow.   
+ 
 
 
 %\subsection{Avoiding Static Obstacles}
@@ -175,9 +177,9 @@ In the scenario presented in Figure \ref{dynamic_2} there are two situations wit
 In this section, the proposed planner is validated against the common criteria of evaluating any algorithm, i.e.\ optimality, feasibility, completeness, runtime and approach.
 
 \subsection{Optimality}
- In this thesis, we discuss the optimality of the time horizon, subsection \ref{timing_constraints} already defines regarding various timing constraints chosen in this planner. A larger planning horizon will enable the planner to create a longer and better path, but due to the unpredictability of the environment, the plan created will not be valid after a certain duration, a larger horizon will also increase the run-time of the algorithm. The planner proposed in this thesis is only a local planner and always needs inputs from a behavioural layer or a global planner to choose target lane, velocity etc. thus a short planning horizon is suitable for this proposed planner. 
+ In this thesis, we discuss the optimality of the time horizon, subsection \ref{timing_constraints} already defines regarding various timing constraints chosen in this planner. A larger planning horizon will enable the planner to create a longer and better path, but due to the unpredictability of the environment, the plan created will not be valid after a specified duration, a broader horizon will also increase the run-time of the algorithm. The planner proposed in this thesis is only a local planner and always needs inputs from a behavioural layer or a global planner to choose target lane, velocity etc. thus a short planning horizon sufficient to bring the ego to a halt is suitable for the proposed planner. 
 
-An example of how horizon will affect optimal planning for the current planner is shown in figure \ref{horizon_optimality}. Here T0, T1 are the trajectories with horizon "T" and T2, T3 are trajectories with horizon "T'". In this condition, if a lane change has been requested then trajectory T1 is chosen, but with increased horizon trajectory T3 will be chosen, depending on situation one is efficient sometimes and other in others. These situations can be improved by lane selection algorithm in the behavioural layer which looks for occupancy of different lanes and suggests the one best suitable lane. Similarly, if an exit has to be taken on the road, a long horizon would choose a plan with reduced speed compared to a high-speed path with the short horizon. This can also be solved by having a velocity planner in the behavioural layer.  
+An example of how horizon will affect optimal planning for the current planner is shown in figure \ref{horizon_optimality}. Here T0, T1 are the trajectories with horizon "T" and T2, T3 are trajectories with horizon "T'". In this condition, if a lane change has been requested then trajectory T1 is chosen, but with increased horizon trajectory T3 will be selected, depending on situation one is efficient sometimes and other in others. These situations can be improved by lane selection algorithm in the behavioural layer which looks for occupancy of different lanes and suggests the one best suitable lane. Similarly, if an exit has to be taken on the road, a long horizon would choose a plan with reduced speed compared to a high-speed path with the short horizon, this can also be solved by having a velocity planner in the behavioural layer with more extended scenario analysis algorithm.  
 
 \begin{figure}[h]
     \centering
@@ -187,28 +189,33 @@ An example of how horizon will affect optimal planning for the current planner i
 \end{figure}
  
  \todo{move to future works}
- Another horizon generally in the discussion for a planner is spatial horizon which discusses how long is the path generated, as per this planning criteria at low velocities the spatial horizon considered is very small thus the planner may not make right decisions because of conditions like missing the obstacles ahead etc. This shortcoming can be improved by creating a spatial path with the longer horizon in the behavioural layer at lower speeds and allowing the local planner to follow new spatial path than following the global reference path. This is an efficient method as the path planning is less expensive than trajectory planning. As shown in figure \ref{optimized_reference}, following the original reference path(solid line) will lead to trajectories that turn a lot causing discomfort due to obstacles on the side of the road that enter the road, thus by using an optimized reference path(dotted line), ego vehicle can plan efficiently even using short horizons.
+Another horizon generally in the discussion for a planner is spatial horizon which discusses how long is the path generated. As per the planning criteria, spatial horizon depends on velocity and temporal horizon, at low speeds spatial horizon is shorter and at high speeds larger temporal horizon. A shorter spatial horizon might result in not having a globally optimal solution, more substantial scenarios analysis will promote a local decision suitable globally. As shown in figure \ref{optimized_reference}, following the original reference path(solid line) at low speeds will result in two times collision avoidance and shifting path. With scenario analysis, a new shifted reference path can be chosen which avoids many shits improving comfort.
 
 The resolution of the sampling in acceleration selection and lateral distance selection will also affect the optimality of planning, a chosen plan can only be optimal of the trajectories created by sampling, higher the number of samples, larger are the possibilities, and the best selection is possible. 
 
-From the above discussion, it can be stated that a planner that has a longer spatial horizon for path planning and short time horizons for trajectory planning will lead to an efficient planner. 
+In summary, the planner proposed in this thesis is locally optimal and needs support from a scenario analysis algorithm to choose globally optimal paths. 
  
  \begin{figure}[h]
     \centering
-    \includegraphics[width=0.8\textwidth]{Images/optimized_reference.png}
-    \caption{Optimized Reference Path}
+    \includegraphics[width=0.8\textwidth]{Images/evaluation/optimized_reference.jpg}
+    \caption{With current reference path (solid black line) at low speeds ego will follow path similar to suggested in blue curve. While with an optimised reference (dotted line) ego will move straight without many shifts}
     \label{optimized_reference}
 \end{figure}
 
 \subsection{Feasibility}
 \label{feasibility}
-The ability of the vehicle to traverse the created trajectory determines feasibility. Generally, the curvature of the path, smoothness and accelerations determine whether a trajectory is feasible or not. The proposed planner creates feasible trajectories at lower speeds because of the third order splines used, and higher speeds require fifth or higher order splines to maintain continuity in path and speed. Discussions in \cite{cmu_parallel_thesis} \cite{ppt_teqniqs_coll_Avdnce} throw light on how to achieve higher degrees of smoothness, which approach is better in which driving conditions. As the intended application for this thesis is a modelcar, constant acceleration profiles are used due to a limitation in the ability of the car to track small changes in velocity and inaccuracies in measurement. These can be easily replaced by a smoother higher order polynomial with a better hardware platform. Consistency in paths evaluated with respect to previous plan is another factor in testing feasibility, the current planner penalizes trajectories deviating from previous plan and also take into account current orientation of the vehicle in choosing a path. Thus creating smoother transitions from one state to another by respecting current driving orientation. 
+The ability of the vehicle to traverse the created trajectory determines feasibility. Generally, the curvature of the path, smoothness and accelerations determine whether a trajectory is feasible or not. The proposed planner creates feasible trajectories at lower speeds because of the third order splines used, and higher speeds require fifth or higher order splines to maintain continuity in path curvature and speed. Discussions in \cite{cmu_parallel_thesis} \cite{ppt_teqniqs_coll_Avdnce} throw light on how to achieve higher degrees of smoothness, which approach is better in which driving conditions. As the intended application for this planner is a modelcar, constant acceleration profiles are used due to a limitation in the ability of the car to track small changes in velocity and inaccuracies in measurement. These can be easily replaced by a smoother higher order polynomial with a better hardware platform. Consistency in paths evaluated with respect to previous plan is another factor in testing feasibility, the current planner penalizes trajectories deviating from previous plan and also take into account current orientation of the vehicle in choosing a path. Thus creating smoother transitions from one state to another by respecting current driving curvature.
+
+In summary, the planner creates feasible trajectories for the modelcar and needs  update in polynomials used in trajectory creationa and representation to be used in complete cars. 
 
 \subsection{Completeness}
 \label{completeness}
-An algorithm is said to be complete if it can result in a solution every time. A motion planner can be called complete if it returns path if it exists in the space searched. Like many other sampling-based approaches the planner proposed in this thesis only probabilistically complete. That is, the probability of finding a solution approaches to one as the number of samples increases. If there are a higher number of samples in the configuration space, the higher are the chances of finding a solution. If a planner cannot find a solution within the sampled region it forces the car to go into the emergency manoeuvre. 
+An algorithm is said to be complete if it can result in a solution every time. A motion planner can be called complete if it returns path if it exists in the space searched. Like many other sampling-based approaches the planner proposed in this thesis only probabilistically complete. That is, the probability of finding a solution approaches to one as the number of samples increases. If there are a higher number of samples in the configuration space, the higher are the chances of finding a solution. If a planner cannot find a solution within the sampled region, it forces the ego to perform an emergency braking manoeuvre. 
 
-In Figure \ref{probablistically_complete}, there are only two sampled end states and there is no solution found by the vehicle, by increasing the number of lateral samples a solution can be easily found. In general condition of completeness can be improved in two ways, first is to sample as many points as possible and as closely as possible in the solution space. The second method is to keep on sampling till an end solution is found or timeout has been reached. The former method will reduce the computational performance while the later can be complex and expensive also. The planner proposed in this thesis implements a combination of both methods, as many samples as possible but evaluates only till a feasible solution is found. It is recommended to achieve completeness for safety purposes in autonomous driving. 
+In Figure \ref{probablistically_complete}, there are only two sampled end states and there is no solution found by the vehicle, by increasing the number of lateral samples a solution can be easily found. In general condition of completeness can be improved in two ways, first is to sample as many points as possible and as closely as possible in the solution space. The second method is to keep on sampling until an end solution is found or timeout has been reached. The former method will reduce the computational performance while the later can be complex and expensive. The planner proposed in this thesis implements a combination of both methods, initially as many samples as possible are created and then evaluate only evaluate these samples based a pre-cost of sample till a feasible solution is found. It is recommended to achieve completeness for safety purposes in autonomous driving.
+
+
+In summary, the proposed planner is probabilistically complete and current implementation with a limited number of acceleration profiles, and lateral shift samples are suitable for the modelcar, and higher sampling needs to be performed to improve completeness.  
 
  \begin{figure}[h]
     \centering
@@ -223,12 +230,12 @@ Though computation power is available cheaply, it is important to create solutio
 
 To compute the complexity of planner lets consider $n_a$ denote the number of acceleration/deceleration profiles, $n_s$ denote the stopping deceleration profiles and $n_l$ denote the number of lateral distance samples. Then the maximum number of samples created is $(n_a+n_s)*n_l$, generally stopping profiles are less as at higher deceleration lower number of lateral samples are chosen due to limitations in vehicle dynamics. This thesis employs a hybrid combination of two methods mentioned in \ref{completeness} to achieve completeness. Therefore in the best case, only one trajectory is evaluated, and complexity is $O(1)$, and the worst case complexity is $O((n_a+n_s)*n_l)$.
 
-Trajectory evaluation with respect to dynamic obstacles is an expensive process in the evaluation of trajectories. Simulation-based methods as discussed in  \cite{kolski_thesis} are expensive with complexity in terms of $O(n_o*n_n)$ where $n_o$ is the number of obstacles and $n_n$ is the number of simulation steps. This thesis employs a simple collision checking algorithm with constant time for evaluating one obstacle thus reducing the complexity to $O(n_o)$, number of obstacles. This process is not effective in intersections. Currently, a conservative approach to wait for other obstacles to pass is used, a simple approach as discussed in \cite{rrt_star} which has a performance better than the simulation-based algorithms can also be employed in future.  
-
-\todo{Write about the execution time for different number of samples, maximum execution time, minimum time from evaluation result etc}
+Trajectory evaluation with respect to dynamic obstacles is an expensive process in the evaluation of trajectories. Simulation-based methods as discussed in  \cite{kolski_thesis} are expensive with complexity in terms of $O(n_o*n_n)$ where $n_o$ is the number of obstacles and $n_n$ is the number of simulation steps. This thesis employs a simple collision checking algorithm with constant time for evaluating one obstacle thus reducing the complexity to $O(n_o)$, number of obstacles. This process is not effective in intersections. Currently, a conservative approach to wait for other obstacles to pass is used, a simple approach as discussed in \cite{rrt_star} which has a performance better than the simulation-based algorithms can also be employed in future for intersections.  
 
 \subsection{Deliberative Approach}
 The planner proposed in this thesis maintains a mix of deliberative and reactive approach. Deliberative by evaluating a trajectory completely before committing to it, this is important to create trajectories adhering to traffic, safe and comfortable. In general, all the planners evaluate all the sampled trajectories then choose the best based on different costs. The planner proposed in this thesis does not follow this convention, and once it finds the best trajectory, it stops evaluating the other trajectories as presented in subsection \ref{traj_Selection}. It does not limit the real-time response of the trajectory as the sampling is chosen such that the worst case response time is within the hard real-time response required by the planner. 
+
+In summary, the planner achieves a reactive behaviour with higher accelerations and trajectory selection algorithm at the same time being deliberate in selecting the final trajectory for execution. 
 
 %\subsection{Low Computational Costs}
 
@@ -240,7 +247,7 @@ The planner proposed in this thesis maintains a mix of deliberative and reactive
 
 %\section{Comparisons to other Planners}
 
-\todo{Comparison here doesn't make sense as there are no numbers to compare with other planners, theoretical comparisons can be presented in related work in forms of short comings in different planners. Here may be just add a table like in CMU or DISS shui thesis with comparision to other planner}
+
 
 %All the motion planners proposed achieve similar objective of navigating smoothly on road with different special capability, these special techniques define how and where these planners can be used. It is tough to compare the planners performance by comparing in definite scenarios due to logistical constraints and costs and objectives of different planners. The generic parameters which define the performance of a trajectory planner are deliberative evaluation, higher dimensional search space, on-road, parallel, real-time. Different types of planners proposed achieve different goals and are suitable at different conditions. 
 
