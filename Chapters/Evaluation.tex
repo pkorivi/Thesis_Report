@@ -80,7 +80,7 @@ In situation one presented in Figure \ref{slow_moving_1} ego vehicle starts chan
 
 In the scenario presented in Figure \ref{merging1}, lane changing is requested to merge into the traffic in the left lane. Here ego vehicle speed is $1ms^{-1}$ and obstacle speed is $0.6m^{-1}$. Initially, lane change does not occur as cost functions are tuned to maintain speed over maintaining required lane. As the vehicle enters the curve, target driving speed is reduced, and the vehicle merges into the traffic in the left lane. Depending on which portion of the lane the ego vehicle is in, i.e., near intersections or exits target lane should have higher priority over maintaining speed and during rest of the regions target speed should be of higher priority to reach a destination quickly. Cost functions implemented in this thesis provide flexibility in tuning behaviour of the ego vehicle. 
 
-\begin{figure}[h]
+\begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth]{Images/evaluation/merging1.jpg}
     \caption{Merging into Traffic}
@@ -174,14 +174,14 @@ In the scenario presented in Figure \ref{dynamic_2} two dynamic obstacles are mo
 
 \section{Criteria Based Evaluation}
 \label{criteria_based_eval}
-In this section, the proposed planner is validated against the common criteria of evaluating any algorithm, i.e.\ optimality, feasibility, completeness, runtime and approach. Each subsection details on advantages and limitations of the planner concerning each criterion along with short comparisons to other approaches. 
+In this section, the proposed planner is validated against the common criteria of evaluating any algorithm, i.e.\ optimality, feasibility, completeness, runtime, and final review of approach. Each subsection details on advantages and limitations of the planner concerning each criterion along with short comparisons to other approaches. 
 
 \subsection{Optimality}
  In this thesis, we discuss the optimality of the time horizon, subsection \ref{timing_constraints} already defines regarding various timing constraints chosen in this planner. A larger planning horizon will enable the planner to create a longer and better path, but due to the unpredictability of the environment, the plan created will not be valid after a specified duration, a broader horizon will also increase the run-time of the algorithm. The planner proposed in this thesis is only a local planner and always needs inputs from a behavioural layer or a global planner to choose target lane, velocity etc. thus a short planning horizon sufficient to bring the ego to a halt is suitable for the proposed planner. 
 
 An example of how horizon will affect optimal planning for the current planner is shown in figure \ref{horizon_optimality}. Here T0, T1 are the trajectories with horizon "T" and T2, T3 are trajectories with horizon "T'". In this condition, if a lane change has been requested then trajectory T1 is chosen, but with increased horizon trajectory T3 will be selected, depending on situation one is efficient sometimes and other in others. These situations can be improved by lane selection algorithm in the behavioural layer which looks for occupancy of different lanes and suggests the one best suitable lane. Similarly, if an exit has to be taken on the road, a long horizon would choose a plan with reduced speed compared to a high-speed path with the short horizon, this can also be solved by having a velocity planner in the behavioural layer with more extended scenario analysis algorithm.  
 
-\begin{figure}[h]
+\begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth]{Images/horizaon_optimality_2.png}
     \caption{Horizon Optimality reference}
@@ -217,7 +217,7 @@ In Figure \ref{probablistically_complete}, there are only two sampled end states
 
 In summary, the proposed planner is probabilistically complete and current implementation with a limited number of acceleration profiles, and lateral shift samples are suitable for the modelcar, and higher sampling needs to be performed to improve completeness.  
 
- \begin{figure}[h]
+ \begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth]{Images/probablistically_complete.png}
     \caption{Probablistic Completeness}
@@ -236,6 +236,11 @@ Trajectory evaluation with respect to dynamic obstacles is an expensive process 
 The planner proposed in this thesis maintains a mix of deliberative and reactive approach. Deliberative by evaluating a trajectory completely before committing to it, this is important to create trajectories adhering to traffic, safe and comfortable. In general, all the planners evaluate all the sampled trajectories then choose the best based on different costs. The planner proposed in this thesis does not follow this convention, and once it finds the best trajectory, it stops evaluating the other trajectories as presented in subsection \ref{traj_Selection}. It does not limit the real-time response of the trajectory as the sampling is chosen such that the worst case response time is within the hard real-time response required by the planner. 
 
 In summary, the planner achieves a reactive behaviour with higher accelerations and trajectory selection algorithm at the same time being deliberate in selecting the final trajectory for execution. 
+
+\subsection{Final Review}
+The approach proposed in this thesis divides the problem of motion planning into subproblems across different layers minimising the computational effort at each level making the planner suitable for model cars. The trajectory creation and selection algorithm presented in this thesis exploits the cost functions and intended behaviour to converge to a solution without evaluating all the sample trajectories. The collision checking algorithm proposed in this thesis utilises the trajectory shape to detect collisions with static and dynamic obstacles in constant time over linear algorithms such as simulation-based approaches. The planning algorithm proposed follows a fixed time horizon resulting in a flexible spatial horizon enabling ego to plan independent of current speed. The planner plans such that the ego is collision free for next temporal horizon time (5 seconds). 
+
+The planner cannot work independently and needs inputs from a behavioural layer with scenario analysis algorithm to make optimal long-term decisions as discussed in previous subsections. The constant acceleration profiles used in the planner create high jerk trajectories; these are suitable for model cars but not for the actual vehicles. Functions related to path and velocity planning must be reimplemented with higher order polynomials for smoothness. The collision detection algorithm follows a conservative approach for the dynamic obstacles moving at intersections, and there is a significant scope for improvement to adapt to traffic at intersections or pedestrians moving across street. 
 
 %\subsection{Low Computational Costs}
 
