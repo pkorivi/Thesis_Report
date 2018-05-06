@@ -16,7 +16,7 @@ Figure \ref{path_planner} represents the general architecture of the planning mo
 
 \section{Localization} \label{localization}
 
-Localization module is responsible for providing the current state of the vehicle concerning the position, orientation, speed(linear and angular) and acceleration. The localisation module implemented on the modelcar has two sub-components, Vehicle Odometry and Global Position estimation using Visual GPS. Odometry is calculated with dead reckoning \cite{dead_reckoning} with speed information from motor and Yaw information from Inertial Measurement Unit (IMU). The localisation module combines odometry with the data received from a visual GPS node (tracks markers on the roof) to correctly estimate the state of the ego vehicle. 
+Localization module is responsible for providing the current state of the vehicle concerning the position, orientation, speed(linear and angular) and acceleration. The localisation module implemented on the modelcar has two sub-components, Vehicle Odometry and a Visual GPS. Odometry is calculated with dead reckoning \cite{dead_reckoning} with speed information from motor and Yaw information from Inertial Measurement Unit (IMU). The localisation module combines odometry with the data received from a visual GPS node (tracks markers on the roof) to correctly estimate the state of the ego vehicle. 
 
 \section{Prediction} \label{prediction}
 
@@ -47,26 +47,26 @@ This section details about the RNDF file \cite{rndf_darpa} which defines the roa
 
 \begin{figure}
 	\centering
-	\begin{subfigure}{.56\textwidth}
+	\begin{subfigure}{.55\textwidth}
 	    \centering
 		\includegraphics[width=1.0\textwidth]{Images/rndf_segment.png}
 		\caption{Segment representation in RNDF - Segement M has two lanes M1, M2 and each lane has way points 1-N}
 		\label{rndf_segment}
-	\end{subfigure}%
-	\begin{subfigure}{.44\textwidth}
+	\end{subfigure}\hspace{.01\textwidth}
+	\begin{subfigure}{.43\textwidth}
 		\centering
 		\includegraphics[width=1.0\textwidth]{Images/rndf_exits.png}
 		\caption{Exit representation in RNDF - Connections between two segments in a T-Junction}
 		\label{rndf_exits}
 	\end{subfigure}
-	\caption{Path velocity representation in \cite{traj_planner_optimization}}
+	\caption{Road representation in RNDF \cite{rndf_darpa}}
 	\label{rndf_seg_exit}
 \end{figure}
 
 \begin{figure}
     \centering
     \includegraphics[width=0.5\textwidth]{Images/zone_segment.png}
-    \caption{Zone Representation in RNDF - Connection between Segments and Zone}
+    \caption{Connection between Segments and Zones (free paths) in RNDF \cite{rndf_darpa}}
     \label{zone_segment}
 \end{figure}
 
@@ -81,7 +81,7 @@ This section details about the RNDF file \cite{rndf_darpa} which defines the roa
 
 \subsection{Path Representation and calculation}
 
-The data in RNDF is represented in the form of a tree with connections across way-points. The global path from source to destination is the shortest path between the waypoint closest to the ego vehicle's current position and the waypoint closest to the destination. The shortest path found is subdivided into sub-paths based on the segment to which the waypoints belong. Once the ego vehicle is at the end of one sub-path it receives a notification from the trajectory planner that a goal is reached, then the route planner transmits the next subpath to the trajectory planner, this process is repeated till destination is reached. Figure \ref{path_Segmentation} details further about the division of shortest path across different segments. This method also reduces the memory needed in modelling the road in trajectory planning stage.
+The data in RNDF is represented in the form of a graph with connections across way-points as edges and way-points as vertices. The global path from source to destination is the shortest path between the waypoint closest to the ego vehicle's current position and the waypoint closest to the destination. The shortest path found is divided into sub-paths based on the segment to which the waypoints belong. Once the ego vehicle is at the end of one sub-path it receives a notification from the trajectory planner that a goal is reached, then the route planner transmits the next subpath to the trajectory planner, this process is repeated till destination is reached. Figure \ref{path_Segmentation} details further about the division of shortest path across different segments. This method also reduces the memory needed in modelling the road in trajectory planning stage.
 
 \begin{figure}
     \centering
@@ -90,8 +90,8 @@ The data in RNDF is represented in the form of a tree with connections across wa
     \label{path_Segmentation}
 \end{figure}
 
-\subsection{Behavioral Layer}
-Behavioural layer plays an important role in path planning, it is responsible for understanding the scenario and making decisions according to various traffic rules, constraints and choices that will make driving more efficient for the vehicle. For example, it decides on lane and speed to drive based on constraints such as emptiness of lane, other vehicles in the lane, next needed exit and turn, speed limit etc. The behavioural layer is a huge research topic in itself and not in the scope of this thesis. Currently, a simple simulated approach is implemented where the user can provide inputs to decide behaviour using mouse clicks for lane change and speed information from the map.
+\subsection{Behavioural Layer}
+Behavioural layer plays an essential role in path planning; it is responsible for understanding the scenario and making decisions according to various traffic rules, constraints and choices that make driving efficient. For example, it decides on target lane and speed based on information such as emptiness of road, other cars in the lane, next needed exit and turn, speed limit etc. The behavioural layer is a vast research topic in itself and not in the scope of this thesis. Currently, a simple simulated approach is implemented where the user can provide inputs to decide behaviour using mouse clicks for lane change and speed information from the map.
 
 \section{Motion Planner} \label{motion_planner}
 

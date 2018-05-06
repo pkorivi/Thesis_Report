@@ -22,13 +22,13 @@
 \contentsline {section}{\numberline {4.4}Route Planner}{18}{section.4.4}
 \contentsline {subsection}{\numberline {4.4.1}RNDF}{19}{subsection.4.4.1}
 \contentsline {subsection}{\numberline {4.4.2}Path Representation and calculation}{20}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}Behavioral Layer}{20}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.4.3}Behavioural Layer}{20}{subsection.4.4.3}
 \contentsline {section}{\numberline {4.5}Motion Planner}{21}{section.4.5}
 \contentsline {subsection}{\numberline {4.5.1}Temporal Horizon}{21}{subsection.4.5.1}
 \contentsline {subsection}{\numberline {4.5.2}Path Modelling}{22}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3} Trajectory Creation}{23}{subsection.4.5.3}
-\contentsline {subsection}{\numberline {4.5.4}Checking for Static Obstacles}{28}{subsection.4.5.4}
-\contentsline {subsection}{\numberline {4.5.5}Checking for Dynamic Obstacles}{29}{subsection.4.5.5}
+\contentsline {subsection}{\numberline {4.5.3} Trajectory Creation}{24}{subsection.4.5.3}
+\contentsline {subsection}{\numberline {4.5.4}Checking for Static Obstacles}{29}{subsection.4.5.4}
+\contentsline {subsection}{\numberline {4.5.5}Checking for Dynamic Obstacles}{30}{subsection.4.5.5}
 \contentsline {subsection}{\numberline {4.5.6}Cost Functions and Trajectory Selection}{34}{subsection.4.5.6}
 \contentsline {subsection}{\numberline {4.5.7}Velocity Planning}{35}{subsection.4.5.7}
 \contentsline {section}{\numberline {4.6}Trajectory Follower}{35}{section.4.6}
