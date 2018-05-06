@@ -26,10 +26,12 @@
 \contentsline {section}{\numberline {4.5}Motion Planner}{21}{section.4.5}
 \contentsline {subsection}{\numberline {4.5.1}Temporal Horizon}{21}{subsection.4.5.1}
 \contentsline {subsection}{\numberline {4.5.2}Path Modelling}{22}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3} Trajectory Creation}{24}{subsection.4.5.3}
-\contentsline {subsection}{\numberline {4.5.4}Checking for Static Obstacles}{29}{subsection.4.5.4}
-\contentsline {subsection}{\numberline {4.5.5}Checking for Dynamic Obstacles}{30}{subsection.4.5.5}
-\contentsline {subsection}{\numberline {4.5.6}Cost Functions and Trajectory Selection}{34}{subsection.4.5.6}
+\contentsline {subsection}{\numberline {4.5.3} Trajectory Creation}{23}{subsection.4.5.3}
+\contentsline {subsubsection}{\numberline {4.5.3.1}Longitudinal Planning}{23}{subsubsection.4.5.3.1}
+\contentsline {subsubsection}{\numberline {4.5.3.2}Lateral Planning}{24}{subsubsection.4.5.3.2}
+\contentsline {subsection}{\numberline {4.5.4}Checking for Static Obstacles}{28}{subsection.4.5.4}
+\contentsline {subsection}{\numberline {4.5.5}Checking for Dynamic Obstacles}{29}{subsection.4.5.5}
+\contentsline {subsection}{\numberline {4.5.6}Cost Functions and Trajectory Selection}{33}{subsection.4.5.6}
 \contentsline {subsection}{\numberline {4.5.7}Velocity Planning}{35}{subsection.4.5.7}
 \contentsline {section}{\numberline {4.6}Trajectory Follower}{35}{section.4.6}
 \contentsline {chapter}{\numberline {5}Implementation}{37}{chapter.5}

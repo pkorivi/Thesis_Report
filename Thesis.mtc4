@@ -9,8 +9,10 @@
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.5.1}Temporal Horizon}{\reset@font\mtcSSfont 21}{subsection.4.5.1}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.5.2}Path Modelling}{\reset@font\mtcSSfont 22}{subsection.4.5.2}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.5.3} Trajectory Creation}{\reset@font\mtcSSfont 23}{subsection.4.5.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {4.5.3.1}Longitudinal Planning}{\reset@font\mtcSSSfont 23}{subsubsection.4.5.3.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {4.5.3.2}Lateral Planning}{\reset@font\mtcSSSfont 24}{subsubsection.4.5.3.2}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.5.4}Checking for Static Obstacles}{\reset@font\mtcSSfont 28}{subsection.4.5.4}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.5.5}Checking for Dynamic Obstacles}{\reset@font\mtcSSfont 29}{subsection.4.5.5}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.5.6}Cost Functions and Trajectory Selection}{\reset@font\mtcSSfont 34}{subsection.4.5.6}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.5.6}Cost Functions and Trajectory Selection}{\reset@font\mtcSSfont 33}{subsection.4.5.6}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.5.7}Velocity Planning}{\reset@font\mtcSSfont 35}{subsection.4.5.7}}
 {\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.6}Trajectory Follower}{\reset@font\mtcSfont 35}{section.4.6}}
