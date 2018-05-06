@@ -12,9 +12,9 @@ Increase in the urban population in many cities around the world is leading to i
 
 Autonomous vehicles are at the forefront of the research in automotive industry, to bring the technology closer to everyday use there needs to be further research. The new research required is mainly in the areas of urban driving involving a large number of traffic participants and complex road conditions. Though robots can act deterministically, humans and environment are not deterministic, to make autonomous vehicles safe the research should be focused at understanding these interactions.
 
-To work on full-scale autonomous vehicles are expensive, time taking, and safety critical to test in emergency scenarios for understanding these interactions. Though simulators provide easy ways to evaluate the situations, issues caused by physical aspect of the perception and vehicle control are missing in simulators. Research into autonomous vehicles is also an expensive endeavour with high costs on platforms, operational constraints and involves large teams. Model cars (1:10 scaled versions of cars) can break this barrier to bring the technology closer to a large number of researchers in the world thus, being the enabler for further innovation. These Modelcars share the aspects of fully autonomous vehicles concerning expected behaviour and conventional mobile robots regarding sensor and computational resources sharing similar challenges of autonomous cars. 
+To work on full-scale autonomous vehicles are expensive, time taking, and safety critical to test in emergency scenarios for understanding these interactions. Though simulators provide easy ways to evaluate the situations, issues caused by physical aspect of the perception and vehicle control are missing in simulators. Research into autonomous vehicles is also an expensive endeavour with high costs on platforms, operational constraints and involves large teams. Modelcars (1:10 scaled versions of cars) can break this barrier to bring the technology closer to a large number of researchers in the world thus, being the enabler for further innovation. These Modelcars share the aspects of fully autonomous vehicles concerning expected behaviour and conventional mobile robots regarding sensor and computational resources sharing similar challenges of autonomous cars. 
 
-The challenges in autonomous vehicles can be subdivided into sensing/perception, navigation and control. The challenge under consideration in this thesis is the navigation/planning problem of driving the ego vehicle (vehicle in consideration for planning) to the destination with available resources. The problem of planning is unique as the module is responsible for understanding the behaviour of the surrounding objects and adjust the ego vehicle's behaviour accordingly following specific rules and react appropriately. Though motion planning for autonomous vehicles is a widely researched topic in structured environments, these methods cannot be applied to the model cars due to constraints in computational power, sensor measurements and vehicle control. The methods proposed in classic mobile robots research either consider dynamic obstacles as pseudo-dynamic (momentarily static) or moving in a straight line not considering the road properties. There is a need for a planner to address these issues. 
+The challenges in autonomous vehicles can be subdivided into sensing/perception, navigation and control. The challenge under consideration in this thesis is the navigation/planning problem of driving the ego vehicle (vehicle in consideration for planning) to the destination with available resources. The problem of planning is unique as the module is responsible for understanding the behaviour of the surrounding objects and adjust the ego vehicle's behaviour accordingly following specific rules and react appropriately. Though motion planning for autonomous vehicles is a widely researched topic in structured environments, these methods cannot be applied to the modelcars due to constraints in computational power, sensor measurements and vehicle control. The methods proposed in classic mobile robots research either consider dynamic obstacles as pseudo-dynamic (momentarily static) or moving in a straight line not considering the road properties. There is a need for a planner to address these issues. 
 
 \section{Problem Statement}
 
@@ -31,21 +31,32 @@ This thesis advocates that effective trajectory planning for modelcars in a stru
 
 \section{Thesis Contributions}
 
-The main contribution of this thesis is the introduction of a trajectory generation framework and algorithms for smaller model car platforms. The hierarchical framework employed divides the problem into four layers of planning named route planner, behavioural layer, trajectory planner and control node. The focus is the development of trajectory creation algorithm using samples of acceleration profiles and lateral shifts, an algorithm to pre-assign costs to samples such that planner evaluates the paths based on pre-costs and converges faster to the solution. The final contribution is collision detection algorithm that works in two steps for detecting collision with static obstacles and three steps for dynamic obstacles. 
+The main contribution of this thesis is the introduction of a trajectory generation framework and algorithms for modelcar platforms. The hierarchical framework employed divides the problem into four layers of planning named route planner, behavioural layer, trajectory planner and control node. The focus is the development of trajectory creation algorithm using samples of acceleration profiles and lateral shifts, an algorithm to pre-assign costs to samples such that planner evaluates the paths based on pre-costs and converges faster to the solution. The final contribution is collision detection algorithm that works in two steps for detecting collision with static obstacles and three steps for dynamic obstacles. 
 
 \section{Thesis Structure}
 
 
 The thesis is broadly organised as follows. The initial chapters present relevant research in this field, followed by a chapter outlining the target hardware and software platform setup, and approach to motion planning. Implementation overview, evaluation and conclusion follow the approach.
+\begin{itemize}
+	\item Firstly, Chapter \ref{related_work} introduces the research direction in autonomous vehicles, followed by different planning approaches in on-road driving. Next, an overview of different trajectory representation and evaluation techniques is presented.
+	\item Chapter \ref{vehicle_info} provides a basic overview of the software and hardware architecture of the target platform.
+	\item Chapter \ref{planning_algo} provides a detailed illustration of the motion planning algorithms developed for this thesis followed by evaluation techniques to validate the trajectories by checking for collision.
+	\item Chapter \ref{implementation} provides a basic overview of the implementation of the proposed planning algorithm by describing the structure of different modules implemented and message flow across them.
+	\item Chapter \ref{evaluation} details on the different experiments performed to validate the planner followed by general criteria-based evaluation of the proposed planner.
+	\item Finally. Chapter \ref{conclusion} concludes regarding the work done in this thesis, discusses regarding possible improvements and further research options.
+	
+	
+	
+\end{itemize}
 
-Firstly, Chapter \ref{related_work} introduces the research direction in autonomous vehicles, followed by different planning approaches in on-road driving. Next, an overview of different trajectory representation and evaluation techniques is presented.
 
-Chapter \ref{vehicle_info} provides a basic overview of the software and hardware architecture of the target platform.
 
-Chapter \ref{planning_algo} provides a detailed illustration of the motion planning algorithms developed for this thesis followed by evaluation techniques to validate the trajectories by checking for collision.
 
-Chapter \ref{implementation} provides a basic overview of the implementation of the proposed planning algorithm by describing the structure of different modules implemented and message flow across them.
 
-Chapter \ref{evaluation} details on the different experiments performed to validate the planner followed by general criteria-based evaluation of the proposed planner.
 
-Finally. Chapter \ref{conclusion} concludes regarding the work done in this thesis, discusses regarding possible improvements and further research options.
+
+
+
+
+
+

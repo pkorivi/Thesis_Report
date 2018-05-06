@@ -95,7 +95,7 @@ In the scenario presented in Figure \ref{series_obstacles} driving lane is block
 \begin{figure}
     \centering
     \includegraphics[width=1.0\textwidth]{Images/evaluation/vehicle_opp_1.jpg}
-    \caption{Lane blocked by series of static obstacles and vehicle in next lane driving opposite. Ego vehicle waits for the vehicle to pass then drives ahead avoiding the static obstacles. The time vs Velocity charts shows how the ego vehicle starts driving, then waits for obstacle to pass and continues accelerating further after passing obstacles.}
+    \caption{Lane blocked by series of static obstacles and vehicle in next lane driving opposite. Ego vehicle waits for the vehicle to pass then drives ahead avoiding the static obstacles. The time vs Velocity (smoothened values) charts shows how the ego vehicle starts driving, then waits for obstacle to pass and continues accelerating further after passing obstacles.}
     \label{series_obstacles}
 \end{figure}
 
@@ -108,7 +108,7 @@ In the scenario presented in Figure \ref{series_obstacles_2}, ego vehicle has en
 	\label{series_obstacles_2}
 \end{figure}
 
-The ego vehicle may get stuck in the middle of the road if driving speed of ego vehicle is low, because of short temporal horizon it may not see the fast moving dynamic obstacle faraway and change the lanes. Once it's in opposite lane and sees a fast moving obstacle, ego will not to shift to right lane because of obstacles and will stop. Only if the opposite vehicle stops and provides enough slack ego will be able to drive forward. The planner does not allow reverse driving thus the ego has to switch to a different planner if the ego has to drive backwards in this scenario. 
+The ego vehicle may get stuck in the middle of the road if driving speed of ego vehicle is low. Because of short temporal horizon even though it takes more than temporal horizon time to complete the maneuver will be initiated by the planner and it may not see the fast moving dynamic obstacle faraway and starts to change the lanes. Once it's in opposite lane and sees a fast moving obstacle, ego will not to shift to right lane because of obstacles and will stop. Only if the opposite vehicle stops and provides enough slack ego will be able to drive forward. The planner does not allow reverse driving thus the ego has to switch to a different planner if the ego has to drive backwards in this scenario. 
 
 
 \subsection{Road Blocked or Pedestrian Ahead}
@@ -134,7 +134,7 @@ A pedestrian on the road is considered similar to a road blocking, in this thesi
 \subsection{Dynamic Obstacles - other vehicles}
 The main objective of the planner is to adjust to the sudden changes in the environment caused by the dynamic obstacles in surroundings, here two sub-scenarios are described where the ego vehicle has to react to an unexpected breaking of vehicles ahead. 
 
-In the scenario presented in Figure \ref{dynamic_1}, the obstacle ahead stops suddenly, and the ego vehicle has to find a path avoiding a collision. This situation is similar to when a car ahead stops to drop off a passenger or stops for a parking spot. In this situation, ego follows the obstacle ahead, once it stops ego slows down till it finds enough room in the left lane to drive ahead of the stopped dynamic obstacle and continues driving. 
+In the scenario presented in Figure \ref{dynamic_1}, the obstacle ahead stops suddenly, and the ego vehicle has to find a path avoiding a collision. This situation is similar to when a car ahead stops to drop off a passenger or for a parking spot. In this situation, ego follows the obstacle ahead, once it stops ego slows down till it finds enough room in the left lane to drive ahead of the stopped dynamic obstacle and continues driving. 
 
 \iffalse 
 
@@ -142,7 +142,7 @@ In the scenario presented in Figure \ref{dynamic_1}, the obstacle ahead stops su
 \begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth]{Images/evaluation/sudden_Stop_dyn_1.jpg}
-    \caption{The scenario has one obstacle moving along the road and other moving opposite as shown in a), ego slows down as the dynamic obstacle in the same lane stops suddenly and starts planning path in next lane once other lane is free as shown in b) and finally ego returns to original lane as presented in c) }
+    \caption{The scenario has one obstacle moving along the road and other moving opposite as shown in a), ego slows down as the dynamic obstacle in the same lane stops suddenly and starts planning path in next lane once other lane is free as shown in b) and finally ego returns to original lane as presented in c). }
     \label{dynamic_1}
 \end{figure}
 
@@ -188,8 +188,7 @@ An example of how horizon will affect optimal planning for the current planner i
     \label{horizon_optimality}
 \end{figure}
  
- \todo{move to future works}
-Another horizon generally in the discussion for a planner is spatial horizon which discusses how long is the path generated. As per the planning criteria, spatial horizon depends on velocity and temporal horizon, at low speeds spatial horizon is shorter and at high speeds larger temporal horizon. A shorter spatial horizon might result in not having a globally optimal solution, more substantial scenarios analysis will promote a local decision suitable globally. As shown in figure \ref{optimized_reference}, following the original reference path(solid line) at low speeds will result in two times collision avoidance and shifting path. With scenario analysis, a new shifted reference path can be chosen which avoids many shits improving comfort.
+Another horizon generally in the discussion for a planner is spatial horizon which discusses how long is the path generated. As per the planning criteria, spatial horizon depends on velocity and temporal horizon, at low speeds spatial horizon is shorter and at high speeds larger temporal horizon. A shorter spatial horizon might result in not having a globally optimal solution, more substantial scenarios analysis will promote a local decision suitable globally. As shown in figure \ref{optimized_reference}, following the original reference path(solid line) at low speeds will result in two times collision avoidance and shifting path. With scenario analysis, a new shifted reference path can be chosen which avoids many shifts improving comfort.
 
 The resolution of the sampling in acceleration selection and lateral distance selection will also affect the optimality of planning, a chosen plan can only be optimal of the trajectories created by sampling, higher the number of samples, larger are the possibilities, and the best selection is possible. 
 
@@ -212,7 +211,7 @@ In summary, the planner creates feasible trajectories for the modelcar and needs
 \label{completeness}
 An algorithm is said to be complete if it can result in a solution every time. A motion planner can be called complete if it returns path if it exists in the space searched. Like many other sampling-based approaches the planner proposed in this thesis only probabilistically complete. That is, the probability of finding a solution approaches to one as the number of samples increases. If there are a higher number of samples in the configuration space, the higher are the chances of finding a solution. If a planner cannot find a solution within the sampled region, it forces the ego to perform an emergency braking manoeuvre. 
 
-In Figure \ref{probablistically_complete}, there are only two sampled end states and there is no solution found by the vehicle, by increasing the number of lateral samples a solution can be easily found. In general condition of completeness can be improved in two ways, first is to sample as many points as possible and as closely as possible in the solution space. The second method is to keep on sampling until an end solution is found or timeout has been reached. The former method will reduce the computational performance while the later can be complex and expensive. The planner proposed in this thesis implements a combination of both methods, initially as many samples as possible are created and then evaluate only evaluate these samples based a pre-cost of sample till a feasible solution is found. It is recommended to achieve completeness for safety purposes in autonomous driving.
+In Figure \ref{probablistically_complete}, there are only two sampled end states and there is no solution found by the vehicle, by increasing the number of lateral samples a solution can be easily found. In general condition of completeness can be improved in two ways, first is to sample as many points as possible and as closely as possible in the solution space. The second method is to keep on sampling until an end solution is found or timeout has been reached. The former method will reduce the computational performance while the later can be complex and expensive. The planner proposed in this thesis implements a combination of both methods, initially as many samples as possible are created and then evaluates these samples based a pre-cost of sample till a feasible solution is found. It is recommended to achieve completeness for safety purposes in autonomous driving.
 
 
 In summary, the proposed planner is probabilistically complete and current implementation with a limited number of acceleration profiles, and lateral shift samples are suitable for the modelcar, and higher sampling needs to be performed to improve completeness.  

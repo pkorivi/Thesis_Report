@@ -43,8 +43,8 @@
 \contentsline {subsection}{\numberline {6.1.2}Overtaking and Merging into Traffic}{41}{subsection.6.1.2}
 \contentsline {subsection}{\numberline {6.1.3}Merging into next lane with opposite traffic}{42}{subsection.6.1.3}
 \contentsline {subsection}{\numberline {6.1.4}Road Blocked or Pedestrian Ahead}{46}{subsection.6.1.4}
-\contentsline {subsection}{\numberline {6.1.5}Dynamic Obstacles - other vehicles}{48}{subsection.6.1.5}
-\contentsline {section}{\numberline {6.2}Criteria Based Evaluation}{48}{section.6.2}
+\contentsline {subsection}{\numberline {6.1.5}Dynamic Obstacles - other vehicles}{47}{subsection.6.1.5}
+\contentsline {section}{\numberline {6.2}Criteria Based Evaluation}{47}{section.6.2}
 \contentsline {subsection}{\numberline {6.2.1}Optimality}{49}{subsection.6.2.1}
 \contentsline {subsection}{\numberline {6.2.2}Feasibility}{51}{subsection.6.2.2}
 \contentsline {subsection}{\numberline {6.2.3}Completeness}{51}{subsection.6.2.3}
@@ -54,7 +54,7 @@
 \contentsline {chapter}{\numberline {7}Conclusion and Future Work}{55}{chapter.7}
 \contentsline {section}{\numberline {7.1}Conclusion}{55}{section.7.1}
 \contentsline {section}{\numberline {7.2}Future Work}{56}{section.7.2}
-\contentsline {chapter}{Bibliography}{57}{chapter*.50}
+\contentsline {chapter}{Bibliography}{57}{chapter*.49}
 \contentsline {chapter}{\numberline {A}Appendix}{63}{appendix.A}
 \contentsline {section}{\numberline {A.1}Static Obstacle Collision checking}{63}{section.A.1}
 \contentsline {section}{\numberline {A.2}Dynamic Obstacle Collision checking}{64}{section.A.2}
