@@ -25,7 +25,7 @@
 \BOOKMARK [1][]{section.4.5}{Motion Planner}{chapter.4}% 25
 \BOOKMARK [2][]{subsection.4.5.1}{Temporal Horizon}{section.4.5}% 26
 \BOOKMARK [2][]{subsection.4.5.2}{Path Modelling}{section.4.5}% 27
-\BOOKMARK [2][]{subsection.4.5.3}{ Trajectory Creation}{section.4.5}% 28
+\BOOKMARK [2][]{subsection.4.5.3}{Trajectory Creation}{section.4.5}% 28
 \BOOKMARK [2][]{subsection.4.5.4}{Checking for Static Obstacles}{section.4.5}% 29
 \BOOKMARK [2][]{subsection.4.5.5}{Checking for Dynamic Obstacles}{section.4.5}% 30
 \BOOKMARK [2][]{subsection.4.5.6}{Cost Functions and Trajectory Selection}{section.4.5}% 31

@@ -5,6 +5,9 @@ In previous chapters detailed working of the planning algorithm has been discuss
 \section{Experiments}\label{experiments}
 Due to time and resource constraint, most of the experiments to evaluate the planner are performed on the simulator. The test cases involve finding a collision-free path with obstruction in driving lane, avoiding slow moving traffic, merging into ongoing traffic, lane changes etc. The following subsections detail further about each experiment. 
 
+All the experiments are available in the following \href{https://youtu.be/kgQQdvBcRfw}{video}
+\newline https://youtu.be/kgQQdvBcRfw .
+
 \subsection{Lane blocked}
 The scenario presented in \ref{lane_blocked_1} describes a situation when the driving lane is blocked by a static obstacle, and there is a vehicle driving in next lane. The ego vehicle slows down till the left lane is free, overtakes the slow-moving obstacle and shifts back to original lane and drives at increased speed. 
 
@@ -108,7 +111,7 @@ In the scenario presented in Figure \ref{series_obstacles_2}, ego vehicle has en
 	\label{series_obstacles_2}
 \end{figure}
 
-The ego vehicle may get stuck in the middle of the road if driving speed of ego vehicle is low. Because of short temporal horizon even though it takes more than temporal horizon time to complete the maneuver will be initiated by the planner and it may not see the fast moving dynamic obstacle faraway and starts to change the lanes. Once it's in opposite lane and sees a fast moving obstacle, ego will not to shift to right lane because of obstacles and will stop. Only if the opposite vehicle stops and provides enough slack ego will be able to drive forward. The planner does not allow reverse driving thus the ego has to switch to a different planner if the ego has to drive backwards in this scenario. 
+The ego vehicle may get stuck in the middle of the road if driving speed of ego vehicle is low. Because of short temporal horizon even though it takes more than temporal horizon time to complete the maneuver will be initiated by the planner and it may not see the fast moving dynamic obstacle faraway and starts to change the lanes. Once it's in opposite lane and sees a fast moving obstacle, ego will not be able to shift to right lane because of obstacles and will stop. Only if the opposite vehicle stops and provides enough slack ego will be able to drive forward. The planner does not allow reverse driving thus the ego has to switch to a different planner if the ego has to drive backwards in this scenario. 
 
 
 \subsection{Road Blocked or Pedestrian Ahead}
@@ -127,7 +130,7 @@ A pedestrian on the road is considered similar to a road blocking, in this thesi
 \begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth]{Images/evaluation/stopping_pedestrian.jpg}
-    \caption{Pedestrian Ahead on Road, Pedestrian is assumed to occupy lane width. Ego vehicles behaves same as lane blocked. The distance Vs velocity graph shows how the ego accelerates, then slowly decelerated and finally halts. Ego stops with 1m gap to pedestrian.}
+    \caption{Pedestrian ahead on road, pedestrian is assumed to occupy lane width. Ego vehicles behaves same as lane blocked. The distance Vs velocity graph shows how the ego accelerates, then slowly decelerated and finally halts. Ego stops with 1m gap to pedestrian.}
     \label{pedestrian_ahead}
 \end{figure}
 
@@ -188,9 +191,9 @@ An example of how horizon will affect optimal planning for the current planner i
     \label{horizon_optimality}
 \end{figure}
  
-Another horizon generally in the discussion for a planner is spatial horizon which discusses how long is the path generated. As per the planning criteria, spatial horizon depends on velocity and temporal horizon, at low speeds spatial horizon is shorter and at high speeds larger temporal horizon. A shorter spatial horizon might result in not having a globally optimal solution, more substantial scenarios analysis will promote a local decision suitable globally. As shown in figure \ref{optimized_reference}, following the original reference path(solid line) at low speeds will result in two times collision avoidance and shifting path. With scenario analysis, a new shifted reference path can be chosen which avoids many shifts improving comfort.
+Another horizon in the discussion for a planner is spatial horizon, it discusses how long the path is generated. As per the planning criteria, spatial horizon depends on velocity and temporal horizon. At low speeds spatial horizon is shorter and at high speeds it is larger. A shorter spatial horizon will result in not having a globally optimal solution, more substantial scenarios analysis will promote a local decision suitable globally. As shown in figure \ref{optimized_reference}, following the original reference path(solid line) at low speeds will result in two times collision avoidance and shifting path. With scenario analysis, a new shifted reference path can be chosen which avoids many shifts improving comfort.
 
-The resolution of the sampling in acceleration selection and lateral distance selection will also affect the optimality of planning, a chosen plan can only be optimal of the trajectories created by sampling, higher the number of samples, larger are the possibilities, and the best selection is possible. 
+The resolution of the samples in acceleration and lateral distance also affect the optimality of planning, a chosen plan can only be optimal of the trajectories created by sampling, higher the number of samples, larger are the possibilities, and the best selection is possible. 
 
 In summary, the planner proposed in this thesis is locally optimal and needs support from a scenario analysis algorithm to choose globally optimal paths. 
  
@@ -203,9 +206,9 @@ In summary, the planner proposed in this thesis is locally optimal and needs sup
 
 \subsection{Feasibility}
 \label{feasibility}
-The ability of the vehicle to traverse the created trajectory determines feasibility. Generally, the curvature of the path, smoothness and accelerations determine whether a trajectory is feasible or not. The proposed planner creates feasible trajectories at lower speeds because of the third order splines used, and higher speeds require fifth or higher order splines to maintain continuity in path curvature and speed. Discussions in \cite{cmu_parallel_thesis} \cite{ppt_teqniqs_coll_Avdnce} throw light on how to achieve higher degrees of smoothness, which approach is better in which driving conditions. As the intended application for this planner is a modelcar, constant acceleration profiles are used due to a limitation in the ability of the car to track small changes in velocity and inaccuracies in measurement. These can be easily replaced by a smoother higher order polynomial with a better hardware platform. Consistency in paths evaluated with respect to previous plan is another factor in testing feasibility, the current planner penalizes trajectories deviating from previous plan and also take into account current orientation of the vehicle in choosing a path. Thus creating smoother transitions from one state to another by respecting current driving curvature.
+The ability of the vehicle to traverse the created trajectory determines feasibility. Generally, the curvature of the path, smoothness and accelerations determine whether a trajectory is feasible or not. The proposed planner creates feasible trajectories at lower speeds because of the third order splines used, and higher speeds require fifth or higher order splines to maintain continuity in path curvature and speed. Discussions in \cite{cmu_parallel_thesis} \cite{ppt_teqniqs_coll_Avdnce} throw light on how to achieve higher degrees of smoothness, which approach is better in which driving conditions. As the intended application for this planner is a modelcar, constant acceleration profiles are used due to a limitation in the ability of the car to track small changes in velocity and inaccuracies in measurement. A smoother higher order polynomial can easily replace these with a better hardware platform. Consistency in paths evaluated with respect to previous plan is another factor in testing feasibility, and the current planner penalizes trajectories deviating from previous plan and also take into account current orientation of the vehicle in choosing a path. Thus creating smoother transitions from one state to another by respecting current driving curvature.
 
-In summary, the planner creates feasible trajectories for the modelcar and needs  update in polynomials used in trajectory creationa and representation to be used in complete cars. 
+In summary, the planner creates feasible trajectories for the modelcar and needs an update in trajectory representation to be used in full-scale cars. 
 
 \subsection{Completeness}
 \label{completeness}
@@ -227,7 +230,7 @@ In summary, the proposed planner is probabilistically complete and current imple
 
 Though computation power is available cheaply, it is important to create solutions which are cheaper and can be employed in large scale. In this case, sampling based approaches perform well and run on low computational hardware. In contrast lattice-based approaches such as \cite{cmu_parallel_thesis} \cite{diss_shui_phd_thesis} \cite{werling_frenet} computationally expensive and require a GPU to run. Low computational costs mean larger chances to be adopted to a greater number of platforms.
 
-To compute the complexity of planner lets consider $n_a$ denote the number of acceleration/deceleration profiles, $n_s$ denote the stopping deceleration profiles and $n_l$ denote the number of lateral distance samples. Then the maximum number of samples created is $(n_a+n_s)*n_l$, generally stopping profiles are less as at higher deceleration lower number of lateral samples are chosen due to limitations in vehicle dynamics. This thesis employs a hybrid combination of two methods mentioned in \ref{completeness} to achieve completeness. Therefore in the best case, only one trajectory is evaluated, and complexity is $O(1)$, and the worst case complexity is $O((n_a+n_s)*n_l)$.
+To compute the complexity of planner lets consider $n_a$ denote the number of acceleration/deceleration profiles, $n_s$ denote the stopping deceleration profiles and $n_l$ denote the number of lateral distance samples. Then the maximum number of samples created is $(n_a+n_s)*n_l$, stopping profiles are less as at higher deceleration lower number of lateral samples are chosen due to limitations in vehicle dynamics. This thesis employs a hybrid combination of two methods mentioned in \ref{completeness} to achieve completeness. Therefore in the best case, only one trajectory is evaluated, and complexity is $O(1)$, and the worst case complexity is $O((n_a+n_s)*n_l)$.
 
 Trajectory evaluation with respect to dynamic obstacles is an expensive process in the evaluation of trajectories. Simulation-based methods as discussed in  \cite{kolski_thesis} are expensive with complexity in terms of $O(n_o*n_n)$ where $n_o$ is the number of obstacles and $n_n$ is the number of simulation steps. This thesis employs a simple collision checking algorithm with constant time for evaluating one obstacle thus reducing the complexity to $O(n_o)$, number of obstacles. This process is not effective in intersections. Currently, a conservative approach to wait for other obstacles to pass is used, a simple approach as discussed in \cite{rrt_star} which has a performance better than the simulation-based algorithms can also be employed in future for intersections.  
 

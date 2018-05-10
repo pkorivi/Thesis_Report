@@ -11,7 +11,7 @@ This chapter details on the implementation of the concepts discussed in the prev
 
 
 \section{Route Planner}
-Route planner parses the RNDF file and stores waypoints, their relation to lanes and further to segments. The below code segment shows the declaration of the waypoint, here coordi indicates the coordinates of waypoints, idn is the unique id for each waypoint and parent is the lane to which waypoint belongs. Similarly, lane stores set of waypoints, the parent is the segment to which the lane belongs. 
+Route planner parses the RNDF file and stores waypoints, their relation to lanes and further to segments. The below code segment shows the declaration of the waypoint, here 'coordi' indicates the coordinates of waypoints, 'idn' is the unique id for each waypoint and 'parent' is the lane to which waypoint belongs. Similarly, lane stores set of waypoints, the parent is the segment to which the lane belongs. 
 
 \begin{lstlisting}
 class c_waypoint(object):
